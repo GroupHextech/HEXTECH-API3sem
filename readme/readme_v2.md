@@ -1,4 +1,4 @@
-# OLD DOCUMENT
+# OLD DOCUMENTS
 
 # HexTech Soluções em Tecnologia
 Empresa fictícia criada pelos alunos do 3º Semestre de Banco de Dados da [Fatec SJC - Prof. Jessen Vidal](https://fatecsjc-prd.azurewebsites.net/suporte-moodle.php "Fatec SJC - Prof. Jessen Vidal") para a realização das atividades curriculares e API semestral.
