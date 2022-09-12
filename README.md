@@ -20,13 +20,13 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
 [William David Antoniazzi](mailto:william.antoniazzi@fatec.sp.gov.br "William David Antoniazzi") <a href="https://www.linkedin.com/in/williamantoniazzi/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a>
 
 **PO:**<br>
-[Luiz Fernando Habaeb](mailto:luiz.habaeb@fatec.sp.gov.br "Luiz Fernando Habaeb") <a href="https://www.linkedin.com/in/williamantoniazzi/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a>
+[Luiz Fernando Habaeb](mailto:luiz.habaeb@fatec.sp.gov.br "Luiz Fernando Habaeb") <a href="https://www.linkedin.com/in/luizhabaeb/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a>
 
 **Demais integrantes:**<br>
-[Caio Sendreto](mailto:caio.sendreto@fatec.sp.gov.br "Caio Sendreto") <a href="https://www.linkedin.com/in/williamantoniazzi/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a><br>
-[Jonathan Willian](mailto:jonathan.alves5@fatec.sp.gov.br "Jonathan Willian") <a href="https://www.linkedin.com/in/williamantoniazzi/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a><br>
-[Michel Rubens Silva](mailto:michel.silva33@fatec.sp.gov.br "Michel Rubens Silva") <a href="https://www.linkedin.com/in/williamantoniazzi/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a><br>
-[Ruan Macedo](mailto:ruan.macedo@fatec.sp.gov.br "Ruan Macedo") <a href="https://www.linkedin.com/in/williamantoniazzi/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a>
+[Caio Sendreto](mailto:caio.sendreto@fatec.sp.gov.br "Caio Sendreto") <a href="https://www.linkedin.com/in/caio-sendreto-0736311a2/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a><br>
+[Jonathan Willian](mailto:jonathan.alves5@fatec.sp.gov.br "Jonathan Willian") <a href="https://www.linkedin.com/in/jonathan-alves-18069118a/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a><br>
+[Michel Rubens Silva](mailto:michel.silva33@fatec.sp.gov.br "Michel Rubens Silva") <a href="https://www.linkedin.com/in/michelrubens/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a><br>
+[Ruan Macedo](mailto:ruan.macedo@fatec.sp.gov.br "Ruan Macedo") <a href="https://www.linkedin.com/in/ruan-cesar-mac/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a>
 
 <h2>Objetivo do Projeto</h2>
 
