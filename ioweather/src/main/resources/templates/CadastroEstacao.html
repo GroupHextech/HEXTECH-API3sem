@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<hread>
+<meta charset="UTF-8"/>
+<title></title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+
+
+</hread>
+<body class="corpo">
+
+<form class="form-horizontal" method="post" action="/novaEstacao" th:object="${estacao}">
+
+   <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+       <span th:text="${mensagem}"></span>
+   </div>
+   
+   
+  <!--<div th:replace="MensagemGeral"></div> 
+  <div th:replace="MensagemErro"></div>    <!-- Mensagem de exclusao --> -->
+  
+     <div class="alert alert-danger" th:if="${#fields.hasAnyErrors()}">
+       <div th:each="detailedError : ${#fields.detailedErrors()}">
+           <span th:text="${detailedError.message}"></span>
+       </div>
+   </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="clearfix">
+                <h1 class="panel-title aw-titulo-panel" >Nova Estaçao</h1>
+                <a class="btn btn-link aw-link-panel" href="/titulos">Voltar para a pesquisa </a>
+            </div>
+        </div>
+        
+        <div class="panel-body">
+           <input type="hidden" th:field="*{idEstacaibr}"/>
+            <div class="form-group"  th:classappend="${#fields.hasErrors('nomeEstacao')} ? 'has-error'" >
+                <label for="descriçao" class="col-sm-2 control-label">Nome da Estaçao</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="NomeEstacao" th:field="*{nomeEstacao}"/>
+                </div>
+            </div>
+            
+            <div class="form-group" th:classappend="${#fields.hasErrors('latitudeEstacao')} ? 'has-error'">
+                <label for="dataVencimento" class="col-sm-2 control-label"> Latitude da estaçao</label>
+                <div class="col-sm-2">
+                    <input type="text" class="form-control" id="Latitude" th:field="*{latitudeEstacao}"/>
+                </div>
+            </div>
+            
+            <div class="form-group" th:classappend="${#fields.hasErrors('longitudeEstacao')} ? 'has-error'">
+                <label for="valor" class="col-sm-2 control-label"> Longitude da estaçao</label>
+                <div class="col-sm-2">
+                     <input type="text" class="form-control" id="Longitude" th:field="*{longitudeEstacao}"/>
+                </div>
+            </div>
+            
+           <div class="form-group" th:classappend="${#fields.hasErrors('altitudeEstacao')} ? 'has-error'">
+                <label for="valor" class="col-sm-2 control-label"> Altitude da estaçao</label>
+                <div class="col-sm-2">
+                     <input type="text" class="form-control" id="Altitude" th:field="*{altitudeEstacao}"/>
+                </div>
+            </div>
+            
+            <div class="form-group" th:classappend="${#fields.hasErrors('dataFundacao')} ? 'has-error'">
+                <label for="valor" class="col-sm-2 control-label"> Data da Fundaçao</label>
+                <div class="col-sm-2">
+                     <input type="text" class="form-control" id="DataFundacao" th:field="*{dataFundacao}"/>
+                </div>
+            </div>
+            
+            <div class="form-group" th:classappend="${#fields.hasErrors('idEstado')} ? 'has-error'">
+                <label for="valor" class="col-sm-2 control-label"> Estado</label>
+                <div class="col-sm-2">
+                     <input type="text" class="form-control" id="IdEstado" th:field="*{idEstado}"/>
+                </div>
+            </div>
+            
+            
+            
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                </div>
+            </div>                               
+        </div>
+    </div>
+</form>
+    
+ <script src="/js/jquery-3.6.0.min.js"></script>   
+ <script src="/js/bootstrap.min.js"></script>
+</body>
+</html>
