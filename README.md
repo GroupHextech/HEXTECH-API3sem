@@ -9,8 +9,8 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
 - [Objetivo do Projeto](#objetivo-do-projeto)
 - [Cronograma das Sprints](#cronograma-das-sprints)
 - [Backlog e Proposta de Entregas](#proposta-de-entregas)
-- [Modelo conceitual do BD e Wireframes] (#)
-- [Burndown] (#)
+- [Modelo conceitual do BD e Wireframes](#modelo-conceitual-do-bd-e-wireframes)
+- [Burndown](#burndown)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 
 <h2>Sobre o grupo</h2>
@@ -72,13 +72,13 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 <table border="1" cellpadding="0" cellspacing="1" width="400">
  <tr>
-  <th height="21" bgcolor="#D3D3D3">BACKLOG TOTAL</th>
+  <th height="21" bgcolor='#D3D3D3'>BACKLOG TOTAL</th>
  </tr>
  <tr>
-  <td height="20" bgcolor="#FF0000">Criação das 3 tabelas no BD (Estação-Região-Estado)</td>
+  <td height="20" bgcolor='#FF0000'>Criação das 3 tabelas no BD (Estação-Região-Estado)</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="#FF0000">Diagrama Entidade/Relacionamento</td>
+  <td height="20" bgcolor=`#FF0000`>Diagrama Entidade/Relacionamento</td>
  </tr>
  <tr>
   <td height="20" bgcolor="#FF0000">Repositórios JPA</td>
@@ -259,7 +259,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 
 <h2>Modelo conceitual do BD e Wireframes</h2>
-
+[![Modelo Lógico do Banco, modelo inicial](documents/IACIT_PostgreSQL-050922_Model.png "Modelo Lógico do Banco Inicial")](https://github.com/GroupHextech/HEXTECH-API3sem/blob/b28a5927abd45ec48a7a695c69fe9b3d8e8747c8/documents/IACIT_PostgreSQL-050922_Model.png "Modelo Lógico do Banco, modelo inicial")
 
 <h2>Burndown</h2>
 
