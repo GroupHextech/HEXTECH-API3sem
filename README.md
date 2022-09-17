@@ -72,165 +72,113 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 <table border="1" cellpadding="0" cellspacing="1" width="400">
  <tr>
-  <th height="21" bgcolor="lightgray">BACKLOG TOTAL</th>
+  <th height="21" bgcolor="#D3D3D3">BACKLOG TOTAL</th>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Criação das 3 tabelas no BD (Estação-Região-Estado)</td>
+  <td height="20" bgcolor="#FF0000">Criação das 3 tabelas no BD (Estação-Região-Estado)</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Diagrama Entidade/Relacionamento</td>
+  <td height="20" bgcolor="#FF0000">Diagrama Entidade/Relacionamento</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Repositórios JPA</td>
+  <td height="20" bgcolor="#FF0000">Repositórios JPA</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="red">Criação do CRUD (estação)</td>
+  <td height="21" bgcolor="#FF0000">Criação do CRUD (estação)</td>
  </tr>
  <tr>
-  <td height="20"  bgcolor="red">Criação do CRUD (região)</td>
+  <td height="20"  bgcolor="#FF0000">Criação do CRUD (região)</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Integração com PostgreeSQL</td>
+  <td height="20" bgcolor="#FF0000">Integração com PostgreeSQL</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="red">Geração dos Relatórios</td>
+  <td height="21" bgcolor="#FF0000">Geração dos Relatórios</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Criação do CRUD (estado)</td>
+  <td height="20" bgcolor="#FF0000">Criação do CRUD (estado)</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Campos para Pesquisa + Botões endereçados</td>
+  <td height="20" bgcolor="#FF0000">Campos para Pesquisa + Botões endereçados</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="red">Tela de Login</td>
+  <td height="21" bgcolor="#FF0000">Tela de Login</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Arquitetura de handling exceptions</td>
+  <td height="20" bgcolor="#FF0000">Arquitetura de handling exceptions</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Finalização do BD</td>
+  <td height="20" bgcolor="#FF0000">Finalização do BD</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Implementação inicial do BD</td>
+  <td height="20" bgcolor="#FFFF00">Implementação inicial do BD</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Protótipo (wireframe figma)</td>
+  <td height="20" bgcolor="#FFFF00">Protótipo (wireframe figma)</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Instalação do Jquery e Bootstrap</td>
+  <td height="20" bgcolor="#FFFF00">Instalação do Jquery e Bootstrap</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Listagem de Dados</td>
+  <td height="20" bgcolor="#FFFF00">Listagem de Dados</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Criação das tabelas específicas (expansão banco)</td>
+  <td height="20" bgcolor="#FFFF00">Criação das tabelas específicas (expansão banco)</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Área de Conteúdo - SOBRE</td>
+  <td height="20" bgcolor="#FFFF00">Área de Conteúdo - SOBRE</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Implementação de Modais</td>
+  <td height="20" bgcolor="#FFFF00">Implementação de Modais</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Revisão Ortográfica e UX</td>
+  <td height="20" bgcolor="#FFFF00">Revisão Ortográfica e UX</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Guia do Usuário</td>
+  <td height="20" bgcolor="#FFFF00">Guia do Usuário</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="lightgreen">Github</td>
+  <td height="21" bgcolor="#90EE90">Github</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="lightgreen">Documentação e Conteúdo em txt</td>
+  <td height="21" bgcolor="#90EE90">Documentação e Conteúdo em txt</td>
  </tr>
  <tr>
-  <td height="21"bgcolor="lightgreen">Rodapé</td>
+  <td height="21"bgcolor="#90EE90">Rodapé</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="lightgreen">Incrementos</td>
+  <td height="21" bgcolor="#90EE90">Incrementos</td>
  </tr>
  </table>
 
 **Divisão proposta por sprints**
 <table border="1" cellpadding="0" cellspacing="1" width="400">
  <tr>
-  <th height="21" bgcolor="lightgray">PROPOSTA DE ENTREGA SPRINT 1</th>
+  <th height="21" bgcolor="#D3D3D3">PROPOSTA DE ENTREGA SPRINT 1</th>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Criação das 3 tabelas no BD (Estação-Região-Estado)</td>
+  <td height="20" bgcolor="#FF0000">Criação das 3 tabelas no BD (Estação-Região-Estado)</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Diagrama Entidade/Relacionamento</td>
+  <td height="20" bgcolor="#FF0000">Diagrama Entidade/Relacionamento</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="red">Repositórios JPA</td>
+  <td height="20" bgcolor="#FF0000">Repositórios JPA</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="red">Criação do CRUD (estação)</td>
+  <td height="21" bgcolor="#FF0000">Criação do CRUD (estação)</td>
   </tr>
 <tr>
-  <td height="20" bgcolor="yellow">Implementação inicial do BD</td>
+  <td height="20" bgcolor="#FFFF00">Implementação inicial do BD</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Protótipo (wireframe figma)</td>
+  <td height="20" bgcolor="#FFFF00">Protótipo (wireframe figma)</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Instalação do Jquery e Bootstrap</td>
+  <td height="20" bgcolor="#FFFF00">Instalação do Jquery e Bootstrap</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="lightgreen">Github</td>
- </tr>
-</table>
-
- <br>
- 
-<table border="1" cellpadding="0" cellspacing="1" width="400">
- <tr>
-  <th height="21" bgcolor="lightgray">PROPOSTA DE ENTREGA SPRINT 2</th>
- </tr>
- <tr>
-  <td height="20"  bgcolor="red">Criação do CRUD (região)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="red">Integração com PostgreeSQL</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="red">Geração dos Relatórios</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="yellow">Listagem de Dados</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="yellow">Criação das tabelas específicas (expansão banco)</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="lightgreen">Documentação e Conteúdo em txt</td>
- </tr>
-</table>
- 
- <br>
- 
-<table border="1" cellpadding="0" cellspacing="1" width="400">
- <tr>
-  <th height="21" bgcolor="lightgray">PROPOSTA DE ENTREGA SPRINT 3</th>
- </tr>
- <tr>
-  <td height="20" bgcolor="red">Criação do CRUD (estado)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="red">Campos para Pesquisa + Botões endereçados</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="red">Tela de Login</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="yellow">Área de Conteúdo - SOBRE</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="yellow">Implementação de Modais</td>
- </tr>
- <tr>
-  <td height="21"bgcolor="lightgreen">Rodapé</td>
+  <td height="21" bgcolor="#90EE90">Github</td>
  </tr>
 </table>
 
@@ -238,22 +186,74 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
  
 <table border="1" cellpadding="0" cellspacing="1" width="400">
  <tr>
-  <th height="21" bgcolor="lightgray">PROPOSTA DE ENTREGA SPRINT 4</th>
+  <th height="21" bgcolor="#D3D3D3">PROPOSTA DE ENTREGA SPRINT 2</th>
  </tr>
  <tr>
-  <td height="21" bgcolor="red">Arquitetura de handling exceptions</td>
+  <td height="20"  bgcolor="#FF0000">Criação do CRUD (região)</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="red"=>Finalização do BD</td>
+  <td height="20" bgcolor="#FF0000">Integração com PostgreeSQL</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Revisão Ortográfica e UX</td>
+  <td height="21" bgcolor="#FF0000">Geração dos Relatórios</td>
  </tr>
  <tr>
-  <td height="20" bgcolor="yellow">Guia do Usuário</td>
+  <td height="20" bgcolor="#FFFF00">Listagem de Dados</td>
  </tr>
  <tr>
-  <td height="21" bgcolor="lightgreen">Incrementos</td>
+  <td height="20" bgcolor="#FFFF00">Criação das tabelas específicas (expansão banco)</td>
+ </tr>
+ <tr>
+  <td height="21" bgcolor="#90EE90">Documentação e Conteúdo em txt</td>
+ </tr>
+</table>
+ 
+ <br>
+ 
+<table border="1" cellpadding="0" cellspacing="1" width="400">
+ <tr>
+  <th height="21" bgcolor="#D3D3D3">PROPOSTA DE ENTREGA SPRINT 3</th>
+ </tr>
+ <tr>
+  <td height="20" bgcolor="#FF0000">Criação do CRUD (estado)</td>
+ </tr>
+ <tr>
+  <td height="20" bgcolor="#FF0000">Campos para Pesquisa + Botões endereçados</td>
+ </tr>
+ <tr>
+  <td height="21" bgcolor="#FF0000">Tela de Login</td>
+ </tr>
+ <tr>
+  <td height="20" bgcolor="#FFFF00">Área de Conteúdo - SOBRE</td>
+ </tr>
+ <tr>
+  <td height="20" bgcolor="#FFFF00">Implementação de Modais</td>
+ </tr>
+ <tr>
+  <td height="21"bgcolor="#90EE90">Rodapé</td>
+ </tr>
+</table>
+
+ <br>
+ 
+<table border="1" cellpadding="0" cellspacing="1" width="400">
+ <tr>
+  <th height="21" bgcolor="#D3D3D3">PROPOSTA DE ENTREGA SPRINT 4</th>
+ </tr>
+ <tr>
+  <td height="21" bgcolor="#FF0000">Arquitetura de handling exceptions</td>
+ </tr>
+ <tr>
+  <td height="21" bgcolor="#FF0000"=>Finalização do BD</td>
+ </tr>
+ <tr>
+  <td height="20" bgcolor="#FFFF00">Revisão Ortográfica e UX</td>
+ </tr>
+ <tr>
+  <td height="20" bgcolor="#FFFF00">Guia do Usuário</td>
+ </tr>
+ <tr>
+  <td height="21" bgcolor="#90EE90">Incrementos</td>
  </tr>
 </table>
 
