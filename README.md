@@ -259,7 +259,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 
 <h2>Modelo conceitual do BD e Wireframes</h2>
-![Modelo BD](https://raw.githubusercontent.com/GroupHextech/HEXTECH-API3sem/8fe2db66fc6a6d15a6eb45eb38fe677aca3c4da4/documents/IACIT_PostgreSQL-050922_Model.png "Modelo BD")
+![Modelo BD](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/bdsprint1.png)
 
 <h2>Burndown</h2>
 
