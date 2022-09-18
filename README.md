@@ -35,234 +35,59 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 <h2>Cronograma das Sprints</h2>
 
-<table border="0">
-        <tr>
-            <td><b>Data</b></td>
-            <td><b>Evento</b></td>  
-        </tr>
-        <tr>
-            <td>15/08/22 - 19/08/22</td>
-            <td>Kick-Off</td>  
-        </tr> 
-        <tr>
-            <td>29/08/22 - 18/09/22</td>
-            <td>Entrega Sprint1 </td>  
-        </tr>    
-        <tr>
-            <td>19/09/22 - 09/10/22</td>
-            <td>Entrega Sprint2</td>  
-        </tr>
-        <tr>
-            <td>13/10/22 - 06/11/22</td>
-            <td>Entrega Sprint3</td>  
-        </tr>   
-        <tr>
-            <td>07/11/22 - 27/11/22</td>
-            <td>Entrega Sprint4</td>  
-        </tr>
-        <tr>
-            <td>08/12/22</td>
-            <td>Feira de Soluções + Apresentação Final API</td>  
-        </tr> 
-    </table>
+| Data | Evento |  
+| ---- | ------ |
+| 15/08/22 - 19/08/22 | Kick-Off |
+| 29/08/22 - 18/09/22 | Entrega Sprint1 | 
+| 19/09/22 - 09/10/22 | Entrega Sprint2 |  
+| 13/10/22 - 06/11/22 | Entrega Sprint3 | 
+| 07/11/22 - 27/11/22 | Entrega Sprint4 | 
+| 08/12/22 | Feira de Soluções + Apresentação Final API | 
 
 <h2>Backlog e Proposta de Entregas</h2>
+**Backlog total** proposta da programação que será será desenvolvida pra o cliente.
 
-**Backlog total** com o desenvolvimento proposto para o usuário
+| BACKLOG TOTAL - PROPOSTA DE DESENVOLVIMENTO |
+| ------------------------------------------- |
+| Criação das 3 tabelas no BD (Estação-Região-Estado) |
+| Diagrama Entidade/Relacionamento |
+| Repositórios JPA |
+| Criação do CRUD (estação) |
+| Criação do CRUD (região) |
+| Integração com PostgreeSQL |
+| Geração dos Relatórios |
+| Criação do CRUD (estado) |
+| Campos para Pesquisa + Botões endereçados |
+| Tela de Login |
+| Arquitetura de handling exceptions |
+| Finalização do BD |
+| Implementação inicial do BD |
+| Protótipo (wireframe figma) |
+| Instalação do Jquery e Bootstrap |
+| Listagem de Dados |
+| Criação das tabelas específicas (expansão banco) |
+| Área de Conteúdo - SOBRE |
+| Implementação de Modais |
+| Revisão Ortográfica e UX |
+| Guia do Usuário |
+| Github |
+| Documentação e Conteúdo em txt |
+| Rodapé |
+| Incrementos |
 
-<table border="1" cellpadding="0" cellspacing="1" width="400">
- <tr>
-  <th height="21" bgcolor="#D3D3D3">BACKLOG TOTAL</th>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Criação das 3 tabelas no BD (Estação-Região-Estado)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Diagrama Entidade/Relacionamento</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Repositórios JPA</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#FF0000">Criação do CRUD (estação)</td>
- </tr>
- <tr>
-  <td height="20"  bgcolor="#FF0000">Criação do CRUD (região)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Integração com PostgreeSQL</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#FF0000">Geração dos Relatórios</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Criação do CRUD (estado)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Campos para Pesquisa + Botões endereçados</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#FF0000">Tela de Login</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Arquitetura de handling exceptions</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Finalização do BD</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Implementação inicial do BD</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Protótipo (wireframe figma)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Instalação do Jquery e Bootstrap</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Listagem de Dados</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Criação das tabelas específicas (expansão banco)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Área de Conteúdo - SOBRE</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Implementação de Modais</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Revisão Ortográfica e UX</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Guia do Usuário</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#90EE90">Github</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#90EE90">Documentação e Conteúdo em txt</td>
- </tr>
- <tr>
-  <td height="21"bgcolor="#90EE90">Rodapé</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#90EE90">Incrementos</td>
- </tr>
- </table>
 
-**Divisão proposta por sprints**
-<table border="1" cellpadding="0" cellspacing="1" width="400">
- <tr>
-  <th height="21" bgcolor="#D3D3D3">PROPOSTA DE ENTREGA SPRINT 1</th>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Criação das 3 tabelas no BD (Estação-Região-Estado)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Diagrama Entidade/Relacionamento</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Repositórios JPA</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#FF0000">Criação do CRUD (estação)</td>
-  </tr>
-<tr>
-  <td height="20" bgcolor="#FFFF00">Implementação inicial do BD</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Protótipo (wireframe figma)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Instalação do Jquery e Bootstrap</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#90EE90">Github</td>
- </tr>
-</table>
+** Proposta do backlog separado por sprints ** Onde a cada entrega pretendemos agregar valor ao desenvolvimento
 
- <br>
- 
-<table border="1" cellpadding="0" cellspacing="1" width="400">
- <tr>
-  <th height="21" bgcolor="#D3D3D3">PROPOSTA DE ENTREGA SPRINT 2</th>
- </tr>
- <tr>
-  <td height="20"  bgcolor="#FF0000">Criação do CRUD (região)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Integração com PostgreeSQL</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#FF0000">Geração dos Relatórios</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Listagem de Dados</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Criação das tabelas específicas (expansão banco)</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#90EE90">Documentação e Conteúdo em txt</td>
- </tr>
-</table>
- 
- <br>
- 
-<table border="1" cellpadding="0" cellspacing="1" width="400">
- <tr>
-  <th height="21" bgcolor="#D3D3D3">PROPOSTA DE ENTREGA SPRINT 3</th>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Criação do CRUD (estado)</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FF0000">Campos para Pesquisa + Botões endereçados</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#FF0000">Tela de Login</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Área de Conteúdo - SOBRE</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Implementação de Modais</td>
- </tr>
- <tr>
-  <td height="21"bgcolor="#90EE90">Rodapé</td>
- </tr>
-</table>
-
- <br>
- 
-<table border="1" cellpadding="0" cellspacing="1" width="400">
- <tr>
-  <th height="21" bgcolor="#D3D3D3">PROPOSTA DE ENTREGA SPRINT 4</th>
- </tr>
- <tr>
-  <td height="21" bgcolor="#FF0000">Arquitetura de handling exceptions</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#FF0000"=>Finalização do BD</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Revisão Ortográfica e UX</td>
- </tr>
- <tr>
-  <td height="20" bgcolor="#FFFF00">Guia do Usuário</td>
- </tr>
- <tr>
-  <td height="21" bgcolor="#90EE90">Incrementos</td>
- </tr>
-</table>
+![PropostaSprints](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/sprintspropostas.png "Proposta do projeto separado por sprints")
 
 
 <h2>Modelo conceitual do BD e Wireframes</h2>
-![Modelo BD](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/bdsprint1.png)
+
+![ModeloLogicoBDSP1](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/bdsprint1.png "Modelo lógico BD Sprint 1")
+
 
 <h2>Burndown</h2>
-
+-#-#-#-#
 
 
 <h2>Tecnologias utilizadas</h2>
