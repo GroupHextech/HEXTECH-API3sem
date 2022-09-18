@@ -9,7 +9,8 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
 - [Objetivo do Projeto](#objetivo-do-projeto)
 - [Cronograma das Sprints](#cronograma-das-sprints)
 - [Backlog e Proposta de Entregas](#backlog-e-proposta-de-entregas)
-- [Modelo conceitual do BD e Wireframes](#modelo-conceitual-do-bd-e-wireframes)
+- [Modelo conceitual e lógico do Banco de Dados](#modelo-conceitual-e--logido-do-banco-de-dados)
+- [Wireframes, arte conceito da aplicação](#Wireframes)
 - [Burndown](#burndown)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 
@@ -82,13 +83,22 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 ![PropostaSprints](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/sprintspropostas.png "Proposta do projeto separado por sprints")
 
 
-<h2>Modelo conceitual do BD e Wireframes</h2>
+
+<h2>Modelo conceitual e lógico do Banco de Dados</h2>
 
 ![ModeloLogicoBDSP1](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/bdsprint1.png "Modelo lógico BD Sprint 1")
 
 
+
+<h2> Wireframes, arte conceito da aplicação <h2>
+
+![Wireframes](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/wireframesprint1.gif "Wireframes da sprint 1")
+
+
+
 <h2>Burndown</h2>
 -#-#-#-#
+
 
 
 <h2>Tecnologias utilizadas</h2>
