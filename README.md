@@ -45,6 +45,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 | 08/12/22 | Feira de Soluções + Apresentação Final API | 
 
 <h2>Backlog e Proposta de Entregas</h2>
+
 **Backlog total** proposta da programação que será será desenvolvida pra o cliente.
 
 | BACKLOG TOTAL - PROPOSTA DE DESENVOLVIMENTO |
@@ -76,7 +77,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 | Incrementos |
 
 
-** Proposta do backlog separado por sprints ** Onde a cada entrega pretendemos agregar valor ao desenvolvimento
+**Proposta do backlog separado por sprints** Onde a cada entrega pretendemos agregar valor ao desenvolvimento
 
 ![PropostaSprints](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/sprintspropostas.png "Proposta do projeto separado por sprints")
 
