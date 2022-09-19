@@ -25,11 +25,24 @@ public class EstacaoController {
 	@RequestMapping(value=("/principal"),method=RequestMethod.GET)
 	public ModelAndView paginaInicial() {
 		ModelAndView mv=new ModelAndView("index");
+<<<<<<< HEAD
 		System.out.println("Testando inicio");
+=======
+>>>>>>> origin/sprint1_CaioSendreto
 		return mv;
 		
 	}
 	
+<<<<<<< HEAD
+=======
+	@RequestMapping(value=("/grafico"),method=RequestMethod.GET)
+	public ModelAndView grafico() {
+		ModelAndView mv=new ModelAndView("grafico");
+		return mv;
+		
+	}
+		
+>>>>>>> origin/sprint1_CaioSendreto
 	
 	
 	

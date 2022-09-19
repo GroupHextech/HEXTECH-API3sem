@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Bootstrap core CSS     -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="/assets/css/animate.min.css" rel="stylesheet" />
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="/assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #chart-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .fomu {
+            border-radius: 15px;
+            box-shadow: 3px 1px 10px lightgrey;
+        }
+    </style>
+</head>
+
+<body style="background-color: #EEEEEE;">
+    <!-- Botoes -->
+    <div class="col-md-12">
+
+        <div class="col-md-3" style="padding: 0px; padding-left: 2%; padding-right: 2%; ">
+            <label for="data1">Data Inicial</label>
+            <input class="form-control fomu" type="date" id="data1">
+            <script>
+                today = '2021-01-01';
+                document.getElementById("data1").value = today;
+            </script>
+        </div>
+
+        <div class="col-md-3" style="padding: 0px; padding-left: 2%; padding-right: 2%;">
+            <label for="data2">Data Final</label>
+            <input class="form-control fomu" type="date" id="data2">
+            <script>
+                today = '2021-01-31';
+                document.getElementById("data2").value = today;
+            </script>
+        </div>
+
+        <div class="col-md-3" style="padding: 0px; padding-left: 2%; padding-right: 2%;">
+            <label for="estacao">Estação</label>
+            <select class="form-control fomu" id="estacao">
+                <option value="A301">A301</option>
+                <option value="A643">A643</option>
+            </select>
+        </div>
+
+        <div class="col-md-3" style="padding: 0px;padding-left: 2%; padding-right: 2%;">
+            <label for="data1" style="visibility: hidden;">JAVA É RUIM</label>
+            <button class="form-control fomu" onclick="env()"
+                style="box-shadow: 3px 1px 10px lightgrey;color: white ;background-color: rgb(141, 140, 140);">Enviar</button>
+        </div>
+
+
+    </div>
+
+
+    <!-- Legenda -->
+    <div class="col-md-12" style="text-align: center; margin-top: 30px;">
+        <input type="color" value='#FF2828' disabled style="border-style: hidden; height: 20px; width: 16px;"><label
+            style="margin-left: 5px; ">Temperatura Maxima</label>
+        <input type="color" value='#91cc75' disabled
+            style="margin-left: 30px; border-style: hidden; height: 20px; width: 16px;"><label
+            style="margin-left: 5px;">Temperatura Média</label>
+        <input type="color" value='#5470c6' disabled
+            style="margin-left: 30px; border-style: hidden; height: 20px; width: 16px;"><label
+            style="margin-left: 5px;">Temperatura Mínima</label>
+    </div>
+
+    <div id="teste">
+        
+    </div>
+    <!-- Grafico -->
+
+
+    <script src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+    <script>
+        var altura = window.screen.height;
+        document.getElementById("teste").innerHTML = '<div id="chart-container" class="col-md-12" style="height: '+ (altura - 370)+'px;"></div>';
+
+        function env() {
+            var data1 = document.getElementById("data1").value;
+            var data2 = document.getElementById("data2").value;
+            var estacao = document.getElementById("estacao").value;
+
+            $.ajax({
+                method: "GET",
+                url: "https://apitempo.inmet.gov.br/estacao/diaria/" + data1 + "/" + data2 + "/" + estacao,
+                success(dados) {
+
+                    let linhas = dados.length;
+                    const datas = [];
+                    var max = [];
+                    var med = [];
+                    var min = [];
+
+                    // ARRUMAR DATAS-----------------------------------------
+                    for (let i = 0; i < linhas; i++) {
+
+                        datas.push(dados[i].DT_MEDICAO);
+                    }
+                    for (let i = 0; i < linhas; i++) {
+                        if (dados[i].TEMP_MAX != null) {
+                            max.push(dados[i].TEMP_MAX.replace('"', ''));
+                        }
+
+                    }
+                    for (let i = 0; i < linhas; i++) {
+                        if (dados[i].TEMP_MED != null) {
+                            med.push(dados[i].TEMP_MED.replace('"', ''));
+                        }
+
+                    }
+                    for (let i = 0; i < linhas; i++) {
+                        if (dados[i].TEMP_MIN != null) {
+                            min.push(dados[i].TEMP_MIN.replace('"', ''));
+                        }
+                    }
+
+
+                    var dom = document.getElementById('chart-container');
+                    var myChart = echarts.init(dom, null, {
+                        renderer: 'canvas',
+                        useDirtyRect: false
+                    });
+                    var app = {};
+
+                    var option;
+
+                    const posList = [
+                        'left',
+                        'right',
+                        'top',
+                        'bottom',
+                        'inside',
+                        'insideTop',
+                        'insideLeft',
+                        'insideRight',
+                        'insideBottom',
+                        'insideTopLeft',
+                        'insideTopRight',
+                        'insideBottomLeft',
+                        'insideBottomRight'
+                    ];
+                    app.configParameters = {
+                        rotate: {
+                            min: -90,
+                            max: 90
+                        },
+                        align: {
+                            options: {
+                                left: 'left',
+                                center: 'center',
+                                right: 'right'
+                            }
+                        },
+                        verticalAlign: {
+                            options: {
+                                top: 'top',
+                                middle: 'middle',
+                                bottom: 'bottom'
+                            }
+                        },
+                        position: {
+                            options: posList.reduce(function (map, pos) {
+                                map[pos] = pos;
+                                return map;
+                            }, {})
+                        },
+                        distance: {
+                            min: 0,
+                            max: 100
+                        }
+                    };
+                    app.config = {
+                        rotate: 90,
+                        align: 'left',
+                        verticalAlign: 'middle',
+                        position: 'insideBottom',
+                        distance: 15,
+                        onChange: function () {
+                            const labelOption = {
+                                rotate: app.config.rotate,
+                                align: app.config.align,
+                                verticalAlign: app.config.verticalAlign,
+                                position: app.config.position,
+                                distance: app.config.distance
+                            };
+                            myChart.setOption({
+                                series: [{
+                                    label: labelOption
+                                },
+                                {
+                                    label: labelOption
+                                },
+                                {
+                                    label: labelOption
+                                },
+                                {
+                                    label: labelOption
+                                }
+                                ]
+                            });
+                        }
+                    };
+                    const labelOption = {
+                        show: true,
+                        position: app.config.position,
+                        distance: app.config.distance,
+                        align: app.config.align,
+                        verticalAlign: app.config.verticalAlign,
+                        rotate: app.config.rotate,
+                        formatter: '{c}  {name|{a}}',
+                        fontSize: 16,
+                        rich: {
+                            name: {}
+                        }
+                    };
+                    option = {
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                                type: 'shadow'
+                            }
+                        },
+                        legend: {
+                            data: ['TEMP_MAX', 'TEMP_MED', 'TEMP_MIN']
+                        },
+                        toolbox: {
+                            show: true,
+                            orient: 'vertical',
+                            left: 'right',
+                            top: 'center',
+                            feature: {
+                                mark: {
+                                    show: true
+                                },
+                                dataView: {
+                                    show: true,
+                                    readOnly: false
+                                },
+                                magicType: {
+                                    show: true,
+                                    type: ['line', 'bar', 'stack']
+                                },
+                                restore: {
+                                    show: true
+                                },
+                                saveAsImage: {
+                                    show: true
+                                }
+                            }
+                        },
+                        xAxis: [{
+                            type: 'category',
+                            axisTick: {
+                                show: false
+                            },
+                            data: datas
+                        }],
+                        yAxis: [{
+                            type: 'value'
+                        }],
+                        series: [{
+                            name: '',
+                            type: 'line',
+                            barGap: 0,
+                            color: '#FF2828 ',
+                            label: labelOption,
+                            emphasis: {
+                                focus: 'series'
+                            },
+                            data: max
+                        },
+                        {
+                            name: '',
+                            type: 'line',
+                            color: '#91cc75 ',
+                            label: labelOption,
+                            emphasis: {
+                                focus: 'series'
+                            },
+                            data: med
+                        },
+                        {
+                            name: '',
+                            type: 'line',
+                            color: '#5470c6 ',
+                            label: labelOption,
+                            emphasis: {
+                                focus: 'series'
+                            },
+                            data: min
+                        },
+
+                        ]
+                    };
+
+                    if (option && typeof option === 'object') {
+                        myChart.setOption(option);
+                    }
+
+                    window.addEventListener('resize', myChart.resize);
+                }
+            })
+        }
+
+    </script>
+
+
+</body>
+
+</html>

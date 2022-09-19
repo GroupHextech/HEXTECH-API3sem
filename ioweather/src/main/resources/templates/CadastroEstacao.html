@@ -8,7 +8,27 @@
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 
+<<<<<<< HEAD
 
+=======
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #chart-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .fomu {
+            border-radius: 15px;
+            box-shadow: 3px 1px 10px lightgrey;
+        }
+    </style>
+>>>>>>> origin/sprint1_CaioSendreto
 </hread>
 <body class="corpo">
 
@@ -16,11 +36,15 @@
 
    <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
        <span th:text="${mensagem}"></span>
+<<<<<<< HEAD
    </div>
    
    
   <!--<div th:replace="MensagemGeral"></div> 
   <div th:replace="MensagemErro"></div>    <!-- Mensagem de exclusao --> -->
+=======
+   </div>	
+>>>>>>> origin/sprint1_CaioSendreto
   
      <div class="alert alert-danger" th:if="${#fields.hasAnyErrors()}">
        <div th:each="detailedError : ${#fields.detailedErrors()}">
@@ -31,13 +55,19 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="clearfix">
+<<<<<<< HEAD
                 <h1 class="panel-title aw-titulo-panel" >Nova Estaçao</h1>
                 <a class="btn btn-link aw-link-panel" href="/titulos">Voltar para a pesquisa </a>
+=======
+                <h1 class="panel-title aw-titulo-panel" >Estaçao</h1>
+                <a class="btn btn-link aw-link-panel" href="/estacoes">Voltar para a pesquisa </a>
+>>>>>>> origin/sprint1_CaioSendreto
             </div>
         </div>
         
         <div class="panel-body">
            <input type="hidden" th:field="*{idEstacaibr}"/>
+<<<<<<< HEAD
             <div class="form-group"  th:classappend="${#fields.hasErrors('nomeEstacao')} ? 'has-error'" >
                 <label for="descriçao" class="col-sm-2 control-label">Nome da Estaçao</label>
                 <div class="col-sm-4">
@@ -87,6 +117,42 @@
                     <button type="submit" class="btn btn-primary">Salvar</button>
                 </div>
             </div>                               
+=======
+           
+           
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto"  th:classappend="${#fields.hasErrors('nomeEstacao')} ? 'has-error'" >
+               <label for="NomeEstacao" class="control-label">Nome da Estaçao</label>         
+                    <input type="text" class="form-control fomu" id="NomeEstacao" th:field="*{nomeEstacao}"/>
+            </div>
+            
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('latitudeEstacao')} ? 'has-error'">
+                <label for="Latitude" class="control-label"> Latitude da estaçao</label>
+                    <input type="text" class="form-control fomu" id="Latitude" th:field="*{latitudeEstacao}"/>
+            </div>
+            
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('longitudeEstacao')} ? 'has-error'">
+                <label for="Longitude" class="control-label"> Longitude da estaçao</label>
+                     <input type="text" class="form-control fomu" id="Longitude" th:field="*{longitudeEstacao}"/>
+            </div>
+            
+           <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('altitudeEstacao')} ? 'has-error'">
+                <label for="Altitude" class="control-label"> Altitude da estaçao</label>
+                     <input type="text" class="form-control fomu" id="Altitude" th:field="*{altitudeEstacao}"/>
+            </div>
+            
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('dataFundacao')} ? 'has-error'">
+                <label for="DataFundacao" class="control-label"> Data da Fundaçao</label>
+                     <input type="date" class="form-control fomu" id="DataFundacao" th:field="*{dataFundacao}"/>
+            </div>
+            
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('idEstado')} ? 'has-error'">
+                <label for="IdEstado" class="control-label"> Estado</label>          
+                     <input type="text" class="form-control fomu" id="IdEstado" th:field="*{idEstado}"/>
+            </div>
+            
+                    <button type="submit" class="btn btn-primary col-md-12 fomu" style="width:150px; float:right; margin: 30px 30px 0 0;">Salvar</button>
+                                    
+>>>>>>> origin/sprint1_CaioSendreto
         </div>
     </div>
 </form>
