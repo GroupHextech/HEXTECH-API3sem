@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org"
+ >
+<hread>
+<meta charset="UTF-8"/>
+<title>Pesquisa de Estaçoes</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</hread>
+     <body>
+     <a href="\estacoes">Estacoes<a>
+     
+     
+     <div class="panel panel-default"> <!-- Painel  -->
+            <div class="panel-heading">
+            
+               <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+                    <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
+               </div>
+                <div class="clearfix">
+                    <h1 class="panel-title aw-titulo-panel" > Pesquisa Estaçoes </h1>
+                    <a class="btn btn-link aw-link-panel" href="/novaEstacao"> Nova estacao </a>
+                </div>
+            </div>
+            
+            
+            <div class="panel-body">
+                <table class="table table-bordered table-striped">
+                    <thead> <!-- Cabeçalho da minha tabela de pesquisa  -->
+                        <tr>
+                            <th class="text-center col-md-1">#</th>
+                            <th>Nome da Estacao</th>
+                            <th class="text-center col-md-2">Latitude</th>
+                            <th class="text-right col-md-2">Longitude</th>
+                            <th class="text-center col-md-2">Altitude</th>
+                            <th class="text-center col-md-2">Data de Fundaçao</th>
+                            <th class="text-center col-md-2">Estado</th>
+                            <th class="col-md-1"></th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr th:each="estacao : ${estacoes}">
+                            <td class="text-center" th:text="${estacao.idEstacaibr}">1</td>
+                            <td class="text-left" th:text="${{estacao.nomeEstacao}}"></td>
+                            <td class="text-center" th:text="${{estacao.latitudeEstacao}}"></td> <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
+                            <td class="text-left" th:text="${{estacao.longitudeEstacao}}"></td>
+                            <td class="text-left" th:text="${{estacao.altitudeEstacao}}"></td>
+                            <td class="text-left" th:text="${{estacao.dataFundacao}}"></td>
+                            <td class="text-left" th:text="${{estacao.idEstado}}"></td>
+
+                           <!-- <td class="text-center">
+                                <span class="label" th:text="${titulo.status.descricao}" th:classappend="${titulo.pendente ? 'label-danger' : 'label-success'}"> Success</span>
+                            </td> -->
+                            
+                            <!-- EDIÇAO -->
+                           <td class="text-center">
+                                <a class="btn btn-link btn-xs" th:href="@{/estacoes/{codigo}(codigo=${estacao.idEstacaibr})}"> <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
+                                  <span class="glyphicon glyphicon-pencil"></span> <!-- Ícone de ediçao de um lápis -->
+                              </a>
+                                  
+                                  <!-- DELETE -->  
+                            
+                                <a class="btn btn-link btn-xs" data-toggle="modal" data-target="#confirmacaoExclusaoModalEstacao"
+                                th:attr="data-codigo=${estacao.idEstacaibr}, data-descricao=${estacao.nomeEstacao}">
+                                    <span class="gliphycon glyphicon-remove"></span>
+                                </a>
+                            
+                            
+                            </td>
+  
+                        
+                        </tr>
+                    
+                        <tr>
+                            <td colspan="6" th:if="${#lists.isEmpty(estacoes)}">Nenhuma Estaçao foi encontrada</td>
+                        
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+            </div>
+            
+            <!-- MODAL -->
+            
+            <div th:replace="ModalExclusaoEstacao"></div>
+                
+        </div>
+     
+        <script src="/js/jquery-3.6.0.min.js"></script>   
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/excluirEstacao.js"></script>
+     </body>
+
+
+</html>
