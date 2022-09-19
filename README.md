@@ -92,7 +92,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 <h2> Wireframes, arte conceito da aplicação <h2>
 
-[Wireframe Sprint 1](https://github.com/GroupHextech/HEXTECH-API3sem/main/documents/wireframe_sprint1.pdf "Wireframe Sprint 1")
+[Wireframe Sprint 1](/documents/wireframe_sprint1.pdf "Wireframe Sprint 1")
 
 
 <h2>Burndown</h2>
