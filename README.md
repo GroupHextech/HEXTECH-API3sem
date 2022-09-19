@@ -90,7 +90,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 
 
-<h2> Wireframes, arte conceito da aplicação <h2>
+<h2> Wireframes, arte conceito da aplicação </h2>
 
 [Wireframe Sprint 1](/documents/wireframe_sprint1.pdf "Wireframe Sprint 1")
 
