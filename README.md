@@ -1,4 +1,4 @@
-# HexTech Soluções em Tecnologia
+# HexTech - Soluções em Tecnologia
 Empresa fictícia criada pelos alunos do 3º Semestre de Banco de Dados da [Fatec SJC - Prof. Jessen Vidal](https://fatecsjc-prd.azurewebsites.net/suporte-moodle.php "Fatec SJC - Prof. Jessen Vidal") para a realização das atividades curriculares e API semestral.
 
 Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnológicas.
@@ -80,7 +80,11 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 **Proposta do backlog separado por sprints** Onde a cada entrega pretendemos agregar valor ao desenvolvimento
 
-![PropostaSprints](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/sprintspropostas.png "Proposta do projeto separado por sprints")
+![SP1](https://user-images.githubusercontent.com/82103455/194673884-4e2d1d4a-149a-4d0f-a6dd-e24a2cb6a4b8.png)
+![SP2](https://user-images.githubusercontent.com/82103455/194673885-deb23f5c-4ebe-4ba5-8255-60e29f7faf81.png)
+![SP3](https://user-images.githubusercontent.com/82103455/194673887-25507648-6569-42ec-86e5-37a509c4bd97.png)
+![SP4](https://user-images.githubusercontent.com/82103455/194673890-9dbbae5e-130d-4670-a2d3-c715f539fea9.png)
+
 
 
 
@@ -102,7 +106,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 <h2>Tecnologias utilizadas</h2>
 
-Ferramentas utilizadas para desenvolvimento da atividade
+Ferramentas utilizadas para desenvolvimento da atividade:
 
 **Comunicação e Versionamento:**
 - [GitHub](https://github.com/)
