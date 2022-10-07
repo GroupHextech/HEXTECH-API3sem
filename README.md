@@ -80,8 +80,13 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 **Proposta do backlog separado por sprints** Onde a cada entrega pretendemos agregar valor ao desenvolvimento
 
-![SP1](https://user-images.githubusercontent.com/82103455/194673884-4e2d1d4a-149a-4d0f-a6dd-e24a2cb6a4b8.png)
-![SP2](https://user-images.githubusercontent.com/82103455/194673885-deb23f5c-4ebe-4ba5-8255-60e29f7faf81.png)
+
+<img align="right" src="https://user-images.githubusercontent.com/82103455/194673884-4e2d1d4a-149a-4d0f-a6dd-e24a2cb6a4b8.png" height="320px">
+
+
+<img align="right" src="https://user-images.githubusercontent.com/82103455/194674384-bd5ac0e7-a0df-412d-a05e-a4cba0593086.png" height="320px">
+
+
 ![SP3](https://user-images.githubusercontent.com/82103455/194673887-25507648-6569-42ec-86e5-37a509c4bd97.png)
 ![SP4](https://user-images.githubusercontent.com/82103455/194673890-9dbbae5e-130d-4670-a2d3-c715f539fea9.png)
 
