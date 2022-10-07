@@ -78,8 +78,8 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 | Incrementos |
 
 
-<p> **Proposta do backlog separado por sprints** (Onde a cada entrega pretendemos agregar valor ao desenvolvimento)
-![image](https://user-images.githubusercontent.com/112524947/194676348-46c2dc78-a797-467b-b1a9-4a403dbc4e7e.png)</p>
+<p> **Proposta do backlog separado por sprints** (Onde a cada entrega pretendemos agregar valor ao desenvolvimento) </p>
+![image](https://user-images.githubusercontent.com/112524947/194676348-46c2dc78-a797-467b-b1a9-4a403dbc4e7e.png)
 
 <h2>Modelo conceitual e lógico do Banco de Dados</h2>
 
