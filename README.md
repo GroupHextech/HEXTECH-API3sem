@@ -85,9 +85,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 <br>
 <br>
 <h2>Estórias do Usuário</h2><br>
-![User Stories 1](https://user-images.githubusercontent.com/82103455/194677439-152ebb09-bb98-4674-8772-4fbf08d60147.png)
-![User Stories 2](https://user-images.githubusercontent.com/82103455/194677442-082cc7c1-9f43-43aa-aac7-6a62634582a4.png)
-![User Stories 3](https://user-images.githubusercontent.com/82103455/194677444-02a93112-3e4a-421e-a32f-206ae7e66f74.png)
+![USER STORIES](https://user-images.githubusercontent.com/82103455/194677535-7a62a0f7-cde6-479d-912c-69c77f5d04e2.jpg)
 <br>
 
 <h2>Modelo conceitual e lógico do Banco de Dados</h2><br>
