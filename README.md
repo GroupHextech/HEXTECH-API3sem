@@ -79,14 +79,14 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 <br>
 <br>
-<h2> Proposta do backlog separado por sprints (Onde a cada entrega pretendemos agregar valor ao desenvolvimento) </2>
+<h2> Proposta do backlog separado por sprints (Onde a cada entrega pretendemos agregar valor ao desenvolvimento) </2><br>
 
-![image](https://user-images.githubusercontent.com/112524947/194676348-46c2dc78-a797-467b-b1a9-4a403dbc4e7e.png)
+![image](https://user-images.githubusercontent.com/112524947/194676348-46c2dc78-a797-467b-b1a9-4a403dbc4e7e.png)<br>
 <br>
 <br>
-<h2>Modelo conceitual e lógico do Banco de Dados</h2>
+<h2>Modelo conceitual e lógico do Banco de Dados</h2><br>
 
-![ModeloLogicoBDSP1](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/bdsprint1.png "Modelo lógico BD Sprint 1")
+![ModeloLogicoBDSP1](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/bdsprint1.png "Modelo lógico BD Sprint 1")<br>
 <br>
 <br>
 <h2> Wireframes, arte conceito da aplicação </h2>
