@@ -84,6 +84,12 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 ![image](https://user-images.githubusercontent.com/112524947/194676348-46c2dc78-a797-467b-b1a9-4a403dbc4e7e.png)<br>
 <br>
 <br>
+<h2>Estórias do Usuário</h2><br>
+![User Stories 1](https://user-images.githubusercontent.com/82103455/194677439-152ebb09-bb98-4674-8772-4fbf08d60147.png)
+![User Stories 2](https://user-images.githubusercontent.com/82103455/194677442-082cc7c1-9f43-43aa-aac7-6a62634582a4.png)
+![User Stories 3](https://user-images.githubusercontent.com/82103455/194677444-02a93112-3e4a-421e-a32f-206ae7e66f74.png)
+<br>
+
 <h2>Modelo conceitual e lógico do Banco de Dados</h2><br>
 
 ![ModeloLogicoBDSP1](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/bdsprint1.png "Modelo lógico BD Sprint 1")<br>
