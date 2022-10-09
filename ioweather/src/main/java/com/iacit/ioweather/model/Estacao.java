@@ -71,7 +71,7 @@ public class Estacao {
 	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
-	public BigDecimal getAltitudeo() {
+	public BigDecimal getAltitude() {
 		return altitude;
 	}
 	public void setAltitude(BigDecimal altitude) {
