@@ -24,14 +24,14 @@ public class EstadoController {
 	@Autowired
 	private Estados estados;
 	
-	@RequestMapping(value=("/principal"),method=RequestMethod.GET)
+	@RequestMapping(value=("/principal/estado"),method=RequestMethod.GET)
 	public ModelAndView paginaInicial() {
-		ModelAndView mv=new ModelAndView("index");
+		ModelAndView mv=new ModelAndView("cadastroestado");
 		return mv;
 		
 	}
 	
-	@RequestMapping(value=("/grafico"),method=RequestMethod.GET)
+	@RequestMapping(value=("/grafico/estado"),method=RequestMethod.GET)
 	public ModelAndView grafico() {
 		ModelAndView mv=new ModelAndView("grafico");
 		return mv;

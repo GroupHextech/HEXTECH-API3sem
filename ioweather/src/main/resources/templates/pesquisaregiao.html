@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org"
+ >
+<head>
+<meta charset="UTF-8"/>
+<title>Pesquisa Região</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+     <body>     
+     
+     <div class="panel panel-default"> <!-- Painel  -->
+            <div class="panel-heading">
+            
+               <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+                    <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
+               </div>
+                <div class="clearfix">
+                    <h1 class="panel-title aw-titulo-panel" > Pesquisa Regiões </h1>
+                    <a class="btn btn-link aw-link-panel" href="/principal/novaRegiao">Nova Região</a>
+                </div>
+            </div>
+            
+            
+            <div class="panel-body">
+                <table class="table table-bordered table-striped">
+                    <thead> <!-- Cabeçalho da minha tabela de pesquisa  -->
+                        <tr>
+                            <th class="text-center col-md-1">#</th>
+                            <th>Nome da Região</th>
+                            <th class="text-center col-md-2">Sigla da região</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr th:each="regiao : ${regioes}">
+                            <td class="text-center" th:text="${regiao.idRegiao}"></td>
+                            <td class="text-left" th:text="${{regiao.nomeRegiao}}"></td>
+                            <td class="text-center" th:text="${{regiao.siglaRegiao}}"></td> <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
+                          
+                            
+                            <!-- EDIÇAO -->
+                           <td class="text-center">
+                                <a class="btn btn-link btn-xs" th:href="@{/regioes/{codigo}(codigo=${regiao.idRegiao})}"> <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
+                                  <span class="glyphicon glyphicon-pencil"></span> <!-- Ícone de ediçao de um lápis -->
+                              </a>
+                                  
+                                  <!-- DELETE -->  
+                            
+                                <a class="btn btn-link btn-xs" data-toggle="modal" data-target="#confirmacaoExclusaoModalRegiao"
+                                th:attr="data-codigo=${regiao.idRegiao}, data-descricao=${regiao.nomeRegiao}">
+                                    <span class="gliphycon glyphicon-remove"></span>
+                                </a>
+                            
+                            
+                            </td>
+  
+                        
+                        </tr>
+                    
+                        <tr>
+                            <td colspan="6" th:if="${#lists.isEmpty(regioes)}">Nenhuma região foi encontrada</td>
+                        
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+            </div>
+            
+            <!-- MODAL -->
+            
+            <div th:replace="modalexclusaoregiao"></div>
+                
+        </div>
+     
+        <script src="/js/jquery-3.6.0.min.js"></script>   
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/excluirRegiao.js"></script>
+     </body>
+
+
+</html>

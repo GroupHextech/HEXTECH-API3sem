@@ -21,16 +21,16 @@ public class RegiaoController {
 
 //============================================================
 	@Autowired
-	private Regiao regioes;
+	private Regioes regioes;
 	
-	@RequestMapping(value=("/principal"),method=RequestMethod.GET)
+	@RequestMapping(value=("/principal/regiao"),method=RequestMethod.GET)
 	public ModelAndView paginaInicial() {
-		ModelAndView mv=new ModelAndView("index");
+		ModelAndView mv=new ModelAndView("cadastroregiao");
 		return mv;
 		
 	}
 	
-	@RequestMapping(value=("/grafico"),method=RequestMethod.GET)
+	@RequestMapping(value=("/grafico/regiao"),method=RequestMethod.GET)
 	public ModelAndView grafico() {
 		ModelAndView mv=new ModelAndView("grafico");
 		return mv;
@@ -80,7 +80,7 @@ public class RegiaoController {
 	
 	@RequestMapping(value="/regioes/{idRegiao}",method=RequestMethod.GET)
 	public ModelAndView editarRegiao(@PathVariable ("idRegiao") Regiao regiao) {
-		ModelAndView mv=new ModelAndView("cadatroregiao");
+		ModelAndView mv=new ModelAndView("cadastroregiao");
 		mv.addObject(regiao);
 		return mv;
 		
