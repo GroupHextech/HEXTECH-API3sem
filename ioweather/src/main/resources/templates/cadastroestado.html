@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org"
+ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8"/>
+<title>Cadastro Estado</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #chart-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .fomu {
+            border-radius: 15px;
+            box-shadow: 3px 1px 10px lightgrey;
+        }
+    </style>
+</head>
+<body class="corpo">
+
+<form class="form-horizontal" method="post" action="/novoEstado" th:object="${estado}">
+
+   <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+       <span th:text="${mensagem}"></span>
+   </div>	
+  
+      <div class="alert alert-danger" th:if="${#fields.hasAnyErrors()}">
+       <div th:each="detailedError : ${#fields.detailedErrors()}">
+           <span th:text="${detailedError.message}"></span>
+       </div>
+   </div> 
+   
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="clearfix">
+                <h1 class="panel-title aw-titulo-panel" >Cadastro de Estados</h1>
+                <a class="btn btn-link aw-link-panel" href="/estados">Voltar para a pesquisa </a>
+            </div>
+        </div>
+        
+        <div class="panel-body">
+           <input type="hidden" th:field="*{idEstado}"/>
+           
+           
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto"  th:classappend="${#fields.hasErrors('nomeEstado')} ? 'has-error'" >
+               <label for="NomeEstado" class="control-label">Nome do Estado</label>         
+                    <input type="text" class="form-control fomu" id="NomeEstado" th:field="*{nomeEstado}"/>
+            </div>
+            
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('siglaEstado')} ? 'has-error'">
+                <label for="SiglaEstado" class="control-label">Sigla Estado</label>
+                    <input type="text" class="form-control fomu" id="SiglaEstado" th:field="*{siglaEstado}"/>
+            </div>
+            
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('idRegiaoEstado')} ? 'has-error'">
+                <label for="IdRegiaoEstado" class="control-label">Região do Estado</label>
+                    <input type="text" class="form-control fomu" id="IdRegiaoEstado" th:field="*{idRegiaoEstado}"/>
+            </div>
+            
+                    <button type="submit" class="btn btn-primary col-md-12 fomu" style="width:150px; float:right; margin: 30px 30px 0 0;">Salvar</button>
+                                    
+        </div>
+    </div>
+</form> 
+    
+ <script src="/js/jquery-3.6.0.min.js"></script>   
+ <script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html> 

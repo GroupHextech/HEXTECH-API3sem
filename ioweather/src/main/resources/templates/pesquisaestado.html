@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8"/>
+<title>Pesquisa Estados</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/css/style.css"/>
+</head>
+     <body>     
+     
+     <div class="panel panel-default"> <!-- Painel  -->
+            <div class="panel-heading">
+            
+               <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+                    <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
+               </div>
+                <div class="clearfix">
+                    <h1 class="panel-title aw-titulo-panel" > Pesquisa Estados </h1>
+                    <a class="btn btn-link aw-link-panel" href="/principal/novoEstado">Novo Estado</a>
+                </div>
+            </div>
+            
+            
+            <div class="panel-body">
+                <table class="table table-bordered table-striped">
+                    <thead> <!-- Cabeçalho da minha tabela de pesquisa  -->
+                        <tr>
+                            <th class="text-center col-md-1">#</th>
+                            <th class="text-center col-md-2">Nome do Estado</th>
+                            <th class="text-center col-md-2">Sigla do Estado</th>
+                            <th class="text-center col-md-2">Região do Estado</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr th:each="estado : ${estados}">
+                            <td class="text-center" th:text="${estado.idEstado}"></td>
+                            <td class="text-left" th:text="${{estado.nomeEstado}}"></td>
+                            <td class="text-center" th:text="${{estado.siglaEstado}}"></td>
+                            <td class="text-center" th:text="${{estado.idRegiaoEstado}}"></td> <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
+                          
+                            
+                            <!-- EDIÇAO -->
+                           <td class="text-center">
+                                <a class="btn btn-link btn-xs" th:href="@{/estados/{codigo}(codigo=${estado.idEstado})}"> <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
+                                  <span class="glyphicon glyphicon-pencil"></span> <!-- Ícone de ediçao de um lápis -->
+                              </a>
+                                  
+                                  <!-- DELETE -->  
+                            
+                                <a class="btn btn-link btn-xs" data-toggle="modal" data-target="#confirmacaoExclusaoModalEstado"
+                                th:attr="data-codigo=${estado.idEstado}, data-descricao=${estado.nomeEstado}">
+                                    <span class="gliphycon glyphicon-remove"></span>
+                                </a>
+                            
+                            
+                            </td>
+  
+                        
+                        </tr>
+                    
+                        <tr>
+                            <td colspan="6" th:if="${#lists.isEmpty(estado)}">Nenhum estado foi encontrada</td>
+                        
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
+            </div>
+            
+            <!-- MODAL -->
+            
+            <div th:replace="modalexclusaoestado"></div>
+                
+        </div>
+     
+        <script src="/js/jquery-3.6.0.min.js"></script>   
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/excluirEstado.js"></script>
+     </body>
+
+
+</html>

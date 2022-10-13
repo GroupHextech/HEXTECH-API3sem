@@ -41,7 +41,7 @@ public class EstacaoController {
 	
 	@RequestMapping(value=("/novaEstacao"), method=RequestMethod.GET)
 	public ModelAndView cadastroGetEstacoes() {
-		ModelAndView mv=new ModelAndView("CadastroEstacao");
+		ModelAndView mv=new ModelAndView("cadastroestacao");
 		mv.addObject(new Estacao());
 		return mv;
 		
@@ -55,7 +55,7 @@ public class EstacaoController {
 		
 		if(erros.hasErrors()) {
 			System.out.println("caiu aqui");
-			return "CadastroEstacao";
+			return "cadastroestacao";
 		}
 		
 		estacoes.save(estacao);
@@ -69,7 +69,7 @@ public class EstacaoController {
 	
 	@RequestMapping(value=("/estacoes"), method=RequestMethod.GET)
 	public ModelAndView pesquisarEstacao() {
-		ModelAndView mv=new ModelAndView("PesquisaEstacao");
+		ModelAndView mv=new ModelAndView("pesquisaestacao");
 		List<Estacao> todasEstacoes=estacoes.findAll();
 		mv.addObject("estacoes",todasEstacoes);
 		return mv;
@@ -80,7 +80,7 @@ public class EstacaoController {
 	
 	@RequestMapping(value="/estacoes/{idEstacao}",method=RequestMethod.GET)
 	public ModelAndView editarEstacao(@PathVariable ("idEstacao") Estacao estacao) {
-		ModelAndView mv=new ModelAndView("CadastroEstacao");
+		ModelAndView mv=new ModelAndView("cadastroestacao");
 		mv.addObject(estacao);
 		return mv;
 		

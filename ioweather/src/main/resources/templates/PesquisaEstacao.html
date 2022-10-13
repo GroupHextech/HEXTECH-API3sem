@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"xmlns:th="http://www.thymeleaf.org"
  >
-<hread>
+<head>
 <meta charset="UTF-8"/>
 <title>Pesquisa de Estaçoes</title>
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="/css/style.css"/>
-</hread>
+</head>
      <body>     
      
      <div class="panel panel-default"> <!-- Painel  -->
@@ -39,13 +39,13 @@
                     
                     <tbody>
                         <tr th:each="estacao : ${estacoes}">
-                            <td class="text-center" th:text="${estacao.idEstacaibr}">1</td>
+                            <td class="text-center" th:text="${estacao.idEstacao}">1</td>
                             <td class="text-left" th:text="${{estacao.nomeEstacao}}"></td>
-                            <td class="text-center" th:text="${{estacao.latitudeEstacao}}"></td> <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
-                            <td class="text-left" th:text="${{estacao.longitudeEstacao}}"></td>
-                            <td class="text-left" th:text="${{estacao.altitudeEstacao}}"></td>
+                            <td class="text-center" th:text="${{estacao.latitude}}"></td> <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
+                            <td class="text-left" th:text="${{estacao.longitude}}"></td>
+                            <td class="text-left" th:text="${{estacao.altitude}}"></td>
                             <td class="text-left" th:text="${{estacao.dataFundacao}}"></td>
-                            <td class="text-left" th:text="${{estacao.idEstado}}"></td>
+                            <td class="text-left" th:text="${{estacao.idEstadoEstacao}}"></td>
 
                            <!-- <td class="text-center">
                                 <span class="label" th:text="${titulo.status.descricao}" th:classappend="${titulo.pendente ? 'label-danger' : 'label-success'}"> Success</span>
@@ -53,14 +53,14 @@
                             
                             <!-- EDIÇAO -->
                            <td class="text-center">
-                                <a class="btn btn-link btn-xs" th:href="@{/estacoes/{codigo}(codigo=${estacao.idEstacaibr})}"> <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
+                                <a class="btn btn-link btn-xs" th:href="@{/estacoes/{codigo}(codigo=${estacao.idEstacao})}"> <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
                                   <span class="glyphicon glyphicon-pencil"></span> <!-- Ícone de ediçao de um lápis -->
                               </a>
                                   
                                   <!-- DELETE -->  
                             
                                 <a class="btn btn-link btn-xs" data-toggle="modal" data-target="#confirmacaoExclusaoModalEstacao"
-                                th:attr="data-codigo=${estacao.idEstacaibr}, data-descricao=${estacao.nomeEstacao}">
+                                th:attr="data-codigo=${estacao.idEstacao}, data-descricao=${estacao.nomeEstacao}">
                                     <span class="gliphycon glyphicon-remove"></span>
                                 </a>
                             
@@ -82,7 +82,7 @@
             
             <!-- MODAL -->
             
-            <div th:replace="ModalExclusaoEstacao"></div>
+            <div th:replace="modalexclusaoestacao"></div>
                 
         </div>
      
