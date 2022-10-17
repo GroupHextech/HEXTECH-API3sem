@@ -9,6 +9,8 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <link href="./assets/css/style.css" rel="stylesheet" />
+
     <!-- Bootstrap core CSS     -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -39,6 +41,12 @@
             border-radius: 15px;
             box-shadow: 3px 1px 10px lightgrey;
         }
+        .sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+            padding: 1.75rem 1rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -60,10 +68,23 @@
                             <p>Painel de Controle</p>
                         </a>
                     </li>
+                    <div class="sb-sidenav-menu-heading" style="padding: 1.75rem 1rem 0.75rem;font-size: 1.25rem;font-weight: bold;text-transform: uppercase;">Cadastrar</div>
+                    <li id="regiao">
+                        <a onclick="cadastroRegiao()">
+                            <i class="pe-7s-plus"></i>
+                            <p>Região</p>
+                        </a>
+                    </li>
+                    <li id="estado">
+                        <a onclick="cadastroEstado()">
+                            <i class="pe-7s-plus"></i>
+                            <p>Estado</p>
+                        </a>
+                    </li>
                     <li id="bbb">
                         <a onclick="cadastro()">
                             <i class="pe-7s-plus"></i>
-                            <p>Cadastro</p>
+                            <p>Estação</p>
                         </a>
                     </li>
                 </ul>
@@ -125,6 +146,22 @@
                         document.getElementById("iframe").src = '/novaEstacao';
                         document.querySelector('#bbb').classList.toggle("active");
                         document.querySelector('#aaa').classList.remove('active');
+                        document.querySelector('#regiao').classList.remove('active');
+                        document.querySelector('#estado').classList.remove('active');
+                    }
+                    function cadastroRegiao(){
+                        document.getElementById("iframe").src = '/novaRegiao';
+                        document.querySelector('#regiao').classList.toggle('active');
+                        document.querySelector('#aaa').classList.remove('active');
+                        document.querySelector('#bbb').classList.remove('active');
+                        document.querySelector('#estado').classList.remove('active');
+                    }
+                    function cadastroEstado(){
+                        document.getElementById("iframe").src = '/novoEstado';
+                        document.querySelector('#estado').classList.toggle('active');
+                        document.querySelector('#aaa').classList.remove('active');
+                        document.querySelector('#bbb').classList.remove('active');
+                        document.querySelector('#regiao').classList.remove('active');
                     }
                 </script>
             </div>
