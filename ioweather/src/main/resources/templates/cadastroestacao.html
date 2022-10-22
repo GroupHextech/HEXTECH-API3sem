@@ -43,7 +43,7 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="clearfix">
-                <h1 class="panel-title aw-titulo-panel" >Estaçao</h1>
+                <h1 class="panel-title aw-titulo-panel" >Estação</h1>
                 <a class="btn btn-link aw-link-panel" href="/estacoes">Voltar para a pesquisa </a>
             </div>
         </div>
@@ -58,22 +58,22 @@
             </div>
             
             <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('latitude')} ? 'has-error'">
-                <label for="Latitude" class="control-label"> Latitude da estaçao</label>
+                <label for="Latitude" class="control-label"> Latitude da estação</label>
                     <input type="text" class="form-control fomu" id="Latitude" th:field="*{latitude}"/>
             </div>
             
             <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('longitude')} ? 'has-error'">
-                <label for="Longitude" class="control-label"> Longitude da estaçao</label>
+                <label for="Longitude" class="control-label"> Longitude da estação</label>
                      <input type="text" class="form-control fomu" id="Longitude" th:field="*{longitude}"/>
             </div>
             
            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('altitude')} ? 'has-error'">
-                <label for="Altitude" class="control-label"> Altitude da estaçao</label>
+                <label for="Altitude" class="control-label"> Altitude da estação</label>
                      <input type="text" class="form-control fomu" id="Altitude" th:field="*{altitude}"/>
             </div>
             
             <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('dataFundacao')} ? 'has-error'">
-                <label for="DataFundacao" class="control-label"> Data da Fundaçao</label>
+                <label for="DataFundacao" class="control-label"> Data da fundação</label>
                      <input type="date" class="form-control fomu" id="DataFundacao" th:field="*{dataFundacao}"/>
             </div>
             
