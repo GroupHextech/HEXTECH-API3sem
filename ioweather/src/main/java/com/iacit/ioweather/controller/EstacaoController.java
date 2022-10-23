@@ -59,7 +59,7 @@ public class EstacaoController {
 		}
 		
 		estacoes.save(estacao);
-		attributes.addFlashAttribute("mensagem","Estacao Salva com sucesso.");
+		attributes.addFlashAttribute("mensagem","Estação salva com sucesso.");
 		
 		
 		return "redirect:/novaEstacao";
@@ -90,7 +90,7 @@ public class EstacaoController {
 	@RequestMapping(value="/estacoes/{idEstacao}",method=RequestMethod.DELETE)
 	public String excluirEstacao(@PathVariable Long idEstacao,RedirectAttributes attributes) {
 		estacoes.deleteById(idEstacao);
-		attributes.addFlashAttribute("mensagem","Estaçao excluida com sucesso.");
+		attributes.addFlashAttribute("mensagem","Estação excluída com sucesso.");
 		
 		
 		

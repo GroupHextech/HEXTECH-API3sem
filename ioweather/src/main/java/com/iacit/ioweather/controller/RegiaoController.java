@@ -23,7 +23,7 @@ public class RegiaoController {
 	@Autowired
 	private Regioes regioes;
 	
-	@RequestMapping(value=("/principal/regiao"),method=RequestMethod.GET)
+/* 	@RequestMapping(value=("/principal/regiao"),method=RequestMethod.GET)
 	public ModelAndView paginaInicial() {
 		ModelAndView mv=new ModelAndView("cadastroregiao");
 		return mv;
@@ -35,7 +35,7 @@ public class RegiaoController {
 		ModelAndView mv=new ModelAndView("grafico");
 		return mv;
 		
-	}
+	}*/ 
 		
 //============================================================	
 	
@@ -67,7 +67,7 @@ public class RegiaoController {
 	
 	
 	
-	@RequestMapping(value=("/regiao"), method=RequestMethod.GET)
+	@RequestMapping(value=("/regioes"), method=RequestMethod.GET)
 	public ModelAndView pesquisarRegiao() {
 		ModelAndView mv=new ModelAndView("pesquisaregiao");
 		List<Regiao> todasRegioes=regioes.findAll();
@@ -90,11 +90,11 @@ public class RegiaoController {
 	@RequestMapping(value="/regioes/{idRegiao}",method=RequestMethod.DELETE)
 	public String excluirRegiao(@PathVariable Long idRegiao,RedirectAttributes attributes) {
 		regioes.deleteById(idRegiao);
-		attributes.addFlashAttribute("mensagem","Região excuída com sucesso.");
+		attributes.addFlashAttribute("mensagem","Região excluída com sucesso.");
 		
 		
 		
-		return "redirect:/regiao";
+		return "redirect:/regioes";
 	}
 
 }

@@ -16,8 +16,8 @@
                     <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
                </div>
                 <div class="clearfix">
-                    <h1 class="panel-title aw-titulo-panel" > Pesquisa Estaçoes </h1>
-                    <a class="btn btn-link aw-link-panel" href="/novaEstacao"> Nova estacao </a>
+                    <h1 class="panel-title aw-titulo-panel" > Pesquisa Estações </h1>
+                    <!--<a class="btn btn-link aw-link-panel" href="/novaEstacao"> Nova estação </a>-->
                 </div>
             </div>
             
@@ -27,11 +27,11 @@
                     <thead> <!-- Cabeçalho da minha tabela de pesquisa  -->
                         <tr>
                             <th class="text-center col-md-1">#</th>
-                            <th>Nome da Estacao</th>
+                            <th>Nome da Estação</th>
                             <th class="text-center col-md-2">Latitude</th>
                             <th class="text-right col-md-2">Longitude</th>
                             <th class="text-center col-md-2">Altitude</th>
-                            <th class="text-center col-md-2">Data de Fundaçao</th>
+                            <th class="text-center col-md-2">Data de Fundação</th>
                             <th class="text-center col-md-2">Estado</th>
                             <th class="col-md-1"></th>
                         </tr>
@@ -71,7 +71,7 @@
                         </tr>
                     
                         <tr>
-                            <td colspan="6" th:if="${#lists.isEmpty(estacoes)}">Nenhuma Estaçao foi encontrada</td>
+                            <td colspan="6" th:if="${#lists.isEmpty(estacoes)}">Nenhuma Estação foi encontrada</td>
                         
                         </tr>
                     

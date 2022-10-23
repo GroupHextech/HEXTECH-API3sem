@@ -24,7 +24,7 @@ public class EstadoController {
 	@Autowired
 	private Estados estados;
 	
-	@RequestMapping(value=("/principal/estado"),method=RequestMethod.GET)
+/*	@RequestMapping(value=("/principal/estado"),method=RequestMethod.GET)
 	public ModelAndView paginaInicial() {
 		ModelAndView mv=new ModelAndView("cadastroestado");
 		return mv;
@@ -36,7 +36,7 @@ public class EstadoController {
 		ModelAndView mv=new ModelAndView("grafico");
 		return mv;
 		
-	}
+	}  */
 		
 //============================================================	
 	
