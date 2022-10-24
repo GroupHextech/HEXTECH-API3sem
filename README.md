@@ -101,9 +101,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 
 <h2>Burndown</h2>
-<h1> Sprint 2 </h1>
-![image](https://user-images.githubusercontent.com/82103455/197425371-cd8b9640-927c-43f4-9f7e-8317b65259c9.png)
-
+![image](https://user-images.githubusercontent.com/82103455/197425502-fa9ab7e9-bec6-4b66-991f-9438c54c6ea9.png)
 
 
 
