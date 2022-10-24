@@ -15,8 +15,7 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 
 <h2> Manual do Usuário </h2>
-[→ Acessar](https://github.com/GroupHextech/HEXTECH-API3sem/blob/main/Manual%20do%20Usu%C3%A1rio/Manual.md)
-
+<li><a href="https://github.com/GroupHextech/HEXTECH-API3sem/blob/main/Manual%20do%20Usu%C3%A1rio/Manual.md">→ Acessar</a></li>
 
 <h2>Sobre o grupo</h2>
 
