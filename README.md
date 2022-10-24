@@ -101,9 +101,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 
 <h2>Burndown</h2>
-![image](https://user-images.githubusercontent.com/82103455/197425502-fa9ab7e9-bec6-4b66-991f-9438c54c6ea9.png)
-
-
+![SP2](https://user-images.githubusercontent.com/82103455/197425566-82d68bf1-99aa-4ba9-b6e8-123424133287.png)
 
 <h2>Tecnologias utilizadas</h2>
 
