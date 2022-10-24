@@ -13,9 +13,7 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
 - [Wireframes, arte conceito da aplicação](#Wireframes)
 - [Burndown](#burndown)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
-
-<h2> Manual do Usuário </h2>
-<li><a href="https://github.com/GroupHextech/HEXTECH-API3sem/blob/main/Manual%20do%20Usu%C3%A1rio/Manual.md">Acessar</a></li>
+- [Manual do Usuário](https://www.w3schools.com/xml/ajax_intro.asp "AJAX")
 
 <h2>Sobre o grupo</h2>
 
@@ -103,7 +101,9 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 
 <h2>Burndown</h2>
--#-#-#-#
+- Sprint 2
+![image](https://user-images.githubusercontent.com/82103455/197425371-cd8b9640-927c-43f4-9f7e-8317b65259c9.png)
+
 
 
 
@@ -117,7 +117,7 @@ Ferramentas utilizadas para desenvolvimento da atividade:
 - [MS Teams](http://https://www.microsoft.com/pt-br/microsoft-teams/log-in "MS Teams")
 
 **Banco de Dados:**
-- [PostgreSQL](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
+- [PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 - [MySQL](https://dev.mysql.com/downloads/mysql/ "MySQL Community") BD para homologação.
 - [PGAdmin](https://www.pgadmin.org/ "PGAdmin")
 
