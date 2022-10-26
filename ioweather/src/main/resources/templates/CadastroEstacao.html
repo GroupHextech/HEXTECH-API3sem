@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
  xmlns:th="http://www.thymeleaf.org"
  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
-<hread>
+<head>
 <meta charset="UTF-8"/>
 <title></title>
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
@@ -25,7 +25,7 @@
             box-shadow: 3px 1px 10px lightgrey;
         }
     </style>
-</hread>
+</head>
 <body class="corpo">
 
 <form class="form-horizontal" method="post" action="/novaEstacao" th:object="${estacao}">
@@ -43,43 +43,43 @@
     <div class="panel panel-default">
         <div class="panel-heading">
             <div class="clearfix">
-                <h1 class="panel-title aw-titulo-panel" >Estaçao</h1>
-                <a class="btn btn-link aw-link-panel" href="/estacoes">Voltar para a pesquisa </a>
+                <h1 class="panel-title aw-titulo-panel" >Estação</h1>
+                <a class="btn btn-link aw-link-panel" href="/estacoes">Listar estações</a>
             </div>
         </div>
         
         <div class="panel-body">
-           <input type="hidden" th:field="*{idEstacaibr}"/>
+           <input type="hidden" th:field="*{idEstacao}"/>
            
            
             <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto"  th:classappend="${#fields.hasErrors('nomeEstacao')} ? 'has-error'" >
-               <label for="NomeEstacao" class="control-label">Nome da Estaçao</label>         
+               <label for="NomeEstacao" class="control-label">Nome da Estação</label>         
                     <input type="text" class="form-control fomu" id="NomeEstacao" th:field="*{nomeEstacao}"/>
             </div>
             
-            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('latitudeEstacao')} ? 'has-error'">
-                <label for="Latitude" class="control-label"> Latitude da estaçao</label>
-                    <input type="text" class="form-control fomu" id="Latitude" th:field="*{latitudeEstacao}"/>
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('latitude')} ? 'has-error'">
+                <label for="Latitude" class="control-label"> Latitude da estação</label>
+                    <input type="text" class="form-control fomu" id="Latitude" th:field="*{latitude}"/>
             </div>
             
-            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('longitudeEstacao')} ? 'has-error'">
-                <label for="Longitude" class="control-label"> Longitude da estaçao</label>
-                     <input type="text" class="form-control fomu" id="Longitude" th:field="*{longitudeEstacao}"/>
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('longitude')} ? 'has-error'">
+                <label for="Longitude" class="control-label"> Longitude da estação</label>
+                     <input type="text" class="form-control fomu" id="Longitude" th:field="*{longitude}"/>
             </div>
             
-           <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('altitudeEstacao')} ? 'has-error'">
-                <label for="Altitude" class="control-label"> Altitude da estaçao</label>
-                     <input type="text" class="form-control fomu" id="Altitude" th:field="*{altitudeEstacao}"/>
+           <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('altitude')} ? 'has-error'">
+                <label for="Altitude" class="control-label"> Altitude da estação</label>
+                     <input type="text" class="form-control fomu" id="Altitude" th:field="*{altitude}"/>
             </div>
             
             <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('dataFundacao')} ? 'has-error'">
-                <label for="DataFundacao" class="control-label"> Data da Fundaçao</label>
+                <label for="DataFundacao" class="control-label"> Data da fundação</label>
                      <input type="date" class="form-control fomu" id="DataFundacao" th:field="*{dataFundacao}"/>
             </div>
             
-            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('idEstado')} ? 'has-error'">
-                <label for="IdEstado" class="control-label"> Estado</label>          
-                     <input type="text" class="form-control fomu" id="IdEstado" th:field="*{idEstado}"/>
+            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto" th:classappend="${#fields.hasErrors('idEstadoEstacao')} ? 'has-error'">
+                <label for="idEstadoEstacao" class="control-label"> Estado</label>          
+                     <input type="text" class="form-control fomu" id="idEstadoEstacao" th:field="*{idEstadoEstacao}"/>
             </div>
             
                     <button type="submit" class="btn btn-primary col-md-12 fomu" style="width:150px; float:right; margin: 30px 30px 0 0;">Salvar</button>

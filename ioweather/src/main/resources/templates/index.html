@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hextech</title>
+    <title>HexTech</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link href="./assets/css/style.css" rel="stylesheet" />
 
     <!-- Bootstrap core CSS     -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
@@ -39,6 +41,12 @@
             border-radius: 15px;
             box-shadow: 3px 1px 10px lightgrey;
         }
+        .sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+            padding: 1.75rem 1rem 0.75rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
@@ -50,7 +58,7 @@
             <div class="sidebar-wrapper">
                 <div class="logo" style="box-shadow: 3px 1px 10px rgb(71, 71, 71)">
                     <a class="simple-text"> <img src="assets/img/logo.png" height="20px" width="20px"
-                            style="margin-top: -5px ;"> HEXTECH</a>
+                            style="margin-top: -5px ;">HEXTECH</a>
                 </div>
 
                 <ul class="nav">
@@ -60,10 +68,29 @@
                             <p>Painel de Controle</p>
                         </a>
                     </li>
+                    <div class="sb-sidenav-menu-heading" style="padding: 1.75rem 1rem 0.75rem;font-size: 1.25rem;font-weight: bold;text-transform: uppercase;">Cadastrar</div>
+                    <li id="regiao">
+                        <a onclick="cadastroRegiao()">
+                            <i class="pe-7s-plus"></i>
+                            <p>Região</p>
+                        </a>
+                    </li>
+                    <li id="estado">
+                        <a onclick="cadastroEstado()">
+                            <i class="pe-7s-plus"></i>
+                            <p>Estado</p>
+                        </a>
+                    </li>
                     <li id="bbb">
                         <a onclick="cadastro()">
                             <i class="pe-7s-plus"></i>
-                            <p>Cadastro</p>
+                            <p>Estação</p>
+                        </a>
+                    </li>
+                    <li id="pesquisa">
+                        <a onclick="pesquisa()">
+                            <i class="pe-7s-search"></i>
+                            <p>Pesquisar</p>
                         </a>
                     </li>
                 </ul>
@@ -110,21 +137,80 @@
             <div class="content" style="padding:  30px  0px  0px  0px; ">
 
                 <iframe id="iframe" width="100%" scrolling="no" style="border: none;"></iframe>
+                <iframe id="estacoes" width="100%" scrolling="no" style="border: none;"></iframe>
+                <iframe id="estados" width="100%" scrolling="no" style="border: none;"></iframe>
+                <iframe id="regioes" width="100%" scrolling="no" style="border: none;"></iframe>
                 <script>
                     var altura = window.screen.height;
-                    document.getElementById("iframe").height = altura - 241;
-                    document.getElementById("iframe").src = '/grafico'
+                    
+                    document.getElementById("iframe").src = '/grafico';
+                    document.getElementById("estados").height = 0;
+                    document.getElementById("estacoes").height = 0;
+                    document.getElementById("regioes").height = 0;
 
                     function painel(){
+                        document.getElementById("iframe").height = altura - 241;
+                        document.getElementById("estados").height = 0;
+                        document.getElementById("estacoes").height = 0;
+                        document.getElementById("regioes").height = 0;
                         document.getElementById("iframe").src = '/grafico';
                         document.querySelector('#aaa').classList.toggle("active");
                         document.querySelector('#bbb').classList.remove('active');
+                        document.querySelector('#regiao').classList.remove('active');
+                        document.querySelector('#estado').classList.remove('active');
+                        document.querySelector('#pesquisa').classList.remove('active');
                     }
 
                     function cadastro(){
+                        document.getElementById("iframe").height = altura - 241;
+                        document.getElementById("estados").height = 0;
+                        document.getElementById("estacoes").height = 0;
+                        document.getElementById("regioes").height = 0;
                         document.getElementById("iframe").src = '/novaEstacao';
                         document.querySelector('#bbb').classList.toggle("active");
                         document.querySelector('#aaa').classList.remove('active');
+                        document.querySelector('#regiao').classList.remove('active');
+                        document.querySelector('#estado').classList.remove('active');
+                        document.querySelector('#pesquisa').classList.remove('active');
+                    }
+                    function cadastroRegiao(){
+                        document.getElementById("iframe").height = altura - 241;
+                        document.getElementById("estados").height = 0;
+                        document.getElementById("estacoes").height = 0;
+                        document.getElementById("regioes").height = 0;
+                        document.getElementById("iframe").src = '/novaRegiao';
+                        document.querySelector('#regiao').classList.toggle('active');
+                        document.querySelector('#aaa').classList.remove('active');
+                        document.querySelector('#bbb').classList.remove('active');
+                        document.querySelector('#estado').classList.remove('active');
+                        document.querySelector('#pesquisa').classList.remove('active');
+                    }
+                    function cadastroEstado(){
+                        document.getElementById("iframe").height = altura - 241;
+                        document.getElementById("estados").height = 0;
+                        document.getElementById("estacoes").height = 0;
+                        document.getElementById("regioes").height = 0;
+                        document.getElementById("iframe").src = '/novoEstado';
+                        document.querySelector('#estado').classList.toggle('active');
+                        document.querySelector('#aaa').classList.remove('active');
+                        document.querySelector('#bbb').classList.remove('active');
+                        document.querySelector('#regiao').classList.remove('active');
+                        document.querySelector('#pesquisa').classList.remove('active');
+                    }
+                    function pesquisa(){
+                        document.getElementById("iframe").src = '';
+                        document.getElementById("iframe").height = 0;
+                        document.getElementById("estados").height = altura - 500;
+                        document.getElementById("estacoes").height = altura - 500;
+                        document.getElementById("regioes").height = altura - 500;
+                        document.getElementById("estados").src = '/estados';
+                        document.getElementById("estacoes").src = '/estacoes';
+                        document.getElementById("regioes").src = '/regioes';
+                        document.querySelector('#estado').classList.remove('active');
+                        document.querySelector('#aaa').classList.remove('active');
+                        document.querySelector('#bbb').classList.remove('active');
+                        document.querySelector('#regiao').classList.remove('active');
+                        document.querySelector('#pesquisa').classList.toggle('active');
                     }
                 </script>
             </div>
