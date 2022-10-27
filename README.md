@@ -7,32 +7,31 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
 
 - [Sobre o grupo](#sobre-o-grupo)
 - [Objetivo do Projeto](#objetivo-do-projeto)
-- [Cronograma das Sprints](#cronograma-das-sprints)
-- [Backlog e Proposta de Entregas](#backlog-e-proposta-de-entregas)
-- [Modelo conceitual e lógico do Banco de Dados](#modelo-conceitual-e--logido-do-banco-de-dados)
-- [Wireframes, arte conceito da aplicação](#Wireframes)
-- [Burndown](#burndown)
+- [Manual do usuário (Excutando a aplicação)](manual_usuario/user_manual.md "Manual do usuário")
+- Backlog do produto e backlog das sprints
+    - [backlog  e Cronograma das Sprints](#cronograma-das-sprints)
+    - [Backlog e Proposta de Entregas](#backlog-e-proposta-de-entregas)
+
+- Andamento das atividas por sprint
+    - [Modelo conceitual e lógico do Banco de Dados](#modelo-conceitual-e--logido-do-banco-de-dados)
+    - [Wireframes, arte conceito da aplicação](#Wireframes)
+    - [Burndown](#burndown)
+
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
-- [Manual do Usuário](https://www.w3schools.com/xml/ajax_intro.asp "AJAX")
 
 <h2>Sobre o grupo</h2>
 
-**Scrum Master:**<br>
-[William David Antoniazzi](mailto:william.antoniazzi@fatec.sp.gov.br "William David Antoniazzi") <a href="https://www.linkedin.com/in/williamantoniazzi/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a>
-
-**PO:**<br>
-[Luiz Fernando Habaeb](mailto:luiz.habaeb@fatec.sp.gov.br "Luiz Fernando Habaeb") <a href="https://www.linkedin.com/in/luizhabaeb/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a>
-
-**Demais integrantes:**<br>
-[Caio Sendreto](mailto:caio.sendreto@fatec.sp.gov.br "Caio Sendreto") <a href="https://www.linkedin.com/in/caio-sendreto-0736311a2/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a><br>
-[Jonathan Willian](mailto:jonathan.alves5@fatec.sp.gov.br "Jonathan Willian") <a href="https://www.linkedin.com/in/jonathan-alves-18069118a/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a><br>
-[Michel Rubens Silva](mailto:michel.silva33@fatec.sp.gov.br "Michel Rubens Silva") <a href="https://www.linkedin.com/in/michelrubens/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a><br>
-[Ruan Macedo](mailto:ruan.macedo@fatec.sp.gov.br "Ruan Macedo") <a href="https://www.linkedin.com/in/ruan-cesar-mac/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a>
+| Scrum Master | PO | Desenvolvedores | 
+| ------------------- | ------------------- |  ------------------- | 
+| [William David Antoniazzi](mailto:william.antoniazzi@fatec.sp.gov.br "William David Antoniazzi") <a href="https://www.linkedin.com/in/williamantoniazzi/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a> | [Luiz Fernando Habaeb](mailto:luiz.habaeb@fatec.sp.gov.br "Luiz Fernando Habaeb") <a href="https://www.linkedin.com/in/luizhabaeb/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a> | [Michel Rubens Silva](mailto:michel.silva33@fatec.sp.gov.br "Michel Rubens Silva") <a href="https://www.linkedin.com/in/michelrubens/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a> | 
+| | | [Caio Sendreto](mailto:caio.sendreto@fatec.sp.gov.br "Caio Sendreto") <a href="https://www.linkedin.com/in/caio-sendreto-0736311a2/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a> | 
+| | | [Jonathan Willian](mailto:jonathan.alves5@fatec.sp.gov.br "Jonathan Willian") <a href="https://www.linkedin.com/in/jonathan-alves-18069118a/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a> |
+| | | [Ruan Macedo](mailto:ruan.macedo@fatec.sp.gov.br "Ruan Macedo") <a href="https://www.linkedin.com/in/ruan-cesar-mac/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a> |
 
 <h2>Objetivo do Projeto</h2>
 
 Criação de um sistema web para o cliente [IACIT Soluções Tecnológicas S.A](http://https://www.iacit.com.br/ "IACIT Soluções Tecnológicas S.A").
-Uma empresa de consultoria meteorológica que necessitam de um sistema para armazenar seus dados em uma base e assim gerar relatórios customizados a seus clientes.
+Uma empresa de consultoria meteorológica que necessitam de um sistema para armazenar seus dados em uma base de dados e com isto oferecer uma plataforma para visualização de dados e gerar relatórios customizados a seus clientes.
 
 
 <h2>Cronograma das Sprints</h2>
@@ -106,33 +105,15 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 <h2>Tecnologias utilizadas</h2>
 
-Ferramentas utilizadas para desenvolvimento da atividade:
+Ferramentas utilizadas para desenvolvimento das atividades:
 
-**Comunicação e Versionamento:**
-- [GitHub](https://github.com/)
-- [Git](https://git-scm.com/download/win)
-- [MS Teams](http://https://www.microsoft.com/pt-br/microsoft-teams/log-in "MS Teams")
-
-**Banco de Dados:**
-- [PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
-- [MySQL](https://dev.mysql.com/downloads/mysql/ "MySQL Community") BD para homologação.
-- [PGAdmin](https://www.pgadmin.org/ "PGAdmin")
-
-**Front end e fluxos:**
-- [Figma](https://www.figma.com/ "Figma")
-- [Bootstrap](https://getbootstrap.com/ "Bootstrap")
-- [jQuery](https://jquery.com/ "jQuery")
-- [JavaScript](https://www.javascript.com/ "JavaScript")
-- [CSS3](https://www.w3schools.com/css/ "CSS3")
-- [HTM5](https://www.w3c.br/pub/Cursos/CursoHTML5/html5-web.pdf "HTML5")
-- [Thymeleaf](https://www.thymeleaf.org/ "Thymeleaf")
-- [Ajax](https://www.w3schools.com/xml/ajax_intro.asp "AJAX")
-
-**Back End:**
-- [Java JDK](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html "Java JDK")
-- [Spring](https://start.spring.io/ "Spring")
-- [Apache Tomcat](https://tomcat.apache.org/ "Apache Tomcat")
-- [Springboot](https://spring.io/projects/spring-boot "Springboot")
-- [Hibernate](https://hibernate.org/ "Hibernate")
-- [JPA](https://www.ibm.com/docs/pt-br/was/8.5.5?topic=SSEQTP_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/cejb_persistence.html "Java JPA")
-- [DEVTools](https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html "DEVTools")
+| Comunicação e Versionamento | Banco de Dados | Front end e fluxos | Back End |
+| --- | --- | --- | --- |
+| [GitHub](https://github.com/) | [PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) | [Figma](https://www.figma.com/ "Figma") | [Java JDK](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html "Java JDK") |
+| [Git](https://git-scm.com/download/win) | [PGAdmin](https://www.pgadmin.org/ "PGAdmin") | [Bootstrap](https://getbootstrap.com/ "Bootstrap") | [Spring](https://start.spring.io/ "Spring") |
+| [MS Teams](http://https://www.microsoft.com/pt-br/microsoft-teams/log-in "MS Teams") | [MySQL](https://dev.mysql.com/downloads/mysql/ "MySQL Community") BD para homologação | [jQuery](https://jquery.com/ "jQuery") | [Apache Tomcat](https://tomcat.apache.org/ "Apache Tomcat") |
+| | | [JavaScript](https://www.javascript.com/ "JavaScript") | [Springboot](https://spring.io/projects/spring-boot "Springboot") |
+| | | [CSS3](https://www.w3schools.com/css/ "CSS3") | [Hibernate](https://hibernate.org/ "Hibernate") |
+| | | [HTM5](https://www.w3c.br/pub/Cursos/CursoHTML5/html5-web.pdf "HTML5") | [JPA](https://www.ibm.com/docs/pt-br/was/8.5.5?topic=SSEQTP_8.5.5/com.ibm.websphere.nd.multiplatform.doc/ae/cejb_persistence.html "Java JPA") |
+| | | [Thymeleaf](https://www.thymeleaf.org/ "Thymeleaf") | [DEVTools](https://docs.spring.io/spring-boot/docs/1.5.16.RELEASE/reference/html/using-boot-devtools.html "DEVTools") |
+| | | [Ajax](https://www.w3schools.com/xml/ajax_intro.asp "AJAX") | |
