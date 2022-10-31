@@ -1,4 +1,5 @@
 # HexTech - Soluções em Tecnologia
+
 Empresa fictícia criada pelos alunos do 3º Semestre de Banco de Dados da [Fatec SJC - Prof. Jessen Vidal](https://fatecsjc-prd.azurewebsites.net/suporte-moodle.php "Fatec SJC - Prof. Jessen Vidal") para a realização das atividades curriculares e API semestral.
 
 Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnológicas.
@@ -8,12 +9,12 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
 
 - [Sobre o grupo](#sobre-o-grupo)
 - [Objetivo do Projeto](#objetivo-do-projeto)
-- [Manual do usuário (Excutando a aplicação)](manual_usuario/user_manual.md "Manual do usuário")
-- [Cronograma e Backlog das sprints](#cronograma-backlog-das-sprints)
-    - [Backlog e cronograma sprint 1]
-    - [Backlog e cronograma sprint 2]
-    - [Backlog e cronograma sprint 3]
-    - [Backlog e cronograma sprint 4]
+- [Manual do usuário (Excutando a aplicação)](#manual-do-usuário-excutando-a-aplicação)
+- [Cronograma e Backlog das sprints](#cronograma-e-backlog-das-sprints)
+    - [Backlog e cronograma sprint 1](readme_pages/sprint01_backlog_burndown.md)
+    - [Backlog e cronograma sprint 2](readme_pages/sprint02_backlog_burndown.md)
+    - [Backlog e cronograma sprint 3](readme_pages/sprint03_backlog_burndown.md)
+    - [Backlog e cronograma sprint 4](readme_pages/sprint04_backlog_burndown.md)
 
 - Andamento das atividas por sprint
     - [Modelo conceitual e lógico do Banco de Dados](#modelo-conceitual-e-logico-do-banco-de-dados)
@@ -40,16 +41,20 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 
 
 <h2>Manual do usuário (Excutando a aplicação)</h2>
+
 Todo processo para execução da aplicação está orientado neste manual criado para o cliente.
 
 [Manual do usuário (Excutando a aplicação)](manual_usuario/user_manual.md "Manual do usuário")
 
 
 <h2>Cronograma e Backlog das sprints</h2>
-D:\Workspace_GitGitHub\HEXTECH-API3sem\documents\Backlog do Produto (novo).png
 
+![Backlog_do_Produto](documents/BacklogProduto.png "Backlog do Produto")
 
-
+- [Backlog e cronograma sprint 1](readme_pages/sprint01_backlog_burndown.md)
+- [Backlog e cronograma sprint 2](readme_pages/sprint02_backlog_burndown.md)
+- [Backlog e cronograma sprint 3](readme_pages/sprint03_backlog_burndown.md)
+- [Backlog e cronograma sprint 4](readme_pages/sprint04_backlog_burndown.md)
 
 
 <h2>Tecnologias utilizadas</h2>
