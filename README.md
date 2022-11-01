@@ -15,13 +15,13 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
     - [Backlog e cronograma sprint 2](readme_pages/sprint02_backlog_burndown.md)
     - [Backlog e cronograma sprint 3](readme_pages/sprint03_backlog_burndown.md)
     - [Backlog e cronograma sprint 4](readme_pages/sprint04_backlog_burndown.md)
-
-- Andamento das atividas por sprint
-    - [Modelo conceitual e lógico do Banco de Dados](#modelo-conceitual-e-logico-do-banco-de-dados)
-    - [Wireframes, arte conceito da aplicação](#Wireframes)
-    - [Burndown](#burndown)
-
+- [Andamento das atividas por sprint](#andamento-das-atividades)
+    - [Andamento Sprint 01](readme_pages/sprint01_atividades_entrega.md)
+    - [Andamento Sprint 02](readme_pages/sprint02_atividades_entrega.md)
+    - [Andamento Sprint 03](readme_pages/sprint03_atividades_entrega.md)
+    - [Andamento Sprint 04](readme_pages/sprint04_atividades_entrega.md)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
+
 
 
 <h2>Sobre o grupo</h2>
@@ -55,6 +55,15 @@ Todo processo para execução da aplicação está orientado neste manual criado
 - [Backlog e cronograma sprint 2](readme_pages/sprint02_backlog_burndown.md)
 - [Backlog e cronograma sprint 3](readme_pages/sprint03_backlog_burndown.md)
 - [Backlog e cronograma sprint 4](readme_pages/sprint04_backlog_burndown.md)
+
+
+<h2>Andamento das atividades</h2>
+Nest tópico aprensentamos todo o andamento e trabalho, por sprint, para se obter um funcionalidade nova no projeto como Task, evolução do banco e da programação e também se o que foi planejado foi entregue ao cliente.
+
+- [Andamento Sprint 01](readme_pages/sprint01_atividades_entrega.md)
+- [Andamento Sprint 02](readme_pages/sprint02_atividades_entrega.md)
+- [Andamento Sprint 03](readme_pages/sprint03_atividades_entrega.md)
+- [Andamento Sprint 04](readme_pages/sprint04_atividades_entrega.md)
 
 
 <h2>Tecnologias utilizadas</h2>
