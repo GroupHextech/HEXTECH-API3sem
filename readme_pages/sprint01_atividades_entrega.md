@@ -20,9 +20,13 @@ Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da 
 
 Modelo conceitual e lógico criado do banco de dados para apresentação da sprint 01.
 
-**Modelo conceitual para a primeira entrega:**
-![ModeloconceitualBDSP1](../documents/BRModel_ConceitualIACITI_SP01.png "Modelo conceitual BD Sprint 1")
 
-***Modelo lógico para a priomeira entrega:**
-![ModeloLogicoBDSP1](../readme_docs/bdsprint1.png "Modelo lógico BD Sprint 1")
+<h3>Modelo conceitual:</h3>
+
+![ModeloconceitualBDSP1](../documents/BRModel_ConceitualIACITI_SP01.png)
+
+
+<h3>Modelo lógico:</h3>
+
+![ModeloLogicoBDSP1](../readme_docs/bdsprint1.png)
 <br />
