@@ -36,4 +36,4 @@ Proposta de funcionalidades a serem entregues ao cliente para a sprint 02
 <h2>Burndown Sprint02</h2>
 Gráfico com a evolução do tempo de execução da sprint
 
-![Sprint02](readme_docs/BurndownSP2.png "Burndown Sprint02")
+![Sprint02](../readme_docs/BurndownSP2.png "Burndown Sprint02")

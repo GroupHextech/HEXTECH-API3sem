@@ -12,7 +12,7 @@ Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da 
 
 <h2>Backlog do produto, Tasks no Jira</h2>
 
-![taskssprint01](readme_docs/tasks_sprint01.png)
+![taskssprint01](../readme_docs/tasks_sprint01.png)
 <br />
 
 
@@ -20,7 +20,9 @@ Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da 
 
 Modelo conceitual e lógico criado do banco de dados para apresentação da sprint 01.
 
-![ModeloconceitualBDSP1](documents/BRModel_ConceitualIACITI_SP01.png "Modelo conceitual BD Sprint 1")
+**Modelo conceitual para a primeira entrega:**
+![ModeloconceitualBDSP1](../documents/BRModel_ConceitualIACITI_SP01.png "Modelo conceitual BD Sprint 1")
 
-![ModeloLogicoBDSP1](readme_docs/bdsprint1.png "Modelo lógico BD Sprint 1")
+***Modelo lógico para a priomeira entrega:**
+![ModeloLogicoBDSP1](../readme_docs/bdsprint1.png "Modelo lógico BD Sprint 1")
 <br />

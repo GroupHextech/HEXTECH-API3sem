@@ -1,1 +1,50 @@
-sprint3 atividades
+# Crongrama, Backlog do produto e das sprints - SPRINT 03
+Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da aplicação em uma visão de tarefas realizadas pelo grupo.
+<br />
+
+
+<h2>Índice</h2>
+
+- [Backlog do produto em Tasks no Jira](#backlog-do-produto-tasks-no-jira)
+- [Implementação do Banco de dados](#implementacao-do-banco-de-dados)
+    - [Modelo conceitual](#modelo-conceitual)
+    - [Modelo lógico](#modelo-logico)
+    - [Modelo físico - Script SQL](#modelo-fisico-script-sql)
+    - [Dicionário de dados](#dicionario-dados)
+<br />
+
+
+<h2>Backlog do produto, Tasks no Jira</h2>
+
+![taskssprint01](../readme_docs/tasks_sprint03.png)
+<br />
+
+
+<h2>Modelo conceitual e lógico do Banco de Dados</h2>
+
+Modelo conceitual e lógico criado do banco de dados para apresentação da sprint 03.
+
+
+<h3>Modelo conceitual:</h3>
+
+![ModeloconceitualBDSP1](../documents/BRModel_ConceitualIACITI.png "Modelo conceitual BD Sprint 1")
+
+
+<h3>Modelo lógico:</h3>
+
+![ModeloLogicoBDSP1](../documents/IACIT_PostgreSQL-050922_COMPLETO.png "Modelo lógico BD Sprint 1")
+
+
+<h3>Modelo físico - Script SQL:</h3>
+Modelo físico do banco finalizado, script compondo a criação e ligação das tabelas para PostgreSQL
+
+[Script PostgreSQL, Base de dados](../documents/IACIT_PostgreSQL_Physical_Export_create.sql)
+
+
+<h3>Dicionário de dados:</h3>
+Dicionário em PDF com informações sobre a estrutura do banco de dados.
+
+[Dicionário de dados completo em PDF](../documents/IACIT_PostgreSQL.pdf)
+
+
+

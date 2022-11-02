@@ -29,11 +29,11 @@ Definição dos entregaveis ao cliente de acordo com as datas e andamento das at
 **Backlog do produto**
 Proposta de funcionalidades a serem entregues ao cliente para a sprint 03
 
-![BacklogSprint3](readme_docs/BacklogSprint3.png "Backlog do produto Sprint03")
+![BacklogSprint3](../readme_docs/BacklogSprint3.png "Backlog do produto Sprint03")
 <br />
 
 
 <h2>Burndown Sprint03</h2>
 Gráfico com a evolução do tempo de execução da sprint
 
-![Sprint03](readme_docs/BurndownSP3.png "Burndown Sprint03")
+![Sprint03](../readme_docs/BurndownSP3.png "Burndown Sprint03")
