@@ -3,6 +3,7 @@
 Empresa fictícia criada pelos alunos do 3º Semestre de Banco de Dados da [Fatec SJC - Prof. Jessen Vidal](https://fatecsjc-prd.azurewebsites.net/suporte-moodle.php "Fatec SJC - Prof. Jessen Vidal") para a realização das atividades curriculares e API semestral.
 
 Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnológicas.
+<br />
 
 
 <h2>Índice</h2>
@@ -21,7 +22,7 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
     - [Andamento Sprint 03](readme_pages/sprint03_atividades_entrega.md)
     - [Andamento Sprint 04](readme_pages/sprint04_atividades_entrega.md)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
-
+<br />
 
 
 <h2>Sobre o grupo</h2>
@@ -32,12 +33,14 @@ Nosso foco é o desenvolvimento de software, banco de dados e inovações tecnol
 | | | [Jonathan Willian](mailto:jonathan.alves5@fatec.sp.gov.br "Jonathan Willian") <a href="https://www.linkedin.com/in/jonathan-alves-18069118a/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a> | 
 | | | [Caio Sendreto](mailto:caio.sendreto@fatec.sp.gov.br "Caio Sendreto") <a href="https://www.linkedin.com/in/caio-sendreto-0736311a2/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a> (Desligado) |
 | | | [Ruan Macedo](mailto:ruan.macedo@fatec.sp.gov.br "Ruan Macedo") <a href="https://www.linkedin.com/in/ruan-cesar-mac/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="15" /></a> (Desligado)|
+<br />
 
 
 <h2>Objetivo do Projeto</h2>
 
 Criação de um sistema web para o cliente [IACIT Soluções Tecnológicas S.A](http://https://www.iacit.com.br/ "IACIT Soluções Tecnológicas S.A").
 Uma empresa de consultoria meteorológica que necessitam de um sistema para armazenar seus dados em uma base de dados e com isto oferecer uma plataforma para visualização de dados e gerar relatórios customizados a seus clientes.
+<br />
 
 
 <h2>Manual do usuário (Excutando a aplicação)</h2>
@@ -45,6 +48,7 @@ Uma empresa de consultoria meteorológica que necessitam de um sistema para arma
 Todo processo para execução da aplicação está orientado neste manual criado para o cliente.
 
 [Manual do usuário (Excutando a aplicação)](manual_usuario/user_manual.md "Manual do usuário")
+<br />
 
 
 <h2>Cronograma e Backlog das sprints</h2>
@@ -55,15 +59,27 @@ Todo processo para execução da aplicação está orientado neste manual criado
 - [Backlog e cronograma sprint 2](readme_pages/sprint02_backlog_burndown.md)
 - [Backlog e cronograma sprint 3](readme_pages/sprint03_backlog_burndown.md)
 - [Backlog e cronograma sprint 4](readme_pages/sprint04_backlog_burndown.md)
+<br />
 
 
 <h2>Andamento das atividades</h2>
 Nest tópico aprensentamos todo o andamento e trabalho, por sprint, para se obter um funcionalidade nova no projeto como Task, evolução do banco e da programação e também se o que foi planejado foi entregue ao cliente.
+<br />
+
+Nossa proposta é a criação de um sistema como o [WIREFRAME](documents/wireframe_sprint1.pdf "Wireframe_PDF") abaixo:
+
+<table border="0">
+    <tr>
+        <td><img src="https://github.com/GroupHextech/HEXTECH-API3sem/blob/8a0882994e74ca2210c8ef67bb7dcbe7cc389577/documents/wir-admin.png" alt="Gráficos Hextech" width="480" height="285"></td>
+        <td><img src="https://github.com/GroupHextech/HEXTECH-API3sem/blob/8a0882994e74ca2210c8ef67bb7dcbe7cc389577/documents/wir-cadastro-estacao.png" alt="Telas de Cadastros" width="480" height="285"></td>
+    </tr>
+</table>
 
 - [Andamento Sprint 01](readme_pages/sprint01_atividades_entrega.md)
 - [Andamento Sprint 02](readme_pages/sprint02_atividades_entrega.md)
 - [Andamento Sprint 03](readme_pages/sprint03_atividades_entrega.md)
 - [Andamento Sprint 04](readme_pages/sprint04_atividades_entrega.md)
+<br />
 
 
 <h2>Tecnologias utilizadas</h2>

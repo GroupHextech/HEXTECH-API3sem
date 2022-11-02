@@ -1,30 +1,26 @@
 # Crongrama, Backlog do produto e das sprints - SPRINT 01
+Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da aplicação em uma visão de tarefas realizadas pelo grupo.
+<br />
+
 
 <h2>Índice</h2>
-- Backlog do produto e backlog das sprints
-    - [backlog  e Cronograma das Sprints](#cronograma-das-sprints)
-    - [Backlog e Proposta de Entregas](#backlog-e-proposta-de-entregas)
 
-- Andamento das atividas por sprint
-    - [Modelo conceitual e lógico do Banco de Dados](#modelo-conceitual-e--logido-do-banco-de-dados)
-    - [Wireframes, arte conceito da aplicação](#Wireframes)
-    - [Burndown](#burndown)
-
-        - [Modelo conceitual e lógico do Banco de Dados](#modelo-conceitual-e-logico-do-banco-de-dados)
-    - [Wireframes, arte conceito da aplicação](#Wireframes)
-    - [Burndown](#burndown)
+- [Backlog do produto em Tasks no Jira](#backlog-do-produto-tasks-no-jira)
+- [Modelo conceitual e lógico do Banco de Dados](#modelo-conceitual-logico-do-banco-de-dados)
+<br />
 
 
+<h2>Backlog do produto, Tasks no Jira</h2>
+
+![taskssprint01](readme_docs/tasks_sprint01.png)
+<br />
 
 
+<h2>Modelo conceitual e lógico do Banco de Dados</h2>
 
-![image](https://user-images.githubusercontent.com/112524947/194676348-46c2dc78-a797-467b-b1a9-4a403dbc4e7e.png)<br>
+Modelo conceitual e lógico criado do banco de dados para apresentação da sprint 01.
 
-<h2>Modelo conceitual e lógico do Banco de Dados</h2><br>
+![ModeloconceitualBDSP1](documents/BRModel_ConceitualIACITI_SP01.png "Modelo conceitual BD Sprint 1")
 
-![ModeloLogicoBDSP1](https://raw.github.com/GroupHextech/HEXTECH-API3sem/main/documents/bdsprint1.png "Modelo lógico BD Sprint 1")<br>
-<br>
-<br>
-<h2> Wireframes, arte conceito da aplicação </h2>
-
-[Wireframe Sprint 1](/documents/wireframe_sprint1.pdf "Wireframe Sprint 1")
+![ModeloLogicoBDSP1](readme_docs/bdsprint1.png "Modelo lógico BD Sprint 1")
+<br />
