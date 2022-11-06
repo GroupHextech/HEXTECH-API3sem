@@ -6,3 +6,6 @@
 - [PostgreSQL 12.0 ou 14.5](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 - [Eclipse IDE](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2022-09/R/eclipse-inst-jre-win64.exe)
 
+## • Passos:
+#### <font color="red">PostgreSQL</font>
+### → 
