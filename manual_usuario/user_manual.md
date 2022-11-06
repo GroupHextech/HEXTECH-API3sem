@@ -7,5 +7,8 @@
 - [Eclipse IDE](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2022-09/R/eclipse-inst-jre-win64.exe)
 
 ## 2. Primeiros Passos:
-{c:red} PostgreSQL {/c}
-### → 
+#### PostgreSQL
+ → Após a instalação do SGBD, abra o PostgreSQL <br>
+ → Configure o usuário para: ___posgres___ **/** senha: ___password___ <br>
+ → Feita a configuração de acesso, execute o script SQL para preparação do ambiente: [Script SQL](https://github.com/GroupHextech/HEXTECH-API3sem/blob/sprint03_Feature/documents/IACIT_PostgreSQL_Physical_Export_create.sql)
+
