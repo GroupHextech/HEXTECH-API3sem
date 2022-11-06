@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -34,6 +36,12 @@ public class EstacaoController {
 		ModelAndView mv=new ModelAndView("grafico");
 		return mv;
 		
+	}
+
+	@GetMapping("/filtroEstacao")
+	public String filtrarEstacao(Estacao estacao, Model model){
+	    model.addAttribute("estacoes",estacoes.findAll());
+	    return "grafico";
 	}
 		
 	
