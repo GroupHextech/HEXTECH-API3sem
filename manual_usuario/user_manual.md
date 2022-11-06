@@ -26,11 +26,16 @@
 
 → Caso tenha preferido o download via .zip, localize o arquivo na sua máquina e faça a extração do mesmo. <br>
 <br>
-→ Feito isso, abra o **Eclipse IDE**
+→ Feito isso, abra o **Eclipse IDE** <br>
 <br>
-→ Ao abrir o Eclipse, selecione o diretório onde você baixou o projeto (exemplo abaixo).
+→ Ao abrir o Eclipse, selecione o diretório onde você baixou o projeto (exemplo abaixo).<br>
 <br>
 <img align="center" src="https://user-images.githubusercontent.com/82103455/200172405-4deb0f82-94bc-4bba-90ab-7610ff11e9c8.png" height="360px"><br>
 <br>
-
-→ Após abrir o projeto, o Eclipse irá baixar as dependências do _Maven_ **automaticamente**, basta aguardar a conclusão.
+→ Após abrir o projeto, o Eclipse irá baixar as dependências do _Maven_ **automaticamente**, basta aguardar a conclusão.<br>
+<br>
+→ Concluído os downloads das dependências, basta abrir o caminho _"sr/main/java" > "com.iacit.ioweather" > clicar com o botão direito no item "IoweatherApplication.java" > Run As > Java Application_ (conforme exemplo abaixo).<br>
+<br>
+<img align="center" src="https://user-images.githubusercontent.com/82103455/200172709-93315fca-f8df-4147-8edd-5f752698e4b3.png" height="440px"><br>
+<br>
+→ Por fim, após todos estes passos, basta abrir algum navegador e digitar no endereço: '**localhost:8082/principal**' e a aplicação estará disponível!
