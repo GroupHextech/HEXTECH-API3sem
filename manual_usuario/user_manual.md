@@ -1,4 +1,4 @@
-## • Pré-Requisitos
+## 1. Pré-Requisitos
 
 #### Primeiramente, para a executarmos do projeto precisamos baixar os seguintes itens:
 - [Java JDK 11](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html "Java JDK")
@@ -6,6 +6,6 @@
 - [PostgreSQL 12.0 ou 14.5](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 - [Eclipse IDE](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2022-09/R/eclipse-inst-jre-win64.exe)
 
-## • Passos:
-#### <font color="red">PostgreSQL</font>
+## 2. Primeiros Passos:
+{c:red} PostgreSQL {/c}
 ### → 
