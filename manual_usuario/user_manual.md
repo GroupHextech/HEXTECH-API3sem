@@ -1,4 +1,4 @@
-## △ Pré-Requisitos
+## • Pré-Requisitos
 
 #### Primeiramente, para a executarmos do projeto precisamos baixar os seguintes itens:
 - [Java JDK 11](https://www.oracle.com/br/java/technologies/javase/jdk11-archive-downloads.html "Java JDK")
