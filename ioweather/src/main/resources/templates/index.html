@@ -127,6 +127,12 @@
                 <p>Filtrar Estações</p>
               </a>
             </li>
+            <li id="sobreNos">
+              <a onclick="sobreNos()">
+                <i class="pe-7s-info"></i>
+                <p>Sobre Nós</p>
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -215,6 +221,7 @@
               document.querySelector("#estado").classList.remove("active");
               document.querySelector("#pesquisa").classList.remove("active");
               document.querySelector("#filtroEstacoes").classList.remove("active");
+              document.querySelector("#sobreNos").classList.remove("active");
             }
 
             function cadastro() {
@@ -229,6 +236,7 @@
               document.querySelector("#estado").classList.remove("active");
               document.querySelector("#pesquisa").classList.remove("active");
               document.querySelector("#filtroEstacoes").classList.remove("active");
+              document.querySelector("#sobreNos").classList.remove("active");
             }
             function cadastroRegiao() {
               document.getElementById("iframe").height = altura - 241;
@@ -242,6 +250,7 @@
               document.querySelector("#estado").classList.remove("active");
               document.querySelector("#pesquisa").classList.remove("active");
               document.querySelector("#filtroEstacoes").classList.remove("active");
+              document.querySelector("#sobreNos").classList.remove("active");
             }
             function cadastroEstado() {
               document.getElementById("iframe").height = altura - 241;
@@ -255,6 +264,7 @@
               document.querySelector("#regiao").classList.remove("active");
               document.querySelector("#pesquisa").classList.remove("active");
               document.querySelector("#filtroEstacoes").classList.remove("active");
+              document.querySelector("#sobreNos").classList.remove("active");
             }
             function pesquisa() {
               document.getElementById("iframe").src = "";
@@ -271,6 +281,7 @@
               document.querySelector("#regiao").classList.remove("active");
               document.querySelector("#pesquisa").classList.toggle("active");
               document.querySelector("#filtroEstacoes").classList.remove("active");
+              document.querySelector("#sobreNos").classList.remove("active");
             }
             function filtrarEstacoes() {
               document.querySelector("#filtroEstacoes").classList.toggle("active");
@@ -279,6 +290,21 @@
               document.querySelector("#estacao").classList.remove("active");
               document.querySelector("#estado").classList.remove("active");
               document.querySelector("#pesquisa").classList.remove("active");
+              document.querySelector("#sobreNos").classList.remove("active");
+            }
+            function sobreNos() {
+              document.getElementById("iframe").height = altura - 241;
+              document.getElementById("estados").height = 0;
+              document.getElementById("estacoes").height = 0;
+              document.getElementById("regioes").height = 0;
+              document.getElementById("iframe").src = "/sobreNos"
+              document.querySelector("#sobreNos").classList.toggle("active");
+              document.querySelector("#regiao").classList.remove("active");
+              document.querySelector("#painelDeControle").classList.remove("active");
+              document.querySelector("#estacao").classList.remove("active");
+              document.querySelector("#estado").classList.remove("active");
+              document.querySelector("#pesquisa").classList.remove("active");
+              document.querySelector("#filtroEstacoes").classList.remove("active");
             }
           </script>
         </div>

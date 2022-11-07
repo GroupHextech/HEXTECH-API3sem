@@ -38,6 +38,13 @@ public class EstacaoController {
 		
 	}
 
+	@RequestMapping(value=("/sobreNos"),method=RequestMethod.GET)
+	public ModelAndView sobreNos() {
+		ModelAndView mv=new ModelAndView("sobreNos");
+		return mv;
+		
+	}
+
 	@GetMapping("/filtroEstacao")
 	public String filtrarEstacao(Estacao estacao, Model model){
 	    model.addAttribute("estacoes",estacoes.findAll());
