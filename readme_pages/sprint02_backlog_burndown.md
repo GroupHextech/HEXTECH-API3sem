@@ -29,7 +29,7 @@ Definição dos entregaveis ao cliente de acordo com as datas e andamento das at
 **Backlog do produto**
 Proposta de funcionalidades a serem entregues ao cliente para a sprint 02
 
-![backlogSprint2]()
+![backlogSprint2](../readme_docs/BacklogSprint2.png)
 <br />
 
 

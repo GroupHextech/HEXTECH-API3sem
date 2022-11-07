@@ -16,7 +16,10 @@ Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da 
 
 <h2>Backlog do produto, Tasks no Jira</h2>
 
-![taskssprint01](../readme_docs/tasks_sprint03.png)
+![taskssprint03](../readme_docs/tasks_sprint03.png)
+<br />
+
+![tasksjira03](../readme_docs/Sprint3_Jira.png)
 <br />
 
 
@@ -46,5 +49,8 @@ Dicionário em PDF com informações sobre a estrutura do banco de dados.
 
 [Dicionário de dados completo em PDF](../documents/IACIT_PostgreSQL.pdf)
 
+<br />
 
+<br />
+OBS: Problemas com o grupo, onde saíram 3 integrantes restando apenas 3 para continuar o andamento do projeto.
 

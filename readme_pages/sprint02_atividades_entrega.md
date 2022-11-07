@@ -15,6 +15,11 @@ Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da 
 ![taskssprint01](../readme_docs/tasks_sprint02.png)
 <br />
 
+Documentação organizada pelo grupo onde cada um menciona as atividades em execução e atas de reuniões realizadas - [JIRA CONFLUENCE](https://fatecbdsjc.atlassian.net/jira/software/projects/FHTAPI3SEM/pages) - (Talves seja necessário solicitar permissão ao moderador.)
+
+![Jira_ConfluenceDocs](../readme_docs/PaginaAndamento_Jira.PNG)
+<br />
+
 
 <h2>Modelo conceitual e lógico do Banco de Dados</h2>
 
@@ -32,5 +37,7 @@ Modelo conceitual e lógico criado do banco de dados para apresentação da spri
 <br />
 
 
+<br />
+<br />
 OBS: Devido a complicações internas não houve entrega desta sprint.
 Algumas tarefas foram executadas e serão avalidas na terceira sprint.
