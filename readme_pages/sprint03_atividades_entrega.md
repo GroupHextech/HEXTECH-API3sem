@@ -19,6 +19,7 @@ Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da 
 ![taskssprint03](../readme_docs/tasks_sprint03.png)
 <br />
 
+
 ![tasksjira03](../readme_docs/Sprint3_Jira.png)
 <br />
 
@@ -53,4 +54,3 @@ Dicionário em PDF com informações sobre a estrutura do banco de dados.
 
 <br />
 OBS: Problemas com o grupo, onde saíram 3 integrantes restando apenas 3 para continuar o andamento do projeto.
-
