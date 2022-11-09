@@ -37,3 +37,9 @@ Proposta de funcionalidades a serem entregues ao cliente para a sprint 02
 Gráfico com a evolução do tempo de execução da sprint
 
 ![Sprint02](../readme_docs/BurndownSP2.png "Burndown Sprint02")
+<br />
+
+<br />
+<br />
+OBS: Devido a complicações internas não houve entrega desta sprint.
+Algumas tarefas foram executadas e serão avalidas na terceira sprint.

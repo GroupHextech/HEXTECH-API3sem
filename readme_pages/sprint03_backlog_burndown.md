@@ -36,4 +36,5 @@ Proposta de funcionalidades a serem entregues ao cliente para a sprint 03
 <h2>Burndown Sprint03</h2>
 Gráfico com a evolução do tempo de execução da sprint
 
-![Sprint03](https://github.com/GroupHextech/HEXTECH-API3sem/blob/sprint03_Feature/readme_pages/Burndown%20SP3.png)
+![BurnSprint3](../readme_docs/BurndownSP3.png)
+<br />
