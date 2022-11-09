@@ -20,7 +20,7 @@ Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da 
 <br />
 
 
-![tasksjira03](../readme_docs/Sprint3_Jira.png)
+![JIRASP3](../readme_docs/Sprint3_Jira.PNG)
 <br />
 
 
