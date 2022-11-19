@@ -49,4 +49,5 @@ Dicionário em PDF com informações sobre a estrutura do banco de dados.
 [Dicionário de dados completo em PDF](../documents/IACIT_PostgreSQL.pdf)
 
 <br />
+Link JIRA:
 https://fatecbdsjc.atlassian.net/jira/software/projects/FHTAPI3SEM/boards/1
