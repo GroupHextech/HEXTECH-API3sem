@@ -12,7 +12,7 @@ Nestas páginas divididas por Sprint, poderão ser acompanhadas a evolução da 
 
 <h2>Backlog do produto, Tasks no Jira</h2>
 
-![taskssprint01](../readme_docs/tasks_sprint02.png)
+![taskssprint02](../readme_docs/tasks_sprint02.png)
 <br />
 
 Documentação organizada pelo grupo onde cada um menciona as atividades em execução e atas de reuniões realizadas - [JIRA CONFLUENCE](https://fatecbdsjc.atlassian.net/jira/software/projects/FHTAPI3SEM/pages) - (Talves seja necessário solicitar permissão ao moderador.)
@@ -28,12 +28,12 @@ Modelo conceitual e lógico criado do banco de dados para apresentação da spri
 
 <h3>Modelo conceitual:</h3>
 
-![ModeloconceitualBDSP1](../documents/BRModel_ConceitualIACITI_SP01.png)
+![ModeloconceitualBDSP2](../documents/BRModel_ConceitualIACITI_SP01.png)
 
 
 <h3>Modelo lógico:</h3>
 
-![ModeloLogicoBDSP1](../readme_docs/bdsprint1.png)
+![ModeloLogicoBDSP2](../readme_docs/bdsprint1.png)
 <br />
 
 

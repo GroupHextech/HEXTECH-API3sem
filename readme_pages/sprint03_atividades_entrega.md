@@ -31,12 +31,12 @@ Modelo conceitual e lógico criado do banco de dados para apresentação da spri
 
 <h3>Modelo conceitual:</h3>
 
-![ModeloconceitualBDSP1](../documents/BRModel_ConceitualIACITI.png)
+![ModeloconceitualBDSP3](../documents/BRModel_ConceitualIACITI.png)
 
 
 <h3>Modelo lógico:</h3>
 
-![ModeloLogicoBDSP1](../documents/IACIT_PostgreSQL-050922_COMPLETO.png)
+![ModeloLogicoBDSP3](../documents/IACIT_PostgreSQL-050922_COMPLETO.png)
 
 
 <h3>Modelo físico - Script SQL:</h3>
