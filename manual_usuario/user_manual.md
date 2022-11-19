@@ -10,7 +10,7 @@
 #### PostgreSQL
  → Após a instalação do SGBD, abra o PostgreSQL <br>
  <br>
- → Configure o usuário para: ___posgres___ **/** senha: ___password___ <br>
+ → Configure o usuário para: ___postgres___ **/** senha: ___password___ <br>
  <br>
  → Feita a configuração/criação do banco, execute o script SQL para preparação do ambiente: [Script SQL](https://github.com/GroupHextech/HEXTECH-API3sem/blob/sprint03_Feature/documents/IACIT_PostgreSQL_Physical_Export_create.sql)
  <br>
