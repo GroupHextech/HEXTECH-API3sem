@@ -60,7 +60,7 @@ public class RegiaoController {
 		}
 
 		regioes.save(regiao);
-		attributes.addFlashAttribute("mensagem", "Região salva com sucesso.");
+		attributes.addFlashAttribute("mensagem", "Região salva com sucesso!");
 
 		return "redirect:/novaRegiao";
 	}
@@ -72,13 +72,14 @@ public class RegiaoController {
 		mv.addObject("regioes", todasRegioes);
 		return mv;
 	}
-	
-	/*@GetMapping("/filtroRegiao")
-	public String filtrarRegiao(Regiao regiao, Model model){
-	    model.addAttribute("regioes",regioes.findAll());
-	    return "grafico";
-	}*/
 
+	/*
+	 * @GetMapping("/filtroRegiao")
+	 * public String filtrarRegiao(Regiao regiao, Model model){
+	 * model.addAttribute("regioes",regioes.findAll());
+	 * return "grafico";
+	 * }
+	 */
 
 	@RequestMapping(value = "/regioes/{idRegiao}", method = RequestMethod.GET)
 	public ModelAndView editarRegiao(@PathVariable("idRegiao") Regiao regiao) {
@@ -91,7 +92,7 @@ public class RegiaoController {
 	@RequestMapping(value = "/regioes/{idRegiao}", method = RequestMethod.DELETE)
 	public String excluirRegiao(@PathVariable Long idRegiao, RedirectAttributes attributes) {
 		regioes.deleteById(idRegiao);
-		attributes.addFlashAttribute("mensagem", "Região excluída com sucesso.");
+		attributes.addFlashAttribute("mensagem", "Região excluída com sucesso!");
 
 		return "redirect:/regioes";
 	}

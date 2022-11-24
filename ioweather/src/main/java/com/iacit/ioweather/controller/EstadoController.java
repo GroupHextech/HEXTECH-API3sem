@@ -60,7 +60,7 @@ public class EstadoController {
 		}
 		
 		estados.save(estado);
-		attributes.addFlashAttribute("mensagem","Estado salvo com sucesso.");
+		attributes.addFlashAttribute("mensagem","Estado salvo com sucesso!");
 		
 		
 		return "redirect:/novoEstado";
@@ -91,7 +91,7 @@ public class EstadoController {
 	@RequestMapping(value="/estados/{idEstado}",method=RequestMethod.DELETE)
 	public String excluirEstado(@PathVariable Long idEstado,RedirectAttributes attributes) {
 		estados.deleteById(idEstado);
-		attributes.addFlashAttribute("mensagem","Estado excluido com sucesso.");
+		attributes.addFlashAttribute("mensagem","Estado excluído com sucesso!");
 		
 		
 		
