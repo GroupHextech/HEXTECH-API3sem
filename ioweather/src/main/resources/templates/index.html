@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HexTech</title>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <link href="./assets/css/style.css" rel="stylesheet" />
@@ -80,10 +79,10 @@
           </div>
 
           <ul class="nav">
-            <li id="sobreNos">
-              <a onclick="sobreNos()">
-                <i class="pe-7s-info"></i>
-                <p>Sobre Nós</p>
+            <li id="painelDeControle" class="active">
+              <a onclick="painel()">
+                <i class="pe-7s-home"></i>
+                <p>Página Inicial</p>
               </a>
             </li>
             <div
@@ -98,19 +97,19 @@
               Cadastrar
             </div>
             <li id="regiao">
-              <a onclick="cadastroRegiao()">
+              <a onclick="cadastroRegiao()" href="/novaRegiao">
                 <i class="pe-7s-plus"></i>
                 <p>Região</p>
               </a>
             </li>
             <li id="estado">
-              <a onclick="cadastroEstado()">
+              <a onclick="cadastroEstado()" href="/novoEstado">
                 <i class="pe-7s-plus"></i>
                 <p>Estado</p>
               </a>
             </li>
             <li id="estacao">
-              <a onclick="cadastro()">
+              <a onclick="cadastro()" href="/novaEstacao">
                 <i class="pe-7s-plus"></i>
                 <p>Estação</p>
               </a>
@@ -124,13 +123,13 @@
             <li id="filtroEstacoes">
               <a onclick="filtrarEstacoes()" href="/filtroEstacao">
                 <i class="pe-7s-search"></i>
-                <p>Relatórios</p>
+                <p>Filtrar Estações</p>
               </a>
             </li>
-            <li id="painelDeControle" class="active">
-              <a onclick="painel()">
-                <i class="pe-7s-home"></i>
-                <p>Painel de Controle</p>
+            <li id="sobreNos">
+              <a onclick="sobreNos()">
+                <i class="pe-7s-info"></i>
+                <p>Sobre Nós</p>
               </a>
             </li>
           </ul>
@@ -297,7 +296,7 @@
               document.getElementById("estados").height = 0;
               document.getElementById("estacoes").height = 0;
               document.getElementById("regioes").height = 0;
-              document.getElementById("iframe").src = "/sobreNos"
+              document.getElementById("iframe").src = "/sobreNos";
               document.querySelector("#sobreNos").classList.toggle("active");
               document.querySelector("#regiao").classList.remove("active");
               document.querySelector("#painelDeControle").classList.remove("active");
