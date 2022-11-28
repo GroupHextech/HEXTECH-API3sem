@@ -79,8 +79,8 @@
           </div>
 
           <ul class="nav">
-            <li id="painelDeControle" class="active">
-              <a onclick="painel()">
+            <li id="painelDeControle">
+              <a onclick="painel()" href="/">
                 <i class="pe-7s-home"></i>
                 <p>Página Inicial</p>
               </a>
@@ -176,21 +176,25 @@
 
         <!-- Conteudo -->
         <div class="content" style="padding: 30px 0px 0px 0px">
-          Home
+          <div class="container-fluid">
+            <h3>Importar dados</h3>
+            <h1><em class="pe-7s-cloud-upload"></em></h1>
+              <input type="file"></input>
+          </div>
         </div>
       </div>
     </div>
   </body>
 
   <script>
-    window. onload = function () { 
-        document.querySelector("#painelDeControle").classList.toggle("active");
-        document.querySelector("#estacao").classList.remove("active");
-        document.querySelector("#estado").classList.remove("active");
-        document.querySelector("#regiao").classList.remove("active");
-        document.querySelector("#sobreNos").classList.remove("active");
-    } 
-</script>
+    window.onload = function () {
+      document.querySelector("#painelDeControle").classList.toggle("active");
+      document.querySelector("#estacao").classList.remove("active");
+      document.querySelector("#estado").classList.remove("active");
+      document.querySelector("#regiao").classList.remove("active");
+      document.querySelector("#sobreNos").classList.remove("active");
+    };
+  </script>
 
   <!--   Core JS Files   -->
   <script src="/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
