@@ -10,23 +10,26 @@ import javax.validation.constraints.Size;
 @Entity
 public class Estado {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id 
+	@GeneratedValue (strategy=GenerationType.IDENTITY)
 	private Long idEstado;
-
-	@NotEmpty(message = "O campo 'Estado' não pode ser nulo.")
-	@Size(max = 100, message = "A quantidade máxima permitida no campo 'Estado' é de 100 caracteres.")
+	
+	@NotEmpty (message="O valor Estado nao pode ser nulo")
+	@Size (max=100, message="Valor máximo de 100 caracteres no campo Estado")
 	private String nomeEstado;
-
-	@NotEmpty(message = "O campo 'Sigla do Estado' não pode ser nulo.")
-	@Size(max = 2, message = "A quantidade máxima permitida no campo 'Siga do Estado' é de 2 caracteres.")
+	
+	@NotEmpty (message="O valor da Sigla do Estado nao pode ser nulo")
+	@Size (max=2, message="Valor máximo de 2 caracteres no campo Sigla do Estado")
 	private String siglaEstado;
-
-	@NotEmpty(message = "O campo 'Região' não pode ser nulo.")
-	@Size(max = 2, message = "A quantidade máxima permitida no campo 'Região' é de 2 caracteres.")
+	
+	@NotEmpty (message="O valor da Regiao nao pode ser nulo")
+	@Size (max=2, message="Valor máximo de 2 caracteres no campo Regiao")
 	private String idRegiaoEstado;
 
-	// Getters and Setters
+	
+	
+	
+	//Getters and Setters
 	public Long getIdEstado() {
 		return idEstado;
 	}
@@ -58,5 +61,8 @@ public class Estado {
 	public void setIdRegiaoEstado(String idRegiaoEstado) {
 		this.idRegiaoEstado = idRegiaoEstado;
 	}
-
+	
+	
+	
 }
+

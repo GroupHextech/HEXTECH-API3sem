@@ -34,13 +34,13 @@ Modelo conceitual e lógico criado do banco de dados para apresentação da spri
 
 <h3>Modelo lógico:</h3>
 
-![ModeloLogicoBDSP4](../documents/IACIT_PostgreSQL-050922_COMPLETO.png)
+![ModeloLogicoBDSP4](../documents/IACIT_PostgreSQL.png)
 
 
 <h3>Modelo físico - Script SQL:</h3>
 Modelo físico do banco finalizado, script compondo a criação e ligação das tabelas para PostgreSQL
 
-[Script PostgreSQL, Base de dados](../documents/IACIT_PostgreSQL_Physical_Export_create.sql)
+[Script PostgreSQL, Base de dados](../documents/IACIT_PostgreSQL.sql)
 
 
 <h3>Dicionário de dados:</h3>
