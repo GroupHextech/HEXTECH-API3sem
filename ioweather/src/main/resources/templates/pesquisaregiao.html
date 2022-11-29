@@ -1,80 +1,259 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+>
   <head>
     <meta charset="UTF-8" />
-    <title>Pesquisa Região</title>
-    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <title>Regiões</title>
+    
+    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link href="/assets/css/style.css" rel="stylesheet" />
+
+    <!-- Bootstrap core CSS     -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="/assets/css/animate.min.css" rel="stylesheet" />
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link
+      href="/assets/css/light-bootstrap-dashboard.css?v=1.4.0"
+      rel="stylesheet"
+    />
+
+    <!--     Fonts and icons     -->
+    <link
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="http://fonts.googleapis.com/css?family=Roboto:400,700,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="/assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      #chart-container {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .fomu {
+        border-radius: 15px;
+        box-shadow: 3px 1px 10px lightgrey;
+      }
+      .sb-sidenav .sb-sidenav-menu .nav .sb-sidenav-menu-heading {
+        padding: 1.75rem 1rem 0.75rem;
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+    </style>
   </head>
-  <body>
-    <div class="panel panel-default">
-      <!-- Painel  -->
-      <div class="panel-heading">
-        <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
-          <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
-        </div>
-        <div class="clearfix">
-          <h1 class="panel-title aw-titulo-panel">Pesquisa Regiões</h1>
-          <!--<a class="btn btn-link aw-link-panel" href="/novaRegiao">Nova Região</a>-->
+  <body style="background-color: #eeeeee">
+    <div class="wrapper">
+      <!-- Barra lado -->
+      <div
+        class="sidebar"
+        data-color="gray"
+        data-image="assets/img/sidebar-5.jpg"
+      >
+        <div class="sidebar-wrapper">
+          <div class="logo" style="box-shadow: 3px 1px 10px rgb(71, 71, 71)">
+            <a class="simple-text">
+              <img
+                src="assets/img/logo.png"
+                height="20px"
+                width="20px"
+                style="margin-top: -5px"
+              />HEXTECH</a
+            >
+          </div>
+
+          <ul class="nav">
+            <li id="painelDeControle">
+              <a onclick="painel()" href="/">
+                <i class="pe-7s-home"></i>
+                <p>Página Inicial</p>
+              </a>
+            </li>
+            <div
+              class="sb-sidenav-menu-heading"
+              style="
+                padding: 1.75rem 1rem 0.75rem;
+                font-size: 1.25rem;
+                font-weight: bold;
+                text-transform: uppercase;
+              "
+            >
+              Cadastrar
+            </div>
+            <li id="regiao">
+              <a onclick="cadastroRegiao()" href="/novaRegiao">
+                <i class="pe-7s-plus"></i>
+                <p>Região</p>
+              </a>
+            </li>
+            <li id="estado">
+              <a onclick="cadastroEstado()" href="/novoEstado">
+                <i class="pe-7s-plus"></i>
+                <p>Estado</p>
+              </a>
+            </li>
+            <li id="estacao">
+              <a onclick="cadastro()" href="/novaEstacao">
+                <i class="pe-7s-plus"></i>
+                <p>Estação</p>
+              </a>
+            </li>
+            <li id="filtroEstacoes">
+              <a onclick="filtrarEstacoes()" href="/filtroEstacao">
+                <i class="pe-7s-search"></i>
+                <p>Filtrar Estações</p>
+              </a>
+            </li>
+            <li id="sobreNos">
+              <a onclick="sobreNos()" href="/sobreNos">
+                <i class="pe-7s-info"></i>
+                <p>Sobre Nós</p>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div class="panel-body">
-        <table class="table table-bordered table-striped">
-          <thead>
-            <!-- Cabeçalho da minha tabela de pesquisa  -->
-            <tr>
-              <th class="text-center col-md-1">#</th>
-              <th>Nome da Região</th>
-              <th class="text-center col-md-2">Sigla da região</th>
-            </tr>
-          </thead>
+      <div class="main-panel">
+        <!-- Barra top -->
+        <nav
+          class="navbar navbar-default navbar-fixed"
+          style="box-shadow: 3px 1px 10px lightgrey"
+        >
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand"> </a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav navbar-left">
+                <li>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="fa pe-7s-user"></i>
+                  </a>
+                </li>
+              </ul>
 
-          <tbody>
-            <tr th:each="regiao : ${regioes}">
-              <td class="text-center" th:text="${regiao.idRegiao}"></td>
-              <td class="text-left" th:text="${{regiao.nomeRegiao}}"></td>
-              <td class="text-center" th:text="${{regiao.siglaRegiao}}"></td>
-              <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
-
-              <!-- EDIÇAO -->
-              <td class="text-center">
-                <a
-                  class="btn btn-link btn-xs"
-                  th:href="@{/regioes/{codigo}(codigo=${regiao.idRegiao})}"
-                >
-                  <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
-                  <span class="glyphicon glyphicon-pencil"></span>
-                  <!-- Ícone de ediçao de um lápis -->
-                </a>
-
-                <!-- DELETE -->
-
-                <a
-                  class="btn btn-link btn-xs"
-                  data-toggle="modal"
-                  data-target="#confirmacaoExclusaoModalRegiao"
-                  th:attr="data-codigo=${regiao.idRegiao}, data-descricao=${regiao.nomeRegiao}"
-                >
-                  <span class="gliphycon glyphicon-remove"></span>
-                </a>
-              </td>
-            </tr>
-
-            <tr>
-              <td colspan="6" th:if="${#lists.isEmpty(regioes)}">Nenhuma região foi encontrada.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <!-- MODAL -->
-
-      <div th:replace="modalexclusaoregiao"></div>
+              <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="logout.php" style="color: black"> Sair </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <!-- Conteúdo -->
+        <div class="content" style="padding: 30px 0px 0px 0px">
+          <div class="panel panel-default">
+            <!-- Painel  -->
+            <div class="panel-heading">
+              <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
+                <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
+              </div>
+              <div class="clearfix">
+                <h1 class="panel-title aw-titulo-panel">Visualização > Regiões</h1>
+                <!--<a class="btn btn-link aw-link-panel" href="/novaRegiao">Nova Região</a>-->
+              </div>
+            </div>
+      
+            <div class="panel-body">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <!-- Cabeçalho da minha tabela de pesquisa  -->
+                  <tr>
+                    <th class="text-center col-md-1">#</th>
+                    <th>Nome da Região</th>
+                    <th class="text-center col-md-2">Sigla da região</th>
+                  </tr>
+                </thead>
+      
+                <tbody>
+                  <tr th:each="regiao : ${regioes}">
+                    <td class="text-center" th:text="${regiao.idRegiao}"></td>
+                    <td class="text-left" th:text="${{regiao.nomeRegiao}}"></td>
+                    <td class="text-center" th:text="${{regiao.siglaRegiao}}"></td>
+                    <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
+      
+                    <!-- EDIÇAO -->
+                    <td class="text-center">
+                      <a
+                        class="btn btn-link btn-xs"
+                        th:href="@{/regioes/{codigo}(codigo=${regiao.idRegiao})}"
+                      >
+                        <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        <!-- Ícone de ediçao de um lápis -->
+                      </a>
+      
+                      <!-- DELETE -->
+      
+                      <a
+                        class="btn btn-link btn-xs"
+                        data-toggle="modal"
+                        data-target="#confirmacaoExclusaoModalRegiao"
+                        th:attr="data-codigo=${regiao.idRegiao}, data-descricao=${regiao.nomeRegiao}"
+                      >
+                        <span class="gliphycon glyphicon-remove"></span>
+                      </a>
+                    </td>
+                  </tr>
+      
+                  <tr>
+                    <td colspan="6" th:if="${#lists.isEmpty(regioes)}">Nenhuma região foi encontrada.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+      
+            <!-- MODAL -->
+      
+            <div th:replace="modalexclusaoregiao"></div>
+          </div>
+        </div></div>
     </div>
 
-    <script src="/js/jquery-3.6.0.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/excluirRegiao.js"></script>
-  </body>
+    <script>
+        window. onload = function () { 
+            document.querySelector("#painelDeControle").classList.remove("active");
+            document.querySelector("#estacao").classList.remove("active");
+            document.querySelector("#estado").classList.remove("active");
+            document.querySelector("#regiao").classList.toggle("active");
+            document.querySelector("#sobreNos").classList.remove("active");
+        } 
+    </script>
+     
+     <script src="/js/jquery-3.6.0.min.js"></script>
+     <script src="/js/bootstrap.min.js"></script>
+     <script src="/js/excluirRegiao.js"></script>
+     </body>
 </html>

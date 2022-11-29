@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HexTech</title>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
     <link href="./assets/css/style.css" rel="stylesheet" />
@@ -80,10 +79,10 @@
           </div>
 
           <ul class="nav">
-            <li id="sobreNos">
-              <a onclick="sobreNos()">
-                <i class="pe-7s-info"></i>
-                <p>Sobre Nós</p>
+            <li id="painelDeControle">
+              <a onclick="painel()" href="/">
+                <i class="pe-7s-home"></i>
+                <p>Página Inicial</p>
               </a>
             </li>
             <div
@@ -98,19 +97,19 @@
               Cadastrar
             </div>
             <li id="regiao">
-              <a onclick="cadastroRegiao()">
+              <a onclick="cadastroRegiao()" href="/novaRegiao">
                 <i class="pe-7s-plus"></i>
                 <p>Região</p>
               </a>
             </li>
             <li id="estado">
-              <a onclick="cadastroEstado()">
+              <a onclick="cadastroEstado()" href="/novoEstado">
                 <i class="pe-7s-plus"></i>
                 <p>Estado</p>
               </a>
             </li>
             <li id="estacao">
-              <a onclick="cadastro()">
+              <a onclick="cadastro()" href="/novaEstacao">
                 <i class="pe-7s-plus"></i>
                 <p>Estação</p>
               </a>
@@ -124,13 +123,13 @@
             <li id="filtroEstacoes">
               <a onclick="filtrarEstacoes()" href="/filtroEstacao">
                 <i class="pe-7s-search"></i>
-                <p>Relatórios</p>
+                <p>Filtrar Estações</p>
               </a>
             </li>
-            <li id="painelDeControle" class="active">
-              <a onclick="painel()">
-                <i class="pe-7s-home"></i>
-                <p>Painel de Controle</p>
+            <li id="sobreNos">
+              <a onclick="sobreNos()">
+                <i class="pe-7s-info"></i>
+                <p>Sobre Nós</p>
               </a>
             </li>
           </ul>
@@ -177,140 +176,25 @@
 
         <!-- Conteudo -->
         <div class="content" style="padding: 30px 0px 0px 0px">
-          <iframe
-            id="iframe"
-            width="100%"
-            scrolling="no"
-            style="border: none"
-          ></iframe>
-          <iframe
-            id="estacoes"
-            width="100%"
-            scrolling="no"
-            style="border: none"
-          ></iframe>
-          <iframe
-            id="estados"
-            width="100%"
-            scrolling="no"
-            style="border: none"
-          ></iframe>
-          <iframe
-            id="regioes"
-            width="100%"
-            scrolling="no"
-            style="border: none"
-          ></iframe>
-          <script>
-            var altura = window.screen.height;
-
-            document.getElementById("iframe").src = "/grafico";
-            document.getElementById("estados").height = 0;
-            document.getElementById("estacoes").height = 0;
-            document.getElementById("regioes").height = 0;
-
-            function painel() {
-              document.getElementById("iframe").height = altura - 241;
-              document.getElementById("estados").height = 0;
-              document.getElementById("estacoes").height = 0;
-              document.getElementById("regioes").height = 0;
-              document.getElementById("iframe").src = "/grafico";
-              document.querySelector("#painelDeControle").classList.toggle("active");
-              document.querySelector("#estacao").classList.remove("active");
-              document.querySelector("#regiao").classList.remove("active");
-              document.querySelector("#estado").classList.remove("active");
-              document.querySelector("#pesquisa").classList.remove("active");
-              document.querySelector("#filtroEstacoes").classList.remove("active");
-              document.querySelector("#sobreNos").classList.remove("active");
-            }
-
-            function cadastro() {
-              document.getElementById("iframe").height = altura - 241;
-              document.getElementById("estados").height = 0;
-              document.getElementById("estacoes").height = 0;
-              document.getElementById("regioes").height = 0;
-              document.getElementById("iframe").src = "/novaEstacao";
-              document.querySelector("#estacao").classList.toggle("active");
-              document.querySelector("#painelDeControle").classList.remove("active");
-              document.querySelector("#regiao").classList.remove("active");
-              document.querySelector("#estado").classList.remove("active");
-              document.querySelector("#pesquisa").classList.remove("active");
-              document.querySelector("#filtroEstacoes").classList.remove("active");
-              document.querySelector("#sobreNos").classList.remove("active");
-            }
-            function cadastroRegiao() {
-              document.getElementById("iframe").height = altura - 241;
-              document.getElementById("estados").height = 0;
-              document.getElementById("estacoes").height = 0;
-              document.getElementById("regioes").height = 0;
-              document.getElementById("iframe").src = "/novaRegiao";
-              document.querySelector("#regiao").classList.toggle("active");
-              document.querySelector("#painelDeControle").classList.remove("active");
-              document.querySelector("#estacao").classList.remove("active");
-              document.querySelector("#estado").classList.remove("active");
-              document.querySelector("#pesquisa").classList.remove("active");
-              document.querySelector("#filtroEstacoes").classList.remove("active");
-              document.querySelector("#sobreNos").classList.remove("active");
-            }
-            function cadastroEstado() {
-              document.getElementById("iframe").height = altura - 241;
-              document.getElementById("estados").height = 0;
-              document.getElementById("estacoes").height = 0;
-              document.getElementById("regioes").height = 0;
-              document.getElementById("iframe").src = "/novoEstado";
-              document.querySelector("#estado").classList.toggle("active");
-              document.querySelector("#painelDeControle").classList.remove("active");
-              document.querySelector("#estacao").classList.remove("active");
-              document.querySelector("#regiao").classList.remove("active");
-              document.querySelector("#pesquisa").classList.remove("active");
-              document.querySelector("#filtroEstacoes").classList.remove("active");
-              document.querySelector("#sobreNos").classList.remove("active");
-            }
-            function pesquisa() {
-              document.getElementById("iframe").src = "";
-              document.getElementById("iframe").height = 0;
-              document.getElementById("estados").height = altura - 400;
-              document.getElementById("estacoes").height = altura - 400;
-              document.getElementById("regioes").height = altura - 400;
-              document.getElementById("estados").src = "/estados";
-              document.getElementById("estacoes").src = "/estacoes";
-              document.getElementById("regioes").src = "/regioes";
-              document.querySelector("#estado").classList.remove("active");
-              document.querySelector("#painelDeControle").classList.remove("active");
-              document.querySelector("#estacao").classList.remove("active");
-              document.querySelector("#regiao").classList.remove("active");
-              document.querySelector("#pesquisa").classList.toggle("active");
-              document.querySelector("#filtroEstacoes").classList.remove("active");
-              document.querySelector("#sobreNos").classList.remove("active");
-            }
-            function filtrarEstacoes() {
-              document.querySelector("#filtroEstacoes").classList.toggle("active");
-              document.querySelector("#regiao").classList.remove("active");
-              document.querySelector("#painelDeControle").classList.remove("active");
-              document.querySelector("#estacao").classList.remove("active");
-              document.querySelector("#estado").classList.remove("active");
-              document.querySelector("#pesquisa").classList.remove("active");
-              document.querySelector("#sobreNos").classList.remove("active");
-            }
-            function sobreNos() {
-              document.getElementById("iframe").height = altura - 241;
-              document.getElementById("estados").height = 0;
-              document.getElementById("estacoes").height = 0;
-              document.getElementById("regioes").height = 0;
-              document.getElementById("iframe").src = "/sobreNos"
-              document.querySelector("#sobreNos").classList.toggle("active");
-              document.querySelector("#regiao").classList.remove("active");
-              document.querySelector("#painelDeControle").classList.remove("active");
-              document.querySelector("#estacao").classList.remove("active");
-              document.querySelector("#estado").classList.remove("active");
-              document.querySelector("#pesquisa").classList.remove("active");
-              document.querySelector("#filtroEstacoes").classList.remove("active");
-            }
-          </script>
+          <div class="container-fluid">
+            <h3>Importar dados</h3>
+            <h1><em class="pe-7s-cloud-upload"></em></h1>
+            <input type="file" />
+          </div>
         </div>
       </div>
     </div>
   </body>
+
+  <script>
+    window.onload = function () {
+      document.querySelector("#painelDeControle").classList.toggle("active");
+      document.querySelector("#estacao").classList.remove("active");
+      document.querySelector("#estado").classList.remove("active");
+      document.querySelector("#regiao").classList.remove("active");
+      document.querySelector("#sobreNos").classList.remove("active");
+    };
+  </script>
 
   <!--   Core JS Files   -->
   <script src="/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
