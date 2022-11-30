@@ -81,7 +81,7 @@ public class EstadoController {
 	
 	@RequestMapping(value="/estados/{idEstado}",method=RequestMethod.GET)
 	public ModelAndView editarEstado(@PathVariable ("idEstado") Estado estado) {
-		ModelAndView mv=new ModelAndView("cadatroestado");
+		ModelAndView mv=new ModelAndView("cadastroestado");
 		mv.addObject(estado);
 		return mv;
 		
