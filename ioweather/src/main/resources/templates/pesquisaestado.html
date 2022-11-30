@@ -7,7 +7,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Estados</title>
-    
+
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -83,7 +83,7 @@
           </div>
 
           <ul class="nav">
-            <li id="painelDeControle" >
+            <li id="painelDeControle">
               <a onclick="painel()" href="/">
                 <i class="pe-7s-home"></i>
                 <p>Página Inicial</p>
@@ -171,90 +171,128 @@
             </div>
           </div>
         </nav>
-        
+
         <!-- Conteúdo -->
         <div class="content" style="padding: 30px 0px 0px 0px">
-            <div class="panel panel-default"> <!-- Painel  -->
-                <div class="panel-heading">
-                
-                   <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
-                        <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
-                   </div>
-                    <div class="clearfix">
-                        <h1 class="panel-title aw-titulo-panel" >Visualização > Estados</h1>
-                        <!--<a class="btn btn-link aw-link-panel" href="/novoEstado">Novo Estado</a>-->
-                    </div>
-                </div>
-                
-                
-                <div class="panel-body">
-                    <table class="table table-bordered table-striped">
-                        <thead> <!-- Cabeçalho da minha tabela de pesquisa  -->
-                            <tr>
-                                <th class="text-center col-md-1">#</th>
-                                <th class="text-center col-md-2">Nome do Estado</th>
-                                <th class="text-center col-md-2">Sigla do Estado</th>
-                                <th class="text-center col-md-2">Região do Estado</th>
-                            </tr>
-                        </thead>
-                        
-                        <tbody>
-                            <tr th:each="estado : ${estados}">
-                                <td class="text-center" th:text="${estado.idEstado}"></td>
-                                <td class="text-left" th:text="${{estado.nomeEstado}}"></td>
-                                <td class="text-center" th:text="${{estado.siglaEstado}}"></td>
-                                <td class="text-center" th:text="${{estado.idRegiaoEstado}}"></td> <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
-                              
-                                
-                                <!-- EDIÇAO -->
-                               <td class="text-center">
-                                    <a class="btn btn-link btn-xs" th:href="@{/estados/{codigo}(codigo=${estado.idEstado})}"> <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
-                                      <span class="glyphicon glyphicon-pencil"></span> <!-- Ícone de ediçao de um lápis -->
-                                  </a>
-                                      
-                                      <!-- DELETE -->  
-                                
-                                    <a class="btn btn-link btn-xs" data-toggle="modal" data-target="#confirmacaoExclusaoModalEstado"
-                                    th:attr="data-codigo=${estado.idEstado}, data-descricao=${estado.nomeEstado}">
-                                        <span class="gliphycon glyphicon-remove"></span>
-                                    </a>
-                                
-                                
-                                </td>
-      
-                            
-                            </tr>
-                        
-                            <tr>
-                                <td colspan="6" th:if="${#lists.isEmpty(estados)}">Nenhum estado foi encontrado.</td>
-                            
-                            </tr>
-                        
-                        </tbody>
-                    </table>
-                
-                </div>
-                
-                <!-- MODAL -->
-                
-                <div th:replace="modalexclusaoestado"></div>
-                    
+          <div class="panel panel-default">
+            <!-- Painel  -->
+            <div class="panel-heading">
+              <div
+                class="alert alert-success"
+                th:if="${!#strings.isEmpty(mensagem)}"
+              >
+                <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
+              </div>
+              <div class="clearfix">
+                <h1 class="panel-title aw-titulo-panel">
+                  Visualização > Estados
+                </h1>
+                <!--<a class="btn btn-link aw-link-panel" href="/novoEstado">Novo Estado</a>-->
+              </div>
             </div>
-        </div></div>
+
+            <div class="panel-body">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <!-- Cabeçalho da minha tabela de pesquisa  -->
+                  <tr>
+                    <th class="text-center col-md-1">#</th>
+                    <th class="text-center col-md-2">Nome do Estado</th>
+                    <th class="text-center col-md-2">Sigla do Estado</th>
+                    <th class="text-center col-md-2">Região do Estado</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr th:each="estado : ${estados}">
+                    <td class="text-center" th:text="${estado.idEstado}"></td>
+                    <td class="text-left" th:text="${{estado.nomeEstado}}"></td>
+                    <td
+                      class="text-center"
+                      th:text="${{estado.siglaEstado}}"
+                    ></td>
+                    <td
+                      class="text-center"
+                      th:text="${{estado.idRegiaoEstado}}"
+                    ></td>
+                    <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
+
+                    <!-- EDIÇAO -->
+                    <td class="text-center">
+                      <a
+                        class="btn btn-link btn-xs"
+                        th:href="@{/estados/{codigo}(codigo=${estado.idEstado})}"
+                      >
+                        <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
+                        <h4 style="margin: 0">
+                          <span class="pe-7s-pen"></span>
+                        </h4>
+                        <!-- Ícone de ediçao de um lápis -->
+                      </a>
+
+                      <!-- DELETE -->
+
+                      <a
+                        class="btn btn-link btn-xs btn-danger"
+                        data-toggle="modal"
+                        data-target="#confirmacaoExclusaoModalEstado"
+                        th:attr="data-codigo=${estado.idEstado}, data-descricao=${estado.nomeEstado}"
+                      >
+                        <h4 style="margin: 0">
+                          <span class="pe-7s-trash"></span>
+                        </h4>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="6" th:if="${#lists.isEmpty(estados)}">
+                      Nenhum estado foi encontrado.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- MODAL -->
+
+            <div th:replace="modalexclusaoestado"></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
-        window. onload = function () { 
-            document.querySelector("#painelDeControle").classList.remove("active");
-            document.querySelector("#estacao").classList.remove("active");
-            document.querySelector("#estado").classList.toggle("active");
-            document.querySelector("#regiao").classList.remove("active");
-            document.querySelector("#sobreNos").classList.remove("active");
-        } 
+      window.onload = function () {
+        document.querySelector("#painelDeControle").classList.remove("active");
+        document.querySelector("#estacao").classList.remove("active");
+        document.querySelector("#estado").classList.toggle("active");
+        document.querySelector("#regiao").classList.remove("active");
+        document.querySelector("#sobreNos").classList.remove("active");
+      };
     </script>
-     
-     <script src="/js/jquery-3.6.0.min.js"></script>   
-     <script src="/js/bootstrap.min.js"></script>
-     <script src="/js/excluirEstado.js"></script>
-     </body>
+
+    <!--   Core JS Files   -->
+  <script src="/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+  <!--  Charts Plugin -->
+  <script src="/assets/js/chartist.min.js"></script>
+
+  <!--  Notifications Plugin    -->
+  <script src="/assets/js/bootstrap-notify.js"></script>
+
+  <!--  Google Maps Plugin    -->
+  <script
+    type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+  ></script>
+
+  <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+  <script src="/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/excluirEstado.js"></script>
+  </body>
 </html>

@@ -7,7 +7,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Estações</title>
-    
+
     <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -171,101 +171,147 @@
             </div>
           </div>
         </nav>
-        
+
         <!-- Conteúdo -->
         <div class="content" style="padding: 30px 0px 0px 0px">
-     
-     <div class="panel panel-default"> <!-- Painel  -->
+          <div class="panel panel-default">
+            <!-- Painel  -->
             <div class="panel-heading">
-            
-               <div class="alert alert-success" th:if="${!#strings.isEmpty(mensagem)}">
-                    <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
-               </div>
-                <div class="clearfix">
-                    <h1 class="panel-title aw-titulo-panel" >Visualização > Estações </h1>
-                    <!--<a class="btn btn-link aw-link-panel" href="/novaEstacao"> Nova estação </a>-->
-                </div>
+              <div
+                class="alert alert-success"
+                th:if="${!#strings.isEmpty(mensagem)}"
+              >
+                <span th:text="${mensagem}">Título salvo com sucesso!!!</span>
+              </div>
+              <div class="clearfix">
+                <h1 class="panel-title aw-titulo-panel">
+                  Visualização > Estações
+                </h1>
+                <!--<a class="btn btn-link aw-link-panel" href="/novaEstacao"> Nova estação </a>-->
+              </div>
             </div>
-            
-            
-            <div class="panel-body">
-                <table class="table table-bordered table-striped">
-                    <thead> <!-- Cabeçalho da minha tabela de pesquisa  -->
-                        <tr>
-                            <th class="text-center col-md-1">#</th>
-                            <th>Nome da Estação</th>
-                            <th class="text-center col-md-2">Latitude</th>
-                            <th class="text-right col-md-2">Longitude</th>
-                            <th class="text-center col-md-2">Altitude</th>
-                            <th class="text-center col-md-2">Data de Fundação</th>
-                            <th class="text-center col-md-2">Estado</th>
-                            <th class="col-md-1"></th>
-                        </tr>
-                    </thead>
-                    
-                    <tbody>
-                        <tr th:each="estacao : ${estacoes}">
-                            <td class="text-center" th:text="${estacao.idEstacao}">1</td>
-                            <td class="text-left" th:text="${{estacao.nomeEstacao}}"></td>
-                            <td class="text-center" th:text="${{estacao.latitude}}"></td> <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
-                            <td class="text-left" th:text="${{estacao.longitude}}"></td>
-                            <td class="text-left" th:text="${{estacao.altitude}}"></td>
-                            <td class="text-left" th:text="${{estacao.dataFundacao}}"></td>
-                            <td class="text-left" th:text="${{estacao.idEstadoEstacao}}"></td>
 
-                           <!-- <td class="text-center">
+            <div class="panel-body">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <!-- Cabeçalho da minha tabela de pesquisa  -->
+                  <tr>
+                    <th class="text-center col-md-1">#</th>
+                    <th>Nome da Estação</th>
+                    <th class="text-center col-md-2">Latitude</th>
+                    <th class="text-right col-md-2">Longitude</th>
+                    <th class="text-center col-md-2">Altitude</th>
+                    <th class="text-center col-md-2">Data de Fundação</th>
+                    <th class="text-center col-md-2">Estado</th>
+                    <th class="col-md-1"></th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr th:each="estacao : ${estacoes}">
+                    <td class="text-center" th:text="${estacao.idEstacao}">
+                      1
+                    </td>
+                    <td
+                      class="text-left"
+                      th:text="${{estacao.nomeEstacao}}"
+                    ></td>
+                    <td
+                      class="text-center"
+                      th:text="${{estacao.latitude}}"
+                    ></td>
+                    <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
+                    <td class="text-left" th:text="${{estacao.longitude}}"></td>
+                    <td class="text-left" th:text="${{estacao.altitude}}"></td>
+                    <td
+                      class="text-left"
+                      th:text="${{estacao.dataFundacao}}"
+                    ></td>
+                    <td
+                      class="text-left"
+                      th:text="${{estacao.idEstadoEstacao}}"
+                    ></td>
+
+                    <!-- <td class="text-center">
                                 <span class="label" th:text="${titulo.status.descricao}" th:classappend="${titulo.pendente ? 'label-danger' : 'label-success'}"> Success</span>
                             </td> -->
-                            
-                            <!-- EDIÇAO -->
-                           <td class="text-center">
-                                <a class="btn btn-link btn-xs" th:href="@{/estacoes/{codigo}(codigo=${estacao.idEstacao})}"> <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
-                                  <span class="glyphicon glyphicon-pencil"></span> <!-- Ícone de ediçao de um lápis -->
-                              </a>
-                                  
-                                  <!-- DELETE -->  
-                            
-                                <a class="btn btn-link btn-xs" data-toggle="modal" data-target="#confirmacaoExclusaoModalEstacao"
-                                th:attr="data-codigo=${estacao.idEstacao}, data-descricao=${estacao.nomeEstacao}">
-                                    <span class="gliphycon glyphicon-remove"></span>
-                                </a>
-                            
-                            
-                            </td>
-  
-                        
-                        </tr>
-                    
-                        <tr>
-                            <td colspan="6" th:if="${#lists.isEmpty(estacoes)}">Nenhuma Estação foi encontrada.</td>
-                        
-                        </tr>
-                    
-                    </tbody>
-                </table>
-            
+
+                    <!-- EDIÇAO -->
+                    <td class="text-center">
+                      <a
+                        class="btn btn-link btn-xs"
+                        th:href="@{/estacoes/{codigo}(codigo=${estacao.idEstacao})}"
+                      >
+                        <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
+                        <h4 style="margin: 0">
+                          <span class="pe-7s-pen"></span>
+                        </h4>
+                        <!-- Ícone de ediçao de um lápis -->
+                      </a>
+
+                      <!-- DELETE -->
+
+                      <a
+                        class="btn btn-link btn-xs btn-danger"
+                        data-toggle="modal"
+                        data-target="#confirmacaoExclusaoModalEstacao"
+                        th:attr="data-codigo=${estacao.idEstacao}, data-descricao=${estacao.nomeEstacao}"
+                      >
+                        <h4 style="margin: 0">
+                          <span class="pe-7s-trash"></span>
+                        </h4>
+                      </a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="6" th:if="${#lists.isEmpty(estacoes)}">
+                      Nenhuma Estação foi encontrada.
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            
+
             <!-- MODAL -->
-            
+
             <div th:replace="modalexclusaoestacao"></div>
-                
+          </div>
         </div>
-        </div></div>
+      </div>
     </div>
 
     <script>
-        window. onload = function () { 
-            document.querySelector("#painelDeControle").classList.remove("active");
-            document.querySelector("#estacao").classList.toggle("active");
-            document.querySelector("#estado").classList.remove("active");
-            document.querySelector("#regiao").classList.remove("active");
-            document.querySelector("#sobreNos").classList.remove("active");
-        } 
+      window.onload = function () {
+        document.querySelector("#painelDeControle").classList.remove("active");
+        document.querySelector("#estacao").classList.toggle("active");
+        document.querySelector("#estado").classList.remove("active");
+        document.querySelector("#regiao").classList.remove("active");
+        document.querySelector("#sobreNos").classList.remove("active");
+      };
     </script>
-     
-        <script src="/js/jquery-3.6.0.min.js"></script>   
-        <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/excluirEstacao.js"></script>
-     </body>
+
+    <!--   Core JS Files   -->
+  <script src="/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+  <!--  Charts Plugin -->
+  <script src="/assets/js/chartist.min.js"></script>
+
+  <!--  Notifications Plugin    -->
+  <script src="/assets/js/bootstrap-notify.js"></script>
+
+  <!--  Google Maps Plugin    -->
+  <script
+    type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+  ></script>
+
+  <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+  <script src="/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/excluirEstacao.js"></script>
+  </body>
 </html>

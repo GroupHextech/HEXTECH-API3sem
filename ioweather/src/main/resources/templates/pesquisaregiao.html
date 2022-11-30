@@ -211,19 +211,19 @@
                         th:href="@{/regioes/{codigo}(codigo=${regiao.idRegiao})}"
                       >
                         <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
-                        <span class="glyphicon glyphicon-pencil"></span>
+                        <h4 style="margin: 0"><span class="pe-7s-pen"></span></h4>
                         <!-- Ícone de ediçao de um lápis -->
                       </a>
       
                       <!-- DELETE -->
       
                       <a
-                        class="btn btn-link btn-xs"
+                        class="btn btn-link btn-xs btn-danger"
                         data-toggle="modal"
                         data-target="#confirmacaoExclusaoModalRegiao"
                         th:attr="data-codigo=${regiao.idRegiao}, data-descricao=${regiao.nomeRegiao}"
                       >
-                        <span class="gliphycon glyphicon-remove"></span>
+                        <h4 style="margin: 0"><span class="pe-7s-trash"></span></h4>
                       </a>
                     </td>
                   </tr>
@@ -251,6 +251,25 @@
             document.querySelector("#sobreNos").classList.remove("active");
         } 
     </script>
+
+    <!--   Core JS Files   -->
+  <script src="/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
+  <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+  <!--  Charts Plugin -->
+  <script src="/assets/js/chartist.min.js"></script>
+
+  <!--  Notifications Plugin    -->
+  <script src="/assets/js/bootstrap-notify.js"></script>
+
+  <!--  Google Maps Plugin    -->
+  <script
+    type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
+  ></script>
+
+  <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+  <script src="/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
      
      <script src="/js/jquery-3.6.0.min.js"></script>
      <script src="/js/bootstrap.min.js"></script>
