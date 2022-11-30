@@ -192,85 +192,59 @@
             </div>
 
             <div class="panel-body">
-              <table class="table table-bordered table-striped">
-                <thead>
-                  <!-- Cabeçalho da minha tabela de pesquisa  -->
-                  <tr>
-                    <th class="text-center col-md-1">#</th>
-                    <th>Nome da Estação</th>
-                    <th class="text-center col-md-2">Latitude</th>
-                    <th class="text-right col-md-2">Longitude</th>
-                    <th class="text-center col-md-2">Altitude</th>
-                    <th class="text-center col-md-2">Data de Fundação</th>
-                    <th class="text-center col-md-2">Estado</th>
-                    <th class="col-md-1"></th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr th:each="estacao : ${estacoes}">
-                    <td class="text-center" th:text="${estacao.idEstacao}">
-                      1
-                    </td>
-                    <td
-                      class="text-left"
-                      th:text="${{estacao.nomeEstacao}}"
-                    ></td>
-                    <td
-                      class="text-center"
-                      th:text="${{estacao.latitude}}"
-                    ></td>
-                    <!-- Usa-se duas chaves {{}}} para definir a formataçao original incluida na classe backend-->
-                    <td class="text-left" th:text="${{estacao.longitude}}"></td>
-                    <td class="text-left" th:text="${{estacao.altitude}}"></td>
-                    <td
-                      class="text-left"
-                      th:text="${{estacao.dataFundacao}}"
-                    ></td>
-                    <td
-                      class="text-left"
-                      th:text="${{estacao.idEstadoEstacao}}"
-                    ></td>
-
-                    <!-- <td class="text-center">
-                                <span class="label" th:text="${titulo.status.descricao}" th:classappend="${titulo.pendente ? 'label-danger' : 'label-success'}"> Success</span>
-                            </td> -->
-
-                    <!-- EDIÇAO -->
-                    <td class="text-center">
-                      <a
-                        class="btn btn-link btn-xs"
-                        th:href="@{/estacoes/{codigo}(codigo=${estacao.idEstacao})}"
-                      >
-                        <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
-                        <h4 style="margin: 0">
-                          <span class="pe-7s-pen"></span>
-                        </h4>
-                        <!-- Ícone de ediçao de um lápis -->
-                      </a>
-
-                      <!-- DELETE -->
-
-                      <a
-                        class="btn btn-link btn-xs btn-danger"
-                        data-toggle="modal"
-                        data-target="#confirmacaoExclusaoModalEstacao"
-                        th:attr="data-codigo=${estacao.idEstacao}, data-descricao=${estacao.nomeEstacao}"
-                      >
-                        <h4 style="margin: 0">
-                          <span class="pe-7s-trash"></span>
-                        </h4>
-                      </a>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td colspan="6" th:if="${#lists.isEmpty(estacoes)}">
-                      Nenhuma Estação foi encontrada.
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                <table class="table table-bordered table-striped">
+                    <thead> <!-- Cabeçalho da minha tabela de pesquisa  -->
+                        <tr>
+                            <th class="text-center col-md-1">ID Estação</th>
+                            <th class="text-center col-md-1">Nome Estação WMO</th>
+                            <th class="text-center col-md-1">Nome da Estação</th>
+                            <th class="text-center col-md-2">Latitude</th>
+                            <th class="text-right col-md-2">Longitude</th>
+                            <th class="text-center col-md-2">Altitude</th>
+                            <th class="text-center col-md-2">Data de Fundação</th>
+                            <th class="text-center col-md-2">Estado</th>
+                            <th class="col-md-1"></th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr th:each="estacao : ${estacoes}">
+                            <td class="text-center" th:text="${estacao.idEstacao}"></td>
+                            <td class="text-center" th:text="${{estacao.estacaoWMO}}"></td>
+                            <td class="text-left" th:text="${{estacao.nomeEstacao}}"></td>
+                            <td class="text-center" th:text="${{estacao.latitude}}"></td> <!-- Usa-se duas chaves {{}} para definir a formatação original incluída na classe backend-->
+                            <td class="text-left" th:text="${{estacao.longitude}}"></td>
+                            <td class="text-left" th:text="${{estacao.altitude}}"></td>
+                            <td class="text-left" th:text="${{estacao.dataFundacao}}"></td>
+                            <td class="text-left" th:text="${{estacao.idEstadoEstacao}}"></td>
+                         
+                            <!-- EDIÇAO -->
+                           <td class="text-center">
+                                <a class="btn btn-link btn-xs" th:href="@{/estacoes/{codigo}(codigo=${estacao.idEstacao})}"> <!-- expressao do thymeleaf para dinamizar uma url utilizando o atributo "codigo" do objeto titulo -->
+                                  <span class="glyphicon glyphicon-pencil"></span> <!-- Ícone de ediçao de um lápis -->
+                              </a>
+                                  
+                                  <!-- DELETE -->  
+                            
+                                <a class="btn btn-link btn-xs" data-toggle="modal" data-target="#confirmacaoExclusaoModalEstacao"
+                                th:attr="data-codigo=${estacao.idEstacao}, data-descricao=${estacao.nomeEstacao}">
+                                    <span class="gliphycon glyphicon-remove"></span>
+                                </a>
+                            
+                            
+                            </td>
+  
+                        
+                        </tr>
+                    
+                        <tr>
+                            <td colspan="6" th:if="${#lists.isEmpty(estacoes)}">Nenhuma Estação foi encontrada.</td>
+                        
+                        </tr>
+                    
+                    </tbody>
+                </table>
+            
             </div>
 
             <!-- MODAL -->
