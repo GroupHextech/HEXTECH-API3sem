@@ -12,7 +12,7 @@ public class Regiao {
 	
 	@Id
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
-	private Long idRegiao;
+	private Integer idRegiao;
 	
 	@NotEmpty (message = "O valor da regiao nao pode ser nulo")
 	@Size(max=60, message="O número máximo de caracteres é de 60.")
@@ -26,10 +26,10 @@ public class Regiao {
 	
 	
 	//Getters and Setters
-	public Long getIdRegiao() {
+	public Integer getIdRegiao() {
 		return idRegiao;
 	}
-	public void setIdRegiao(Long idRegiao) {
+	public void setIdRegiao(Integer idRegiao) {
 		this.idRegiao = idRegiao;
 	}
 	public String getNomeRegiao() {

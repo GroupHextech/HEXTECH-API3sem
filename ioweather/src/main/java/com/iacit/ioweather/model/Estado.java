@@ -12,7 +12,7 @@ public class Estado {
 
 	@Id 
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
-	private Long idEstado;
+	private Integer idEstado;
 	
 	@NotEmpty (message="O valor Estado nao pode ser nulo")
 	@Size (max=100, message="Valor máximo de 100 caracteres no campo Estado")
@@ -24,17 +24,17 @@ public class Estado {
 	
 	@NotEmpty (message="O valor da Regiao nao pode ser nulo")
 	@Size (max=2, message="Valor máximo de 2 caracteres no campo Regiao")
-	private String idRegiaoEstado;
+	private Integer idRegiaoEstado;
 
 	
 	
 	
 	//Getters and Setters
-	public Long getIdEstado() {
+	public Integer getIdEstado() {
 		return idEstado;
 	}
 
-	public void setIdEstado(Long idEstado) {
+	public void setIdEstado(Integer idEstado) {
 		this.idEstado = idEstado;
 	}
 
@@ -54,11 +54,11 @@ public class Estado {
 		this.siglaEstado = siglaEstado;
 	}
 
-	public String getIdRegiaoEstado() {
+	public Integer getIdRegiaoEstado() {
 		return idRegiaoEstado;
 	}
 
-	public void setIdRegiaoEstado(String idRegiaoEstado) {
+	public void setIdRegiaoEstado(Integer idRegiaoEstado) {
 		this.idRegiaoEstado = idRegiaoEstado;
 	}
 	

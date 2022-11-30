@@ -15,6 +15,7 @@ public class IoweatherApplication {
 		SpringApplication.run(IoweatherApplication.class, args);
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Bean
 	public LocaleResolver localeResolver() {
 		return new FixedLocaleResolver(new Locale("pt","BR"));

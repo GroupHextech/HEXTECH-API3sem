@@ -23,7 +23,7 @@ public class Estacao {
 	
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
-	private Long idEstacao;
+	private Integer idEstacao;
 
 	@NotEmpty(message="O código WMO da estação não deve ser nulo")
     @Size(max=10, message="Número máximo de caracteres é de 10.")
@@ -36,12 +36,12 @@ public class Estacao {
 	@NotEmpty(message="Latitude não pode ser vazio.")
 	@DecimalMin(value="-90.00000000", message="A latitude da estação deve ser entre -90.00000000 a 90.00000000")
 	@DecimalMax(value="90.00000000", message="A latitude da estação deve ser entre -90.00000000 a 90.00000000")
-	private String latitude;
+	private BigDecimal latitude;
 	
 	@NotEmpty(message="Longitude não pode ser vazio.")
 	@DecimalMin(value="-180.00000000", message="A latitude da estação deve ser entre -180.00000000 a 180.00000000")
 	@DecimalMax(value="180.00000000", message="A latitude da estação deve ser entre -180.00000000 a 180.00000000")
-	private String longitude;
+	private BigDecimal longitude;
 	
 	@NotNull(message="A altitude não deve ser nula")
 	@DecimalMin(value="0.01", message=" A altitude da Estaçao não pode ser menor que 0,01")
@@ -53,13 +53,13 @@ public class Estacao {
 	private Date dataFundacao;
 	
 	@NotEmpty(message="O id do estado não pode estar vazio")
-	private String idEstadoEstacao;
+	private Integer idEstadoEstacao;
 	
 	//Getters and Setters
-	public Long getIdEstacao() {
+	public Integer getIdEstacao() {
 		return idEstacao;
 	}
-	public void setIdEstacao(Long idEstacao) {
+	public void setIdEstacao(Integer idEstacao) {
 		this.idEstacao = idEstacao;
 	}
 	public String getNomeEstacao() {
@@ -74,16 +74,16 @@ public class Estacao {
 	public void setNomeEstacao(String nomeEstacao) {
 		this.nomeEstacao = nomeEstacao;
 	}
-	public String getLatitude() {
+	public BigDecimal getLatitude() {
 		return latitude;
 	}
-	public void setLatitude(String latitude) {
+	public void setLatitude(BigDecimal latitude) {
 		this.latitude = latitude;
 	}
-	public String getLongitude() {
+	public BigDecimal getLongitude() {
 		return longitude;
 	}
-	public void setLongitude(String longitude) {
+	public void setLongitude(BigDecimal longitude) {
 		this.longitude = longitude;
 	}
 	public BigDecimal getAltitude() {
@@ -98,10 +98,10 @@ public class Estacao {
 	public void setDataFundacao(Date dataFundacao) {
 		this.dataFundacao = dataFundacao;
 	}
-	public String getIdEstadoEstacao() {
+	public Integer getIdEstadoEstacao() {
 		return idEstadoEstacao;
 	}
-	public void setIdEstadoEstacao(String idEstadoEstacao) {
+	public void setIdEstadoEstacao(Integer idEstadoEstacao) {
 		this.idEstadoEstacao = idEstadoEstacao;
 	}
 	
