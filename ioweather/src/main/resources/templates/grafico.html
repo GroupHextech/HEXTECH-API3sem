@@ -68,8 +68,8 @@
   <body style="background-color: #eeeeee">
     <div class="row mx-1 my-3">
       <div
-        class="col-md-3"
-        style="padding: 0px; padding-left: 2%; padding-right: 2%"
+        class="col-md-2"
+        style="padding: 0px; padding-left: 1%; padding-right: 1%"
       >
         <label for="data1">Data Inicial</label>
         <input class="form-control fomu" type="date" id="data1" />
@@ -80,8 +80,8 @@
       </div>
 
       <div
-        class="col-md-3"
-        style="padding: 0px; padding-left: 2%; padding-right: 2%"
+        class="col-md-2"
+        style="padding: 0px; padding-left: 1%; padding-right: 1%"
       >
         <label for="data2">Data Final</label>
         <input class="form-control fomu" type="date" id="data2" />
@@ -92,8 +92,8 @@
       </div>
 
       <div
-        class="col-md-3"
-        style="padding: 0px; padding-left: 2%; padding-right: 2%"
+        class="col-md-2"
+        style="padding: 0px; padding-left: 1%; padding-right: 1%"
       >
         <label>Estação</label>
         <select class="form-control fomu" id="estacao" name="selectEstacao">
@@ -106,10 +106,22 @@
           <option value="83377">Brasília (DF)</option>
         </select>
       </div>
+      <div
+        class="col-md-2"
+        style="padding: 0px; padding-left: 1%; padding-right: 1%"
+      >
+        <label>Filtro</label>
+        <select class="form-control fomu" id="parametro" name="selectParametro">
+          <option value="TEMP">Temperatura (°C)</option>
+          <option value="UMID">Umidade (g/m³)</option>
+          <option value="CHUVA">Chuva (mm)</option>
+          <option value="VEL_VENTO_MED">Velocidade do Vento (m/s)</option>
+        </select>
+      </div>
 
       <div
-        class="col-md-3 d-flex align-items-end"
-        style="padding: 0px; padding-left: 2%; padding-right: 2%"
+        class="col-md-2 d-flex align-items-end"
+        style="padding: 0px; padding-left: 1%; padding-right: 1%"
       >
         <button
           class="form-control fomu"
@@ -132,7 +144,7 @@
         value="#FF2828"
         disabled
         style="border-style: hidden; height: 20px; width: 16px"
-      /><label style="margin-left: 5px">Temperatura Máxima</label>
+      /><label style="margin-left: 5px">Máxima</label>
       <input
         type="color"
         value="#91cc75"
@@ -143,7 +155,7 @@
           height: 20px;
           width: 16px;
         "
-      /><label style="margin-left: 5px">Temperatura Média</label>
+      /><label style="margin-left: 5px">Média</label>
       <input
         type="color"
         value="#5470c6"
@@ -154,11 +166,13 @@
           height: 20px;
           width: 16px;
         "
-      /><label style="margin-left: 5px">Temperatura Mínima</label>
+      /><label style="margin-left: 5px">Mínima</label>
     </div>
 
     <div id="grafico"></div>
-    <div style="text-align: center;"><a href="/"><button class="btn fomu">Voltar</button></a></div>
+    <div style="text-align: center">
+      <a href="/"><button class="btn fomu">Voltar</button></a>
+    </div>
 
     <!--div id="formTest" class="col-md-12">
       <form method="get">
@@ -225,6 +239,7 @@
         var data1 = document.getElementById("data1").value;
         var data2 = document.getElementById("data2").value;
         var estacao = document.getElementById("estacao").value;
+        var parametro = document.getElementById("parametro").value;
 
         $.ajax({
           method: "GET",
@@ -238,9 +253,17 @@
           success(dados) {
             let linhas = dados.length;
             const datas = [];
-            var max = [];
-            var med = [];
-            var min = [];
+            var tempMax = [];
+            var tempMed = [];
+            var tempMin = [];
+            var umidMin = [];
+            var umidMed = [];
+            var chuva = [];
+            var velocVento = [];
+
+            var info1 = [];
+            var info2 = [];
+            var info3 = [];
 
             // ARRUMAR DATAS-----------------------------------------
             for (let i = 0; i < linhas; i++) {
@@ -248,18 +271,59 @@
             }
             for (let i = 0; i < linhas; i++) {
               if (dados[i].TEMP_MAX != null) {
-                max.push(dados[i].TEMP_MAX.replace('"', ""));
+                tempMax.push(dados[i].TEMP_MAX.replace('"', ""));
               }
             }
             for (let i = 0; i < linhas; i++) {
               if (dados[i].TEMP_MED != null) {
-                med.push(dados[i].TEMP_MED.replace('"', ""));
+                tempMed.push(dados[i].TEMP_MED.replace('"', ""));
               }
             }
             for (let i = 0; i < linhas; i++) {
               if (dados[i].TEMP_MIN != null) {
-                min.push(dados[i].TEMP_MIN.replace('"', ""));
+                tempMin.push(dados[i].TEMP_MIN.replace('"', ""));
               }
+            }
+            for (let i = 0; i < linhas; i++) {
+              if (dados[i].UMID_MIN != null) {
+                umidMin.push(dados[i].UMID_MIN.replace('"',""));
+              }
+            }
+            for (let i = 0; i < linhas; i++) {
+              if (dados[i].UMID_MED != null) {
+                umidMed.push(dados[i].UMID_MED.replace('"',""));
+              }
+            }
+            for (let i = 0; i < linhas; i++) {
+              if (dados[i].CHUVA != null) {
+                chuva.push(dados[i].CHUVA.replace('"',""));
+              }
+            }
+            for (let i = 0; i < linhas; i++) {
+              if (dados[i].VEL_VENTO_MED != null) {
+                velocVento.push(dados[i].VEL_VENTO_MED.replace('"',""));
+              }
+            }
+
+            if (parametro == 'TEMP') {
+              info1 = tempMax;
+              info2 = tempMed;
+              info3 = tempMin;
+            }
+            if (parametro == 'UMID') {
+              info1 = null;
+              info2 = umidMed;
+              info3 = umidMin;
+            }
+            if (parametro == 'CHUVA') {
+              info1 = null;
+              info2 = chuva;
+              info3 = null;
+            }
+            if (parametro == 'VEL_VENTO_MED') {
+              info1 = null;
+              info2 = velocVento;
+              info3 = null;
             }
 
             var dom = document.getElementById("chart-container");
@@ -356,7 +420,7 @@
               verticalAlign: app.config.verticalAlign,
               rotate: app.config.rotate,
               formatter: "{c}  {name|{a}}",
-              fontSize: 0,
+              fontSize: 8,
               rich: {
                 name: {},
               },
@@ -420,7 +484,7 @@
                   emphasis: {
                     focus: "series",
                   },
-                  data: max,
+                  data: info1,
                 },
                 {
                   name: "",
@@ -430,7 +494,7 @@
                   emphasis: {
                     focus: "series",
                   },
-                  data: med,
+                  data: info2,
                 },
                 {
                   name: "",
@@ -440,7 +504,7 @@
                   emphasis: {
                     focus: "series",
                   },
-                  data: min,
+                  data: info3,
                 },
               ],
             };
