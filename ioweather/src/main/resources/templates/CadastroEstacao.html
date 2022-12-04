@@ -132,14 +132,27 @@
             </li>
           </ul>
         </div>
-        
-        <div class="panel-body">
-           <input type="hidden" th:field="*{idEstacao}"/>
-           
-           
-            <div class="form-group col-md-6" style="padding-right:2%; padding-left:2%; margin: 0 auto"  th:classappend="${#fields.hasErrors('nomeEstacao')} ? 'has-error'" >
-               <label for="NomeEstacao" class="control-label">Nome da Estação</label>         
-                    <input type="text" class="form-control fomu" id="NomeEstacao" th:field="*{nomeEstacao}"/>
+      </div>
+
+      <div class="main-panel">
+        <!-- Barra top -->
+        <nav
+          class="navbar navbar-default navbar-fixed"
+          style="box-shadow: 3px 1px 10px lightgrey"
+        >
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button
+                type="button"
+                class="navbar-toggle"
+                data-toggle="collapse"
+              >
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand"> </a>
             </div>
             <div class="collapse navbar-collapse">
               <ul class="nav navbar-nav navbar-left">
@@ -333,7 +346,7 @@
   <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
   <script src="/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
 
-    <script src="../static/js/jquery-3.6.0.min.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
   </body>
 </html>

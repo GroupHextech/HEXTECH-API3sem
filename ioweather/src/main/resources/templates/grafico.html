@@ -99,11 +99,9 @@
         <select class="form-control fomu" id="estacao" name="selectEstacao">
           <option
             th:each="est : ${estacoes}"
-            th:value="${{est.idEstacao}}"
+            th:value="${{est.estacaoWMO}}"
             th:text="${{est.nomeEstacao}}"
           ></option>
-          <option value="A301">Recife (PE)</option>
-          <option value="83377">Brasília (DF)</option>
         </select>
       </div>
       <div
