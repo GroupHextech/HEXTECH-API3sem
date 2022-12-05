@@ -36,4 +36,4 @@ Proposta de funcionalidades a serem entregues ao cliente para a sprint 04
 <h2>Burndown Sprint04</h2>
 Gráfico com a evolução do tempo de execução da sprint
 
-![Burndown - SP4](../readme_docs/Burndown%20-%20SP4.png)
+![Burndown - SP4](../readme_docs/Burndown-SP4.png)
