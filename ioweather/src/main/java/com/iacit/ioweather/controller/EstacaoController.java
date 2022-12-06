@@ -92,7 +92,7 @@ public class EstacaoController {
 	}
 	
 	@RequestMapping(value="/estacoes/{idEstacao}",method=RequestMethod.DELETE)
-	public String excluirEstacao(@PathVariable Long idEstacao,RedirectAttributes attributes) {
+	public String excluirEstacao(@PathVariable Integer idEstacao,RedirectAttributes attributes) {
 		estacoes.deleteById(idEstacao);
 		attributes.addFlashAttribute("mensagem","Estação excluída com sucesso.");		
 		return "redirect:/estacoes";

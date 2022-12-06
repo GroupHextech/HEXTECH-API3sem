@@ -8,7 +8,7 @@
     <meta charset="UTF-8" />
     <title>Regiões</title>
     
-    <link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -22,7 +22,7 @@
 
     <!--  Light Bootstrap Table core CSS    -->
     <link
-      href="/assets/css/light-bootstrap-dashboard.css?v=1.4.0"
+      href="/assets/css/light-bootstrap-dashboard.css"
       rel="stylesheet"
     />
 
@@ -239,11 +239,12 @@
       
             <div th:replace="modalexclusaoregiao"></div>
           </div>
-        </div></div>
+        </div>
+        </div>
     </div>
 
     <script>
-        window. onload = function () { 
+        window.onload = function () { 
             document.querySelector("#painelDeControle").classList.remove("active");
             document.querySelector("#estacao").classList.remove("active");
             document.querySelector("#estado").classList.remove("active");
@@ -252,24 +253,26 @@
         } 
     </script>
 
-    <!--   Core JS Files   -->
+    <!--   Core JS Files -->
   <script src="/assets/js/jquery.3.2.1.min.js" type="text/javascript"></script>
   <script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
 
   <!--  Charts Plugin -->
   <script src="/assets/js/chartist.min.js"></script>
 
-  <!--  Notifications Plugin    -->
+  <!--  Notifications Plugin -->
   <script src="/assets/js/bootstrap-notify.js"></script>
 
-  <!--  Google Maps Plugin    -->
+  <!--  Google Maps Plugin -->
   <script
     type="text/javascript"
     src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
   ></script>
 
   <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
-  <script src="/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script>
+  <script src="/assets/js/light-bootstrap-dashboard.js?v=1.4.0"></script> 
+  
+ 
      
      <script src="/js/jquery-3.6.0.min.js"></script>
      <script src="/js/bootstrap.min.js"></script>

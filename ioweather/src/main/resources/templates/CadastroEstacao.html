@@ -210,6 +210,22 @@
                 <div
                   class="form-group col-md-6"
                   style="padding-right: 2%; padding-left: 2%; margin: 0 auto"
+                  th:classappend="${#fields.hasErrors('estacaoWMO')} ? 'has-error'"
+                >
+                  <label for="EstacaoWMO" class="control-label"
+                    >Nome WMO da Estação</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control fomu"
+                    id="EstacaoWMO"
+                    th:field="*{estacaoWMO}"
+                  />
+                </div>
+
+                <div
+                  class="form-group col-md-6"
+                  style="padding-right: 2%; padding-left: 2%; margin: 0 auto"
                   th:classappend="${#fields.hasErrors('nomeEstacao')} ? 'has-error'"
                 >
                   <label for="NomeEstacao" class="control-label"

@@ -1,5 +1,7 @@
 package com.iacit.ioweather.model;
 
+// import java.math.BigInteger;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

@@ -24,22 +24,6 @@ public class EstadoController {
 	@Autowired
 	private Estados estados;
 	
-/*	@RequestMapping(value=("/principal/estado"),method=RequestMethod.GET)
-	public ModelAndView paginaInicial() {
-		ModelAndView mv=new ModelAndView("cadastroestado");
-		return mv;
-		
-	}
-	
-	@RequestMapping(value=("/grafico/estado"),method=RequestMethod.GET)
-	public ModelAndView grafico() {
-		ModelAndView mv=new ModelAndView("grafico");
-		return mv;
-		
-	}  */
-		
-//============================================================	
-	
 	
 	@RequestMapping(value=("/novoEstado"), method=RequestMethod.GET)
 	public ModelAndView cadastroGetEstados() {
@@ -89,7 +73,7 @@ public class EstadoController {
 	
 	
 	@RequestMapping(value="/estados/{idEstado}",method=RequestMethod.DELETE)
-	public String excluirEstado(@PathVariable Long idEstado,RedirectAttributes attributes) {
+	public String excluirEstado(@PathVariable Integer idEstado,RedirectAttributes attributes) {
 		estados.deleteById(idEstado);
 		attributes.addFlashAttribute("mensagem","Estado excluído com sucesso!");
 		

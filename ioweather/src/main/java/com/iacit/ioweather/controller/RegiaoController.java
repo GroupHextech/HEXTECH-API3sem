@@ -25,24 +25,6 @@ public class RegiaoController {
 	@Autowired
 	private Regioes regioes;
 
-	/*
-	 * @RequestMapping(value=("/principal/regiao"),method=RequestMethod.GET)
-	 * public ModelAndView paginaInicial() {
-	 * ModelAndView mv=new ModelAndView("cadastroregiao");
-	 * return mv;
-	 * 
-	 * }
-	 * 
-	 * @RequestMapping(value=("/grafico/regiao"),method=RequestMethod.GET)
-	 * public ModelAndView grafico() {
-	 * ModelAndView mv=new ModelAndView("grafico");
-	 * return mv;
-	 * 
-	 * }
-	 */
-
-	// ============================================================
-
 	@RequestMapping(value = ("/novaRegiao"), method = RequestMethod.GET)
 	public ModelAndView cadastroGetRegioes() {
 		ModelAndView mv = new ModelAndView("cadastroregiao");
@@ -73,13 +55,7 @@ public class RegiaoController {
 		return mv;
 	}
 
-	/*
-	 * @GetMapping("/filtroRegiao")
-	 * public String filtrarRegiao(Regiao regiao, Model model){
-	 * model.addAttribute("regioes",regioes.findAll());
-	 * return "grafico";
-	 * }
-	 */
+
 
 	@RequestMapping(value = "/regioes/{idRegiao}", method = RequestMethod.GET)
 	public ModelAndView editarRegiao(@PathVariable("idRegiao") Regiao regiao) {
@@ -90,7 +66,7 @@ public class RegiaoController {
 	}
 
 	@RequestMapping(value = "/regioes/{idRegiao}", method = RequestMethod.DELETE)
-	public String excluirRegiao(@PathVariable Long idRegiao, RedirectAttributes attributes) {
+	public String excluirRegiao(@PathVariable Integer idRegiao, RedirectAttributes attributes) {
 		regioes.deleteById(idRegiao);
 		attributes.addFlashAttribute("mensagem", "Região excluída com sucesso!");
 

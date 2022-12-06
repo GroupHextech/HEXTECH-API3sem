@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -22,7 +23,7 @@ public class Estado {
 	@Size (max=2, message="Valor máximo de 2 caracteres no campo Sigla do Estado")
 	private String siglaEstado;
 	
-	@NotEmpty (message="O valor da Regiao nao pode ser nulo")
+	@NotNull (message="O valor da Regiao nao pode ser nulo")
 	@Size (max=2, message="Valor máximo de 2 caracteres no campo Regiao")
 	private Integer idRegiaoEstado;
 

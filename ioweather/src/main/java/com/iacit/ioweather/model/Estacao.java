@@ -33,12 +33,12 @@ public class Estacao {
 	@Size(max=60, message="Número máximo de caracteres é de 60.")
 	private String nomeEstacao;
 	
-	@NotEmpty(message="Latitude não pode ser vazio.")
+	@NotNull(message="Latitude não pode ser vazio.")
 	@DecimalMin(value="-90.00000000", message="A latitude da estação deve ser entre -90.00000000 a 90.00000000")
 	@DecimalMax(value="90.00000000", message="A latitude da estação deve ser entre -90.00000000 a 90.00000000")
 	private BigDecimal latitude;
 	
-	@NotEmpty(message="Longitude não pode ser vazio.")
+	@NotNull(message="Longitude não pode ser vazio.")
 	@DecimalMin(value="-180.00000000", message="A latitude da estação deve ser entre -180.00000000 a 180.00000000")
 	@DecimalMax(value="180.00000000", message="A latitude da estação deve ser entre -180.00000000 a 180.00000000")
 	private BigDecimal longitude;
@@ -52,7 +52,7 @@ public class Estacao {
 	@Temporal(TemporalType.DATE)
 	private Date dataFundacao;
 	
-	@NotEmpty(message="O id do estado não pode estar vazio")
+	@NotNull(message="O id do estado não pode estar vazio")
 	private Integer idEstadoEstacao;
 	
 	//Getters and Setters
