@@ -99,7 +99,7 @@ Nossa proposta é a criação de um sistema como o [WIREFRAME](documents/wirefra
 <details>
 <summary><b>Entrega - Sprint 2</b></summary>
 <details>
-                  <summary>]Cadastros das Estações</summary>
+                  <summary>Cadastros das Estações</summary>
                         <b>Story User</b>
                         <p>•Como meteorologista eu preciso cadastrar estações na plataforma para que eu tenha as visualizações dos indicadores para esta estação cadastrada.
                   </details>
