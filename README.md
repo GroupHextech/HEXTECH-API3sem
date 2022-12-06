@@ -125,7 +125,7 @@ Nossa proposta é a criação de um sistema como o [WIREFRAME](documents/wirefra
 
                   
 <details>
-<summary><b>Sprint 4</b></summary>
+<summary><b>Entrega - Sprint 4</b></summary>
 <details>
                   <summary>Nivelamento de Acesso (tela de login)</summary>
                         <b>Story User</b>
