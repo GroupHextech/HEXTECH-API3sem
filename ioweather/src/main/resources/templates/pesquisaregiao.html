@@ -165,7 +165,7 @@
 
               <ul class="nav navbar-nav navbar-right">
                 <li>
-                  <a href="logout.php" style="color: black"> Sair </a>
+                  <a href="/" style="color: black"> Sair </a>
                 </li>
               </ul>
             </div>
@@ -191,9 +191,10 @@
                 <thead>
                   <!-- Cabeçalho da minha tabela de pesquisa  -->
                   <tr>
-                    <th class="text-center col-md-1">#</th>
+                    <th class="text-center col-md-1">Id Região</th>
                     <th>Nome da Região</th>
                     <th class="text-center col-md-2">Sigla da região</th>
+                    <th class="text-center col-md-2">Atualizar ou Apagar</th>
                   </tr>
                 </thead>
       
@@ -219,6 +220,7 @@
       
                       <a
                         class="btn btn-link btn-xs btn-danger"
+                        id="exclusaoRegiao"
                         data-toggle="modal"
                         data-target="#confirmacaoExclusaoModalRegiao"
                         th:attr="data-codigo=${regiao.idRegiao}, data-descricao=${regiao.nomeRegiao}"
@@ -236,9 +238,8 @@
             </div>
       
             <!-- MODAL -->
-      
-            <div th:replace="modalexclusaoregiao"></div>
-          </div>
+          <div th:replace="ModalExclusaoRegiao"></div>  
+          </div> 
         </div>
         </div>
     </div>

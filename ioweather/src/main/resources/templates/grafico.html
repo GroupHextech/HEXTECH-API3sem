@@ -172,59 +172,6 @@
       <a href="/"><button class="btn fomu">Voltar</button></a>
     </div>
 
-    <!--div id="formTest" class="col-md-12">
-      <form method="get">
-        <div class="row mx-1">
-          <div class="col" th:object="${regiao}">
-            <label>Região</label>
-            <select
-              class="form-control"
-              id="selectRegiao"
-              name="selectRegiao"
-            >
-              <option
-                th:each="r : ${regioes}"
-                th:value="${r.nomeRegiao}"
-                th:text="${r.nomeRegiao}"
-              ></option>
-            </select>
-          </div>
-          <div class="col">
-            <label>Estado</label>
-            <select
-              class="form-control"
-              id="selectEstado"
-              name="selectEstado"
-            >
-              <option
-                th:each="uf : ${estados}"
-                th:value="${uf.nomeEstado}"
-                th:text="${uf.siglaEstado}+' : '+${uf.nomeEstado}"
-              ></option>
-            </select>
-          </div>
-          <div class="col">
-            <label>Estação</label>
-            <select
-              class="form-control"
-              id="selectEstacao"
-              name="selectEstacao"
-            >
-              <option
-                th:each="est : ${estacoes}"
-                th:value="${{est.idEstacao}}"
-                th:text="${{est.nomeEstacao}}"
-              ></option>
-            </select>
-          </div>
-          <div class="col d-flex align-items-end">
-            <button type="submit" class="btn btn-primary">Buscar</button>
-          </div>
-        </div>
-      </form>
-    </div-->
-
-    <!-- Grafico -->
     <script src="https://fastly.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
     <script>
       var altura = window.screen.height;
