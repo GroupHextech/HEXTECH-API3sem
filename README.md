@@ -81,6 +81,63 @@ Nossa proposta é a criação de um sistema como o [WIREFRAME](documents/wirefra
 - [Andamento Sprint 04](readme_pages/sprint04_atividades_entrega.md)
 <br />
 
+## Metas das Sprints
+<details>
+<summary><b>Entrega - Sprint 1</b></summary>
+                  <details>
+                  <summary>Visualização dos Dados Processados </summary>
+                        <b>Story User</b>
+                        <p>•Como meteorologista eu preciso filtrar as estações, visualizar os dados meteorológicos para que eu ter uma visão simplificada de diversos tipos de dados das estações.
+                  </details>
+                  <details>
+                  <summary>Exportar Relatórios</summary>
+                        <b>Story User</b>
+                        <p>•Como usuário eu quero poder baixar os relatórios que gerei no site, tanto em excel ou a própria imagem do gráfico.
+                  </details>
+</details>
+
+<details>
+<summary><b>Entrega - Sprint 2</b></summary>
+<details>
+                  <summary>]Cadastros das Estações</summary>
+                        <b>Story User</b>
+                        <p>•Como meteorologista eu preciso cadastrar estações na plataforma para que eu tenha as visualizações dos indicadores para esta estação cadastrada.
+                  </details>
+
+</details>
+
+
+
+<details>
+<summary><b>Entrega - Sprint 3</b></summary>
+<details>
+                  <summary>Demais Cadastros</summary>
+                        <b>Story User</b>
+                        <p>•Como usuário quero opções para cadastrar Estados e Regiões que ainda não existem no sistema.
+                  </details>
+                  <details>
+                  <summary>Desenvolvimento de telas de pressão atmosférica, vento e precipitação</summary>
+                        <b>Story User</b>
+                        <p>•Como usuário, preciso gerar os gráficos de Pressão Atmosférica, Vento e Precipitação com os devidos filtros e tratativas.
+                  </details>
+                  </details>
+                  </details>
+
+                  
+<details>
+<summary><b>Sprint 4</b></summary>
+<details>
+                  <summary>Nivelamento de Acesso (tela de login)</summary>
+                        <b>Story User</b>
+                        <p>•Como usuário, quero ter um nível de acesso mais alto para que possa gerenciar mais profundamente os relatórios.
+                  </details>
+                  <details>
+                  <summary>Integração API ↔ Banco de Dados</summary>
+                        <b>Story User</b>
+                        <p>•Como administrador, preciso que os gráficos sejam gerados e alimentados pelo Banco de Dados e, que este banco, seja alimentado e integrado com a API do INMET para maior precisão e confiabilidade.</p>
+                  </details>
+
+</details>
 
 <h2>Tecnologias utilizadas</h2>
 
